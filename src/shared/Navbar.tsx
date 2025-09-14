@@ -93,22 +93,22 @@ const Header = () => {
     const navLinks = <>
         <ul><NavLink className={({ isActive }) =>
             isActive
-                ? "border-b-2 border-orange-600 px-3 rounded"
+                ? "border-b-2 border-[#F7A582] px-3 rounded"
                 : "px-3 rounded hover:border-b-0"
         } to='/'>Home</NavLink></ul>
         <ul><NavLink className={({ isActive }) =>
             isActive
-                ? "border-b-2 border-orange-600 px-3 rounded"
+                ? "border-b-2 border-[#F7A582] px-3 rounded"
                 : "px-3 rounded hover:border-b-0"
         } to='/about'>About</NavLink></ul>
         <ul><NavLink className={({ isActive }) =>
             isActive
-                ? "border-b-2 border-orange-600 px-3 rounded"
+                ? "border-b-2 border-[#F7A582] px-3 rounded"
                 : "px-3 rounded hover:border-b-0"
         } to='/appointment'>Appointment</NavLink></ul>
         <ul><NavLink className={({ isActive }) =>
             isActive
-                ? "border-b-2 border-orange-600 px-3 rounded"
+                ? "border-b-2 border-[#F7A582] px-3 rounded"
                 : "px-3 rounded hover:border-b-0"
         } to='/login'>Login</NavLink></ul>
     </>
@@ -130,13 +130,8 @@ const Header = () => {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-3 text-white">
+                    <nav className="hidden md:flex items-center navbar-end gap-3 text-white">
                         {navLinks}
-                    </nav>
-
-                    {/* CTA Button, Theme Toggle and Mobile Menu Toggle */}
-                    <div className="flex items-center gap-4">
-                        {/* Theme Toggle Button */}
                         <button
                             onClick={toggleTheme}
                             className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 dark:focus:ring-gray-400 transition-colors duration-300"
@@ -148,6 +143,12 @@ const Header = () => {
                                 <MoonIcon className="h-5 w-5" />
                             )}
                         </button>
+                    </nav>
+
+                    {/* CTA Button, Theme Toggle and Mobile Menu Toggle */}
+                    <div className="flex items-center gap-4">
+                        {/* Theme Toggle Button */}
+                        
 
                         {/* Mobile Menu Button */}
                         <div className="md:hidden">
@@ -161,7 +162,6 @@ const Header = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
