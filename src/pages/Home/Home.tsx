@@ -1,11 +1,12 @@
 import Banner from "./Banner";
-import HeroSection from "./HeadSec";
 
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
-      <HeroSection></HeroSection>
+      <div className="bg-teal-950">
+        <Banner></Banner>
+      </div>
+
     </div>
   );
 };
