@@ -7,7 +7,9 @@ const Mainlayout = () => {
         <div className=''>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
+            <div className='bg-gray-300'>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
