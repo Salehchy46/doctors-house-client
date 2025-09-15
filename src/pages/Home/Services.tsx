@@ -3,7 +3,7 @@ import docimage from '../../assets/docimg.jpg'
 const Services = () => {
     return (
         <div className='hero max-w-[1600px] mx-auto bg-white dark:bg-white text-black dark:text-black'>
-            <div className='hero-content lg:flex-wrap flex-col py-20'>
+            <div className='hero-content lg:flex md:flex-row flex-col py-20'>
                 <div className='flex-1 m-6'>
                     <img src={docimage} className='rounded-xl w-[550px] h-[1050]' alt="" />
                 </div>
