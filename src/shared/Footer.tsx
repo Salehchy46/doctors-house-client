@@ -1,133 +1,97 @@
 "use client";
-import { FaClinicMedical } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="p-3 bg-gradient-to-r from-teal-300 to-teal-500 dark:from-teal-800 dark:to-teal-950 text-gray-900 dark:text-white py-12 px-4 font-inter border-t border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className=" mx-auto p-3 max-w-[1600px] bg-gray-300 text-black py-12 px-4 font-inter border-t border-gray-200 dark:border-gray-800">
+      <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <FaClinicMedical className="text-6xl mr-3"></FaClinicMedical>
+            <img src="/transparent-bg-logo.png" className="w-20" alt="" />
             <h3 className="text-[35px] font-bold">
-              <span className="text-[#F7A582]">Doc</span> House
+              <span className="text-[#F7A582]">Doc</span> <span className="text-teal-950">House</span>
             </h3>
           </div>
-          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          <p className=" text-sm leading-relaxed">
             Innovating for a better tomorrow. We are committed to delivering
             high-quality solutions that empower businesses and individuals.
           </p>
-          
+          <button className="btn btn-xl bg-gray-300 border-[#F7A582] text-[#F7A582]">Appointment</button>
+           
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+          <h3 className="text-[25px] font-bold dark:text-black">
             Quick Links
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Home
-              </a>
+                <Link to='/about'>About Us</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                About Us
-              </a>
+                <Link to='/service'>Service</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Services
-              </a>
+                <Link to='/doctors'>Doctors</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Portfolio
-              </a>
+                <Link to='/departments'>Departments</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Blog
-              </a>
+                <Link to='/olinePaments'>Online Paments</Link>
+            </li>
+            <li>
+                <Link to='/contactUs'>Contact Us</Link>
+            </li>
+            <li>
+                <Link to='/myAccount'>My Account</Link>
             </li>
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            Resources
+          <h3 className="text-[25px] font-bold dark:text-black">
+            Doc House Services
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Support
-              </a>
+              <Link to='/pediatricClinic'>Pediatric Clinic</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                FAQs
-              </a>
+              <Link to='/diagonsisClinic'>Diagonsis Clinic</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Privacy Policy
-              </a>
+              <Link to='/cardiacClinic'>Cardiac Clinic</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Terms of Service
-              </a>
+              <Link to='/laboratoryanalysis'>Laboratory Analysis</Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors duration-300"
-              >
-                Careers
-              </a>
+              <Link to='/gynecologicalClinic'>Gynecological Clinic</Link>
             </li>
+            <li>
+              <Link to='/personalCounseling'>Personal Counseling</Link>
+            </li>
+            <li>
+              <Link to='/dentalClinic'>Dental Clinic</Link>
+            </li>
+            
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            Contact Us
+          <h3 className="text-[25px] font-bold dark:text-black">
+            Working Hours
           </h3>
-          <p className="text-gray-600 dark:text-gray-300">
-            123 Tech Avenue, Innovation City, 98765
-          </p>
-          <p className="text-gray-600 dark:text-gray-300">
-            Email: info@yourbrand.com
-          </p>
-          <p className="text-gray-600 dark:text-gray-300">
-            Phone: +1 (555) 123-4567
-          </p>
+          <p className="text-xl font-semibold text-gray-500">Monday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Tuesday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Wednesday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Thursday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Friday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Saturday - 10 am to 7 pm</p>
+          <p className="text-xl font-semibold text-gray-500">Sunday - 10 am to 7 pm</p>
         </div>
       </div>
-      <div className="text-center text-gray-500 dark:text-gray-400 text-sm pt-10 mt-10 dark:border-gray-700">
+      <div className="border-t-2 mt-10 border-gray-600 mx-20"></div>
+      <div className="text-center text-gray-600 dark:text-gray-700 text-sm pt-10 mt-10 dark:border-gray-700">
         <p>
           &copy; {new Date().getFullYear()} Doc House. All rights reserved.
         </p>

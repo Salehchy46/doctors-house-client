@@ -1,7 +1,6 @@
 "use client"
 import { useTheme } from "next-themes";
 import { useState } from "react";
-import { FaClinicMedical } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 // Icons from lucide-react, commonly used with shadcn/ui
@@ -118,19 +117,19 @@ const Header = () => {
     };
 
     return (
-        <header className="p-3 fixed z-10 opacity-80 bg-transparent text-gray-900 backdrop-blur-sm top-0 w-full">
+        <header className="p-3 fixed z-10 opacity-80 bg-transparent text-gray-900 dark:text-white backdrop-blur-sm top-0 w-full">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="navbar items-center h-16 my-10">
                     {/* Logo Section */}
-                    <div className="flex-shrink-0">
+                    <div className="navbar-start flex-shrink-0">
                         <a href="#" className="flex items-center gap-2">
-                            <FaClinicMedical className="text-6xl mr-3 text-gray-900 dark:text-white" />
+                            <img src="/logo-docs.png" className="w-20" alt="" />
                             <span className="text-[35px] font-bold text-gray-900 dark:text-white"><span className="text-[#F7A582]">Doc</span> House</span>
                         </a>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center navbar-end gap-3 text-white">
+                    <nav className="navbar-end hidden md:flex items-center gap-3 text-white">
                         {navLinks}
                         <button
                             onClick={toggleTheme}
