@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" mx-auto p-3 max-w-[1600px] bg-gray-300 text-black py-12 px-4 font-inter border-t border-gray-200 dark:border-gray-800">
+    <footer className=" mx-auto p-3 max-w-[1600px] bg-gray-300 text-black py-12 px-4 font-inter">
       <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
@@ -96,7 +96,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Doc House. All rights reserved.
         </p>
         <p className="mt-1">
-          Designed<span className="text-red-500"></span> by Saleh
+          Designed by Saleh
         </p>
       </div>
     </footer>
