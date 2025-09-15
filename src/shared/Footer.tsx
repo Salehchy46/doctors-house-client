@@ -26,25 +26,25 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3">
             <li>
-                <Link to='/about'>About Us</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/about'>About Us</Link>
             </li>
             <li>
-                <Link to='/service'>Service</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/service'>Service</Link>
             </li>
             <li>
-                <Link to='/doctors'>Doctors</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/doctors'>Doctors</Link>
             </li>
             <li>
-                <Link to='/departments'>Departments</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/departments'>Departments</Link>
             </li>
             <li>
-                <Link to='/olinePaments'>Online Paments</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/olinePaments'>Online Paments</Link>
             </li>
             <li>
-                <Link to='/contactUs'>Contact Us</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/contactUs'>Contact Us</Link>
             </li>
             <li>
-                <Link to='/myAccount'>My Account</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/myAccount'>My Account</Link>
             </li>
           </ul>
         </div>
@@ -54,25 +54,25 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <Link to='/pediatricClinic'>Pediatric Clinic</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/pediatricClinic'>Pediatric Clinic</Link>
             </li>
             <li>
-              <Link to='/diagonsisClinic'>Diagonsis Clinic</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/diagonsisClinic'>Diagonsis Clinic</Link>
             </li>
             <li>
-              <Link to='/cardiacClinic'>Cardiac Clinic</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/cardiacClinic'>Cardiac Clinic</Link>
             </li>
             <li>
-              <Link to='/laboratoryanalysis'>Laboratory Analysis</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/laboratoryanalysis'>Laboratory Analysis</Link>
             </li>
             <li>
-              <Link to='/gynecologicalClinic'>Gynecological Clinic</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/gynecologicalClinic'>Gynecological Clinic</Link>
             </li>
             <li>
-              <Link to='/personalCounseling'>Personal Counseling</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/personalCounseling'>Personal Counseling</Link>
             </li>
             <li>
-              <Link to='/dentalClinic'>Dental Clinic</Link>
+              <Link className="text-xl font-semibold text-gray-500" to='/dentalClinic'>Dental Clinic</Link>
             </li>
             
           </ul>
@@ -90,8 +90,8 @@ const Footer = () => {
           <p className="text-xl font-semibold text-gray-500">Sunday - 10 am to 7 pm</p>
         </div>
       </div>
-      <div className="border-t-2 mt-10 border-gray-600 mx-20"></div>
-      <div className="text-center text-gray-600 dark:text-gray-700 text-sm pt-10 mt-10 dark:border-gray-700">
+      <div className="border-t-2 mt-10 border-gray-500 mx-20"></div>
+      <div className="text-center text-gray-500 dark:text-gray-700 text-sm pt-10 mt-10 dark:border-gray-500">
         <p>
           &copy; {new Date().getFullYear()} Doc House. All rights reserved.
         </p>
