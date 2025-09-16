@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import ContactForm from "./Contact";
 import Experts from "./Experts";
 import Medicons from "./Medicons";
 import Reviews from "./Reviews";
@@ -22,7 +23,9 @@ const Home = () => {
       <div className="bg-white">
         <Experts></Experts>
       </div>
-
+      <div className="bg-white">
+        <ContactForm></ContactForm>
+      </div>
     </div>
   );
 };
