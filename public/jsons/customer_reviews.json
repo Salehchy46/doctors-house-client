@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Lee",
+    "image": "https://i.ibb.co.com/MxKtwrH8/Ellipse-2-1.png",
+    "review": "Excellent quality and fast delivery! Highly recommended.",
+    "review_time": "2025-05-18 16:15:16"
+  },
+  {
+    "id": 2,
+    "name": "Michael Johnson",
+    "image": "https://i.ibb.co.com/8nmzcymf/Ellipse-2.png",
+    "review": "Customer support was very helpful and guided me through the purchase.",
+    "review_time": "2025-08-16 16:15:16"
+  },
+  {
+    "id": 3,
+    "name": "Emily Carter",
+    "image": "https://i.ibb.co.com/MxKtwrH8/Ellipse-2-1.png",
+    "review": "Affordable prices and genuine products. Will shop again.",
+    "review_time": "2025-07-23 16:15:16"
+  },
+  {
+    "id": 4,
+    "name": "Rajesh Patel",
+    "image": "https://i.ibb.co.com/8nmzcymf/Ellipse-2.png",
+    "review": "The product arrived on time and was exactly as described.",
+    "review_time": "2025-04-22 16:15:16"
+  },
+  {
+    "id": 5,
+    "name": "Sophia Nguyen",
+    "image": "https://i.ibb.co.com/MxKtwrH8/Ellipse-2-1.png",
+    "review": "Reliable supplier for our clinic. Thank you!",
+    "review_time": "2025-06-21 16:15:16"
+  },
+  {
+    "id": 6,
+    "name": "Ahmed Khan",
+    "image": "https://i.ibb.co.com/8nmzcymf/Ellipse-2.png",
+    "review": "Good variety of equipment and easy-to-use website.",
+    "review_time": "2025-06-13 16:15:16"
+  },
+  {
+    "id": 7,
+    "name": "Laura Smith",
+    "image": "https://i.ibb.co.com/MxKtwrH8/Ellipse-2-1.png",
+    "review": "I am impressed with the quality and packaging.",
+    "review_time": "2025-03-15 16:15:16"
+  },
+  {
+    "id": 8,
+    "name": "Carlos Martinez",
+    "image": "https://i.ibb.co.com/8nmzcymf/Ellipse-2.png",
+    "review": "Very professional service and prompt responses.",
+    "review_time": "2025-05-29 16:15:16"
+  },
+  {
+    "id": 9,
+    "name": "Hannah Brown",
+    "image": "https://i.ibb.co.com/MxKtwrH8/Ellipse-2-1.png",
+    "review": "One of the best online stores for medical supplies.",
+    "review_time": "2025-03-24 16:15:16"
+  },
+  {
+    "id": 10,
+    "name": "David Wilson",
+    "image": "https://i.ibb.co.com/8nmzcymf/Ellipse-2.png",
+    "review": "Great experience overall. Will recommend to others.",
+    "review_time": "2025-06-29 16:15:16"
+  }
+]

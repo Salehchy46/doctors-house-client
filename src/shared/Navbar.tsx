@@ -117,13 +117,13 @@ const Header = () => {
     };
 
     return (
-        <header className="p-3 fixed z-10 opacity-80 bg-transparent text-gray-900 dark:text-white backdrop-blur-sm top-0 w-full">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="hero p-3 fixed z-10 opacity-80 bg-transparent text-gray-900 dark:text-white backdrop-blur-sm top-0 w-full">
+            <div className="hero-content container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="navbar items-center h-16 my-10">
                     {/* Logo Section */}
                     <div className="navbar-start flex-shrink-0">
                         <a href="#" className="flex items-center gap-2">
-                            <img src="/logo-docs.png" className="w-20" alt="" />
+                            <img src="./logo/logo-docs.png" className="w-20" alt="" />
                             <span className="text-[35px] font-bold text-gray-900 dark:text-white"><span className="text-[#F7A582]">Doc</span> House</span>
                         </a>
                     </div>

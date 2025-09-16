@@ -17,11 +17,12 @@ const Home = () => {
         <Medicons></Medicons>
       </div>
       <div className="bg-white">
-        <Experts></Experts>
-      </div>
-      <div className="bg-white">
         <Reviews></Reviews>
       </div>
+      <div className="bg-white">
+        <Experts></Experts>
+      </div>
+
     </div>
   );
 };

@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" mx-auto p-3 max-w-[1600px] text-black py-12 px-4 font-inter">
+    <footer className="mx-auto p-3 max-w-[1600px] text-black py-12 px-4 font-inter">
       <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <img src="/transparent-bg-logo.png" className="w-20" alt="" />
+            <img src="./logo/transparent-bg-logo.png" className="w-20" alt="" />
             <h3 className="text-[35px] font-bold">
               <span className="text-[#F7A582]">Doc</span> <span className="text-teal-950">House</span>
             </h3>
