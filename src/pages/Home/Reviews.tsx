@@ -1,14 +1,14 @@
 import Heading from "@/components/sharedComponents/Heading";
 import { useEffect, useState } from "react";
-import quote from '../../assets/quote.png'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import quote from "../../assets/quote.png";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 
 // import required modules
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 
 type Review = {
   name: string;
@@ -21,8 +21,8 @@ const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
-    fetch('./jsons/customer_reviews.json')
-      .then(res => res.json())
+    fetch("./jsons/customer_reviews.json")
+      .then((res) => res.json())
       .then((data: Review[]) => {
         console.log(data);
         setReviews(data);
@@ -45,11 +45,10 @@ const Reviews = () => {
           modules={[Navigation]}
           navigation={true}
           slidesPerView={2}
-          onSlideChange={() => console.log('slide change')}
+          onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
           {reviews.map((review) => (
-
             <SwiperSlide>
               <div className="card w-[550px] h-[280px] shadow-sm">
                 <div className="card-body">
@@ -72,7 +71,7 @@ const Reviews = () => {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper >
+        </Swiper>
       </div>
     </div>
   );
