@@ -6,7 +6,7 @@ import { CiLocationOn } from "react-icons/ci";
 const ContactForm: React.FC = () => {
     return (
         <section className=" flex justify-center py-12">
-            <div className="hero max-w-[1150px] bg-teal-950 text-white rounded-xl">
+            <div className="hero max-w-[1280px] bg-teal-950 text-white rounded-xl">
                 <div className="hero-content grid md:grid-cols-2 gap-8 p-20">
                     {/* LEFT INFO */}
                     <div>

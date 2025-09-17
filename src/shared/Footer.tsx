@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto p-3 max-w-[1600px] text-black py-12 px-4 font-inter">
-      <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <footer className=" mx-auto max-w-[1280px] text-black py-12 font-inter">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <img src="./logo/transparent-bg-logo.png" className="w-20" alt="" />
@@ -17,7 +17,7 @@ const Footer = () => {
             Innovating for a better tomorrow. We are committed to delivering
             high-quality solutions that empower businesses and individuals.
           </p>
-          <button className="btn btn-xl bg-gray-300 border-[#F7A582] text-[#F7A582]">Appointment</button>
+          <button className="btn btn-xl bg-gray-300 border-[#F7A582] text-[#F7A582]  hover:bg-[#F7A582] hover:text-white">Appointment</button>
            
         </div>
         <div className="space-y-4">

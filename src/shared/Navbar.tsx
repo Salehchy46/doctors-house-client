@@ -117,8 +117,8 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-teal-950 p-3 z-10 opacity-80 text-gray-900 dark:text-white backdrop-blur-sm top-0 w-full">
-            <div className=" max-w-[1600px] mx-auto">
+        <header className="bg-teal-950 p-3 z-10 opacity-80 text-gray-900 dark:text-white top-0 w-full">
+            <div className=" max-w-[1280px] mx-auto">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="navbar items-center h-16 my-10">
                         {/* Logo Section */}

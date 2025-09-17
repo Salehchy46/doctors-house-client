@@ -32,7 +32,7 @@ const Reviews = () => {
   console.log(reviews);
 
   return (
-    <div className="max-w-[1600px] mx-auto bg-white text-black">
+    <div className="max-w-[1280px] mx-auto bg-white text-black">
       <Heading
         title={"What Our Patients Says"}
         subTitle={
