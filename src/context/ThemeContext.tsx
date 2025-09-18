@@ -1,5 +1,13 @@
-import { createContext } from "react";
+import { createContext } from "react"
 
-const ThemeContext = createContext();
+export interface ThemeContextType {
+  theme: "light" | "dark"
+  toggleTheme: () => void
+}
 
-export default ThemeContext;
+const ThemeContext = createContext<ThemeContextType>({
+  theme: "light",    
+  toggleTheme: () => {}, 
+})
+
+export default ThemeContext

@@ -4,6 +4,7 @@ import doctor2 from '../../assets/doctor2.png'
 import doctor3 from '../../assets/doctor3.png'
 import { CiLocationOn } from "react-icons/ci";
 import { CiCalendar, CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Experts = () => {
 
@@ -91,7 +92,9 @@ const Experts = () => {
                                     <p>{experts.visit}</p>
                                 </div>
                                 <div className="card-actions">
-                                    <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">View Profile</button>
+                                    <Link to='/doctorprofile'>
+                                        <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">View Profile</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>)
