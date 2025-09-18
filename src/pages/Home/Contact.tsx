@@ -35,12 +35,12 @@ const ContactForm: React.FC = () => {
                             <input
                                 type="text"
                                 placeholder="Name"
-                                className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300"
+                                className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300"
                             />
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300"
+                                className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300"
                             />
                         </div>
 
@@ -48,12 +48,12 @@ const ContactForm: React.FC = () => {
                             <input
                                 type="text"
                                 placeholder="Mobile Number"
-                                className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300"
+                                className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300"
                             />
                             <input
                                 type="text"
                                 placeholder="Doctor Name"
-                                className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300"
+                                className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300"
                             />
                         </div>
 
@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
                                 <input
                                     type="date"
                                     placeholder="Date"
-                                    className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300 pr-10"
+                                    className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300 pr-10"
                                 />
                                 <CalendarIcon className="absolute right-3 top-3.5 h-5 w-5 text-gray-300" />
                             </div>
@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
                                 <input
                                     type="time"
                                     placeholder="Time"
-                                    className="input input-bordered w-full bg-teal-900 text-white placeholder-gray-300 pr-10"
+                                    className="input input-bordered w-full bg-teal-950 text-white placeholder-gray-300 pr-10"
                                 />
                                 <Clock className="absolute right-3 top-3.5 h-5 w-5 text-gray-300" />
                             </div>
