@@ -6,7 +6,7 @@ import Locations from "./Details/Locations";
 
 const MyTabs: React.FC = () => {
   return (
-    <div className="max-w-[1280px] mx-auto bg-white">
+    <div className="max-w-[1280px] mx-auto rounded-xl bg-white">
       <div className="p-7">
         <Tabs>
           <TabList className="flex gap-2">

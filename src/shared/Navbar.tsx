@@ -56,6 +56,14 @@ const Header = () => {
           Login
         </NavLink>
       </ul>
+      <ul>
+        <NavLink
+          
+          to="/register"
+        >
+          Register
+        </NavLink>
+      </ul>
     </>
   );
 

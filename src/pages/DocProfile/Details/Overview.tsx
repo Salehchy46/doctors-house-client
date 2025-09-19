@@ -50,13 +50,11 @@ const Overview: React.FC = () => {
     }, []);
 
     if (!details) {
-        return <div>Loading…</div>;
+        return <div className="min-h-screen text-center items-center">Loading…</div>;
     }
 
     return (
         <div className="">
-            <h1 className="text-2xl font-bold mt-5">{details.name}</h1>
-
             <h6 className="text-xl font-bold mt-5">About Me</h6>
             <p className="my-3">{details.about_me}</p>
 
