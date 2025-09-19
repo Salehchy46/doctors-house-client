@@ -1,11 +1,13 @@
+// @ts-expect-error
+import "swiper/css"
+// @ts-expect-error
+import "swiper/css/navigation"
 import Heading from "@/components/sharedComponents/Heading"
 import { useEffect, useState } from "react"
 import quote from "../../assets/quote.png"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
 
 import { Navigation } from "swiper/modules"
 

@@ -16,8 +16,8 @@ const Docprofile: React.FC = () => {
                     <DocDetail></DocDetail>
                 </div>
             </div>
-            <div className='bg-white'>
-                <div className='max-w-[1280px] text-black'>
+            <div className='bg-gray-100'>
+                <div className='-100 max-w-[1280px] mx-auto text-black'>
                     <Resume></Resume>
                 </div>
             </div>

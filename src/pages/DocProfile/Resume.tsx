@@ -1,44 +1,46 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Overview from "./Details/Overview";
+import Locations from "./Details/Locations";
 
 const MyTabs: React.FC = () => {
   return (
-    <div className="hero max-w-[1280px] mx-auto">
-      <div className="hero-content">
+    <div className="max-w-[1280px] mx-auto bg-white">
+      <div className="p-7">
         <Tabs>
-          <TabList>
+          <TabList className="flex gap-2">
             <Tab
-              className="px-3 rounded hover:border-b-0"
-              selectedClassName="border-b-2 px-3 rounded"
+              className="px-10 rounded-tl-xl hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
+              selectedClassName="bg-[#F7A582] p-3 text-white"
             >
               Overview
             </Tab>
             <Tab
-              className="px-3 rounded hover:border-b-0"
-              selectedClassName="border-b-2 px-3 rounded"
+              className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
+              selectedClassName="bg-[#F7A582] p-3 text-white"
             >
               Location
             </Tab>
             <Tab
-              className="px-3 rounded hover:border-b-0"
-              selectedClassName="border-b-2 px-3 rounded"
+              className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
+              selectedClassName="bg-[#F7A582] p-3 text-white"
             >
               Reviews
             </Tab>
             <Tab
-              className="px-3 rounded hover:border-b-0"
-              selectedClassName="border-b-2 px-3 rounded"
+              className="px-10 rounded-tr-xl hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
+              selectedClassName="bg-[#F7A582] p-3 text-white"
             >
               Business Hours
             </Tab>
           </TabList>
 
           <TabPanel>
-            <h2>Any content 1</h2>
+            <Overview></Overview>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <Locations></Locations>
           </TabPanel>
           <TabPanel>
             <h2>Any content 3</h2>
