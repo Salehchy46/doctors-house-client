@@ -16,7 +16,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/"
@@ -28,7 +28,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/about"
@@ -40,7 +40,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/appointment"
@@ -50,11 +50,7 @@ const Header = () => {
       </ul>
       <ul>
         <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-2 border-[#F7A582] px-3 rounded"
-              : "px-3 rounded hover:border-b-0"
-          }
+          
           to="/login"
         >
           Login

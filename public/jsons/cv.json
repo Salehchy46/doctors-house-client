@@ -1,65 +1,75 @@
-[
+{
+  "name": "Dr. Sarah Khan",
+  "about_me": "Dedicated dental professional with over 15 years of experience in family and cosmetic dentistry. Passionate about patient education and preventative care with a commitment to excellence and community service.",
+  "education": [
     {
-        "name": "Dr. [Name Here]",
-        "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-        "education": [
-            {
-                "institution": "American Dental Medical University",
-                "degree": "BDS",
-                "years": "1998 - 2003"
-            },
-            {
-                "institution": "American Dental Medical University",
-                "degree": "MDS",
-                "years": "2003 - 2005"
-            }
-        ],
-        "work_experience": [
-            {
-                "clinic": "Glowing Smiles Family Dental Clinic",
-                "years": "2010 - Present (5 years)"
-            },
-            {
-                "clinic": "Comfort Care Dental Clinic",
-                "years": "2007 - 2010 (3 years)"
-            },
-            {
-                "clinic": "Dream Smile Dental Practice",
-                "years": "2005 - 2007 (2 years)"
-            }
-        ],
-        "services": [
-            "Tooth cleaning",
-            "Root Canal Therapy",
-            "Implants",
-            "Composite Bonding",
-            "Fissure Sealants",
-            "Surgical Extractions"
-        ],
-        "awards": [
-            {
-                "date": "July 2019",
-                "title": "Humanitarian Award",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-            },
-            {
-                "date": "March 2011",
-                "title": "Certificate for International Volunteer Service",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-            },
-            {
-                "date": "May 2008",
-                "title": "The Dental Professional of The Year Award",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-            }
-        ],
-        "specializations": [
-            "Children Care",
-            "Dental Care",
-            "Oral and Maxillofacial Surgery",
-            "Orthodontist",
-            "Periodontist",
-            "Prosthodontics"
-        ]
+      "institution": "American Dental Medical University",
+      "degree": "BDS",
+      "years": "1998 - 2003"
+    },
+    {
+      "institution": "American Dental Medical University",
+      "degree": "MDS (Oral and Maxillofacial Surgery)",
+      "years": "2003 - 2005"
     }
-]
+  ],
+  "work_experience": [
+    {
+      "clinic": "Glowing Smiles Family Dental Clinic",
+      "role": "Senior Dentist",
+      "years": "2010 - Present (15 years)"
+    },
+    {
+      "clinic": "Comfort Care Dental Clinic",
+      "role": "Associate Dentist",
+      "years": "2007 - 2010 (3 years)"
+    },
+    {
+      "clinic": "Dream Smile Dental Practice",
+      "role": "Junior Dentist",
+      "years": "2005 - 2007 (2 years)"
+    }
+  ],
+  "services": [
+    "Tooth Cleaning",
+    "Root Canal Therapy",
+    "Implants",
+    "Composite Bonding",
+    "Fissure Sealants",
+    "Surgical Extractions"
+  ],
+  "awards": [
+    {
+      "date": "July 2019",
+      "title": "Humanitarian Award",
+      "description": "Recognized for providing free dental care to underserved communities in rural areas."
+    },
+    {
+      "date": "March 2011",
+      "title": "Certificate for International Volunteer Service",
+      "description": "Awarded for volunteering dental services in international health missions."
+    },
+    {
+      "date": "May 2008",
+      "title": "Dental Professional of The Year Award",
+      "description": "Honored for outstanding contributions in clinical excellence and patient care."
+    }
+  ],
+  "specializations": [
+    "Children Care",
+    "Dental Care",
+    "Oral and Maxillofacial Surgery",
+    "Orthodontics",
+    "Periodontics",
+    "Prosthodontics"
+  ],
+  "contact": {
+    "email": "sarah.khan@example.com",
+    "phone": "+1-555-678-1234",
+    "image": "https://i.ibb.co/placeholder/doctor-sarah.jpg",
+    "country": "United States",
+    "hospital": "Glowing Smiles Family Dental Clinic",
+    "rating": 4.5,
+    "experience_years": 15
+  }
+}

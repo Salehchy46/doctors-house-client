@@ -92,7 +92,7 @@ const Experts = () => {
                                     <p>{experts.visit}</p>
                                 </div>
                                 <div className="card-actions">
-                                    <Link to='/doctorprofile'>
+                                    <Link to='/doctorprofile' className="w-full">
                                         <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">View Profile</button>
                                     </Link>
                                 </div>

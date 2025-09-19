@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import DocDetail from './DocDetail';
+import Resume from './Resume';
 
 const Docprofile: React.FC = () => {
     return (
@@ -13,6 +14,11 @@ const Docprofile: React.FC = () => {
             <div className='bg-gray-100'>
                 <div className='pt-28 pb-10 text-black max-w-[1280px] mx-auto'>
                     <DocDetail></DocDetail>
+                </div>
+            </div>
+            <div className='bg-white'>
+                <div className='max-w-[1280px] text-black'>
+                    <Resume></Resume>
                 </div>
             </div>
         </div>
