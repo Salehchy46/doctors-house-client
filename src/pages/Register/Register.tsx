@@ -41,7 +41,7 @@ const Register: React.FC = () => {
                       <input type="email" className="input bg-gray-100" placeholder="Enter your Email" />
                       <label className="label text-xl font-semibold">Password</label>
                       <input type="password" className="input bg-gray-100" placeholder="Enter your Password" />
-                      <button className="btn btn-lg py-5 border-0 bg-[#F7A582] mt-4">Create Account</button>
+                      <button className="btn btn-lg py-5 border-0 bg-[#F7A582] mt-4 rounded-xl">Create Account</button>
                     </fieldset>
                   </form>
                   <p className='text-[18px] text-center'>Already registered? Go to <Link to='/login' className='text-[#F7A582] font-bold'>SIGN IN</Link></p>

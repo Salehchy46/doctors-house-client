@@ -16,6 +16,7 @@ const Register: React.FC = () => {
                     <img className='w-[460px] h-80 relative right-72 bottom-40' src={frame1} alt="" />
                 </div>
             </div>
+            <Link to='/' className='btn btn-lg relative top-[750px] bg-gradient-to-r from-60% from-teal-950 to-50% to-white mx-auto text-teal-700 border-0'>Home</Link>
             {/* Right side - Login Form */}
             <div className="w-full bg-white text-black items-center justify-center p-8">
                 <div className="w-full max-w-md space-y-8">
@@ -39,7 +40,7 @@ const Register: React.FC = () => {
                                                 <div><a className="link link-hover text-[#F7A582]">Forgot password?</a></div>
                                             </div>
                                             <input type="password" className="input bg-gray-100" placeholder="Enter your Password" />
-                                            <button className="btn btn-lg py-5 border-0 bg-[#F7A582] mt-4">Create Account</button>
+                                            <button className="btn btn-lg py-5 border-0 bg-[#F7A582] mt-4 rounded-xl">Create Account</button>
                                         </fieldset>
                                     </form>
                                     <p className='text-[18px] text-center'>Please register at first. Go to <Link to='/register' className='text-[#F7A582] font-bold'>SIGN UP</Link></p>
