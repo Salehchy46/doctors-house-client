@@ -30,11 +30,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>,
+                element: <div className="bg-gradient-to-r from-teal-950 via-teal-950 to-50% to-white">
+                    <Login></Login>
+                </div>,
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <div className="bg-gradient-to-r from-teal-950 via-teal-950 to-50% to-white">
+                    <Register></Register>
+                </div>,
             }
         ]
     },
