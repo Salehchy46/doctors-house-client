@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" mx-auto max-w-[1280px] text-black py-12 font-inter">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <footer className=" max-w-[1280px] mx-auto text-black py-12 font-inter">
+      <div className="container mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <img src="./logo/transparent-bg-logo.png" className="w-20" alt="" />
