@@ -50,7 +50,11 @@ const Header = () => {
       </ul>
       <ul>
         <NavLink
-          
+          className={({ isActive }) =>
+            isActive
+              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+              : "px-3 rounded hover:border-b-0"
+          }
           to="/login"
         >
           Login
@@ -58,7 +62,11 @@ const Header = () => {
       </ul>
       <ul>
         <NavLink
-          
+          className={({ isActive }) =>
+            isActive
+              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+              : "px-3 rounded hover:border-b-0"
+          }
           to="/register"
         >
           Register
@@ -72,9 +80,9 @@ const Header = () => {
   };
 
   return (
-    <header className="p-3 z-10 opacity-80 text-gray-900 fixed dark:text-white backdrop-blur-sm w-full">
+    <header className="py-3 z-10 opacity-80 text-gray-900 fixed dark:text-white backdrop-blur-sm w-full">
       <div className="max-w-[1280px] mx-auto">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
           <div className="navbar items-center h-16 my-5">
             {/* Logo */}
             <div className="navbar-start flex-shrink-0">

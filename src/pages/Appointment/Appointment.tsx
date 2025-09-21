@@ -1,8 +1,21 @@
+import CalendarHero from "./Calender";
+import Hero from "./Hero";
+import bgchair from '../../assets/appointment/landing-bg.png'
+import Service from "./Service";
 
 const Appointment = () => {
     return (
         <div>
-            <h3 className="text-3xl font-bold text-center my-10">Appointment</h3>
+            <div className="bg-teal-950">
+                <Hero></Hero>
+            </div>
+            <div className="bg-white flex flex-col" style={{
+                backgroundImage:
+                    `url(${bgchair})`,
+            }}>
+                <CalendarHero></CalendarHero>
+                <Service></Service>
+            </div>
         </div>
     );
 };

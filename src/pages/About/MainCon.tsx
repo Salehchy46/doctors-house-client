@@ -2,9 +2,9 @@ import React from 'react';
 
 const MainCon: React.FC = () => {
     return (
-        <div className="w-full max-w-[1280px] mx-auto bg-gray-50 text-gray-800">
+        <div className="w-full max-w-[1280px] mx-auto pt-10 text-gray-800">
             {/* Main Content */}
-            <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[1280px] bg-gray-100 rounded-xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Text Section */}
                 <div>
                     <h2 className="text-3xl font-bold text-teal-900 mb-6">
@@ -42,11 +42,11 @@ const MainCon: React.FC = () => {
 
             {/* Values Section */}
             <div className="bg-white py-16">
-                <div className="max-w-6xl mx-auto px-6 text-center">
+                <div className="max-w-[1280px] mx-auto text-center">
                     <h2 className="text-3xl font-bold text-teal-950 mb-10">
                         Our Core Values
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         <div className="p-6 bg-gray-100 rounded-xl shadow">
                             <h3 className="text-xl font-semibold mb-3">Compassion</h3>
                             <p>
