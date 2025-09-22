@@ -1,6 +1,8 @@
+import Dashboard from "@/layouts/Dashboard";
 import Mainlayout from "@/layouts/Mainlayout";
 import About from "@/pages/About/About";
 import Appointment from "@/pages/Appointment/Appointment";
+import MyAppointment from "@/pages/Dashboard/MyAppointment";
 import Docprofile from "@/pages/DocProfile/Docprofile";
 import Error from "@/pages/ErrorPage/Error";
 import Home from "@/pages/Home/Home";
@@ -46,4 +48,14 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/dashboard', 
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: '/dashboard/myappointment',
+                element: <MyAppointment></MyAppointment>,
+            }
+        ]
+    }
 ])
