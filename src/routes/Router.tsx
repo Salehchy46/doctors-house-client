@@ -2,6 +2,7 @@ import Dashboard from "@/layouts/Dashboard";
 import Mainlayout from "@/layouts/Mainlayout";
 import About from "@/pages/About/About";
 import Appointment from "@/pages/Appointment/Appointment";
+import ManageDocs from "@/pages/Dashboard/AdminPanel/ManageDocs";
 import MyAppointment from "@/pages/Dashboard/MyAppointment";
 import Docprofile from "@/pages/DocProfile/Docprofile";
 import Error from "@/pages/ErrorPage/Error";
@@ -55,6 +56,13 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/myappointment',
                 element: <MyAppointment></MyAppointment>,
+            },
+            {
+                path: '/dashboard/addadoctor',
+            },
+            {
+                path: '/dashboard/managedocs',
+                element: <ManageDocs></ManageDocs>
             }
         ]
     }

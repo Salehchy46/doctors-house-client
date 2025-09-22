@@ -75,7 +75,7 @@ const Header = () => {
   );
 
   return (
-    <header className="py-3 z-10 opacity-80 text-gray-900 fixed dark:text-white backdrop-blur-sm w-full">
+    <header className="py-3 z-10 opacity-80 text-gray-900 bg-teal-950  w-full">
       <div className="max-w-[1280px] mx-auto">
         <div className="container mx-auto">
           <div className="navbar items-center h-16 my-5">
@@ -93,7 +93,7 @@ const Header = () => {
             <nav className="navbar-end hidden md:flex items-center gap-3 text-white">
               {navLinks}
               <button className="">
-                <NavLink to='/dashboard/myappointment'><FaCartArrowDown></FaCartArrowDown></NavLink>
+                <NavLink to='/dashboard'><FaCartArrowDown></FaCartArrowDown></NavLink>
               </button>
             </nav>
 
