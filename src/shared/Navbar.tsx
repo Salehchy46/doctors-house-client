@@ -93,7 +93,7 @@ const Header = () => {
             <nav className="navbar-end hidden md:flex items-center gap-3 text-white">
               {navLinks}
               <button className="">
-                <NavLink to='/dashboard'><FaCartArrowDown></FaCartArrowDown></NavLink>
+                <NavLink to='/dashboard/myappointment'><FaCartArrowDown></FaCartArrowDown></NavLink>
               </button>
             </nav>
 
