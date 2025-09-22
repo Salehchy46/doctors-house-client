@@ -16,12 +16,30 @@ const Dashboard: React.FC = () => {
                             isAdmin ?
                                 <>
                                     <li>
-                                        <NavLink to='/dashboard' className={({ isActive }) =>
+                                        <NavLink to='/dashboard/addashboard' className={({ isActive }) =>
                                             isActive
                                                 ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
                                                 : "px-3 rounded hover:border-b-0"
                                         }>
                                             Dashboard
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='/dashboard/allusers' className={({ isActive }) =>
+                                            isActive
+                                                ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+                                                : "px-3 rounded hover:border-b-0"
+                                        }>
+                                            All Users
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='/dashboard/addadoctor' className={({ isActive }) =>
+                                            isActive
+                                                ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+                                                : "px-3 rounded hover:border-b-0"
+                                        }>
+                                            Add A Doctor
                                         </NavLink>
                                     </li>
                                     <li>
@@ -31,6 +49,18 @@ const Dashboard: React.FC = () => {
                                                 : "px-3 rounded hover:border-b-0"
                                         }>
                                             Manage Doctors
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+                                                    : "px-3 rounded hover:border-b-0"
+                                            }
+                                            to="/"
+                                        >
+                                            Home
                                         </NavLink>
                                     </li>
                                 </>
@@ -48,17 +78,18 @@ const Dashboard: React.FC = () => {
                                             My Appointments
                                         </NavLink>
                                     </li>
-                                    <div className='divider'></div>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive
-                                                ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
-                                                : "px-3 rounded hover:border-b-0"
-                                        }
-                                        to="/"
-                                    >
-                                        Home
-                                    </NavLink>
+                                    <li>
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+                                                    : "px-3 rounded hover:border-b-0"
+                                            }
+                                            to="/"
+                                        >
+                                            Home
+                                        </NavLink>
+                                    </li>
                                 </>
                         }
                     </ul>

@@ -2,6 +2,9 @@ import Dashboard from "@/layouts/Dashboard";
 import Mainlayout from "@/layouts/Mainlayout";
 import About from "@/pages/About/About";
 import Appointment from "@/pages/Appointment/Appointment";
+import AddaDoctor from "@/pages/Dashboard/AdminPanel/AddaDoctor";
+import AdDashboard from "@/pages/Dashboard/AdminPanel/AdDashboard";
+import AllUsers from "@/pages/Dashboard/AdminPanel/AllUsers";
 import ManageDocs from "@/pages/Dashboard/AdminPanel/ManageDocs";
 import MyAppointment from "@/pages/Dashboard/MyAppointment";
 import Docprofile from "@/pages/DocProfile/Docprofile";
@@ -52,13 +55,25 @@ export const router = createBrowserRouter([
     {
         path: '/dashboard', 
         element: <Dashboard></Dashboard>,
+        errorElement: <div className="bg-white">
+            <Error></Error>
+        </div>,
         children: [
+            {
+                path: '/dashboard/addashboard',
+                element: <AdDashboard></AdDashboard>,
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
+            },
             {
                 path: '/dashboard/myappointment',
                 element: <MyAppointment></MyAppointment>,
             },
             {
                 path: '/dashboard/addadoctor',
+                element: <AddaDoctor></AddaDoctor>,
             },
             {
                 path: '/dashboard/managedocs',
