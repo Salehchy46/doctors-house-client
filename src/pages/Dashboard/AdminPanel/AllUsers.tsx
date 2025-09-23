@@ -20,22 +20,22 @@ const AllUsers: React.FC = () => {
                         <tr>
                             <th>1</th>
                             <td>Cy Ganderton</td>
-                            <td> <button className='btn bg-teal-950'>Make Admin</button></td>
-                            <td><button className='btn bg-teal-950'>Remove User</button></td>
+                            <td> <button className='btn bg-teal-950 text-white'>Make Admin</button></td>
+                            <td><button className='btn bg-teal-950 text-white'>Remove User</button></td>
                         </tr>
                         {/* row 2 */}
                         <tr>
                             <th>2</th>
                             <td>Hart Hagerty</td>
-                            <td> <button className='btn bg-teal-950'>Make Admin</button></td>
-                            <td><button className='btn bg-teal-950'>Remove User</button></td>
+                            <td> <button className='btn bg-teal-950 text-white'>Make Admin</button></td>
+                            <td><button className='btn bg-teal-950 text-white'>Remove User</button></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
                             <th>3</th>
                             <td>Brice Swyre</td>
-                            <td> <button className='btn bg-teal-950'>Make Admin</button></td>
-                            <td><button className='btn bg-teal-950'>Remove User</button></td>
+                            <td> <button className='btn bg-teal-950 text-white'>Make Admin</button></td>
+                            <td><button className='btn bg-teal-950 text-white'>Remove User</button></td>
                         </tr>
                     </tbody>
                 </table>

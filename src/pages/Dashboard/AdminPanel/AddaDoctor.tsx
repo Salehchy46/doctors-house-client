@@ -15,7 +15,7 @@ const AddaDoctor: React.FC = () => {
                 <label className="label">Author</label>
                 <input type="text" className="input bg-white border-2 border-black" placeholder="Name" />
                 <input type="image" accessKey='' />
-                <input type="submit" className='btn w-full bg-teal-950' value="Add" />
+                <input type="submit" className='btn w-full bg-teal-950 text-white' value="Add" />
             </fieldset>
         </div>
     );

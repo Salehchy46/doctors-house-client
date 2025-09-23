@@ -4,9 +4,9 @@ import DateSelector from './DatePicker';
 const MyAppointment: React.FC = () => {
     return (
         <div>
-            <div className='flex justify-between text-black' >
+            <div className='flex justify-between items-center text-black' >
                 <div className=''>
-                    <h2 className='text-2xl'>My Appointment</h2>
+                    <h2 className='text-2xl font-bold mb-10'>My Appointment</h2>
                 </div>
                 <DateSelector></DateSelector>
             </div>
