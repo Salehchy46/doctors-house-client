@@ -24,10 +24,10 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 export default function Piechart() {
     return (
-        <div className='bg-white p-3 rounded-xl w-[500px]'>
+        <div className='bg-white p-3 rounded-xl w-[500px] h-[350px]'>
             <h3 className='text-[#898989] font-semibold'>Appointment</h3>
             <div className='divider'></div>
-            <div className='w-44 h-44 mx-auto'>
+            <div className='w-44 h-44 mx-auto mt-10'>
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart width={400} height={400}>
                         <Pie
