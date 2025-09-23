@@ -48,10 +48,10 @@ const data = [
 
 const RechartAreachart: React.FC = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white p-3 rounded-xl w-[500px]'>
             <h3 className='text-[#898989] font-semibold'>Patients</h3>
             <div className='divider'></div>
-            <div className='w-[420px] h-48'>
+            <div className='w-[440px] h-52 mx-auto'>
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart
                         width={500}
@@ -68,7 +68,7 @@ const RechartAreachart: React.FC = () => {
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#898989" />
                     </AreaChart>
                 </ResponsiveContainer>
             </div>

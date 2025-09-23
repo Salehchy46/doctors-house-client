@@ -7,9 +7,9 @@ const Dashboard: React.FC = () => {
     const isAdmin = true;
 
     return (
-        <div className='bg-white'>
+        <div className='bg-gray-100'>
             <Header></Header>
-            <div className='max-w-[1280px] bg-white mx-auto flex pl-5 py-10 text-black'>
+            <div className='max-w-[1280px] bg-gray-100 mx-auto flex pl-5 py-10 text-black'>
                 <div className='w-64 min-h-screen bg-white'>
                     <ul className='menu'>
                         {

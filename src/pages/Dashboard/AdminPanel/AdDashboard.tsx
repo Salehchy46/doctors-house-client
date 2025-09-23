@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAreachart from './RechartAreachart';
+import Piechart from './PieChart';
 
 const AdDashboard: React.FC = () => {
     return (
@@ -14,7 +15,9 @@ const AdDashboard: React.FC = () => {
                 <div>
                     <ReactAreachart></ReactAreachart>
                 </div>
-                <div></div>
+                <div>
+                    <Piechart></Piechart>
+                </div>
             </div>
         </div>
     );
