@@ -93,7 +93,7 @@ const Header = () => {
             <nav className="navbar-end hidden md:flex items-center gap-3 text-white">
               {navLinks}
               <button className="">
-                <NavLink to='/dashboard'><FaCartArrowDown></FaCartArrowDown></NavLink>
+                <NavLink to='/dashboard/addashboard'><FaCartArrowDown></FaCartArrowDown></NavLink>
               </button>
             </nav>
 
@@ -125,7 +125,7 @@ const Header = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white">
             {navLinks}
             <button className="">
-              <Link to='/dashboard'><FaCartArrowDown></FaCartArrowDown></Link>
+              <Link to='/dashboard/addashboard'><FaCartArrowDown></FaCartArrowDown></Link>
             </button>
           </div>
         </div>
