@@ -1,3 +1,4 @@
+import ScrollToTop from '@/components/scrollToTop/ScrollToTop';
 import Header from '@/shared/Navbar';
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -8,6 +9,7 @@ const Dashboard: React.FC = () => {
 
     return (
         <div className='bg-gradient-to-r from-20% from-white to-30% to-gray-100'>
+            <ScrollToTop />
             <Header></Header>
             <div className='max-w-[1280px] bg-gray-100 mx-auto flex text-black'>
                 <div className='w-[300px] min-h-screen bg-white'>
