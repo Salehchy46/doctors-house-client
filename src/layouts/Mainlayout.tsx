@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../shared/Navbar'
 import Footer from '@/shared/Footer';
+import ScrollToTop from '@/components/scrollToTop/ScrollToTop';
 
 const Mainlayout = () => {
 
@@ -9,6 +10,7 @@ const Mainlayout = () => {
 
     return (
         <div className=''>
+            <ScrollToTop></ScrollToTop>
             {noHeaderFooter || <Navbar></Navbar>}
             <Outlet></Outlet>
             {noHeaderFooter || <div className='bg-gray-300'>

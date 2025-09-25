@@ -17,6 +17,8 @@ const DateSelector: React.FC = () => {
     return currentDate.getTime() < selectedDate.getTime();
   };
 
+  //To do: here will tak ethe date from user
+
   return (
     <div className="p-4">
       <DatePicker

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import img1 from "../../assets/doc1.png";
 import img2 from "../../assets/doc2.png";
 import img3 from "../../assets/doc3.png";
@@ -14,9 +15,11 @@ const Banner = () => {
             <p className="my-10 text-[18px]">
               No man is a good doctor who has never been sick himself
             </p>
-            <button className="btn btn-xl p-8 rounded-xl bg-[#F7A582] hover:bg-transparent hover:border-[#F7A582]">
-              All Service
-            </button>
+            <Link to='/appointment'>
+              <button className="btn btn-xl p-8 rounded-xl bg-[#F7A582] hover:text-[#F7A582] hover:bg-transparent hover:border-[#F7A582]">
+                All Service
+              </button>
+            </Link>
           </div>
           <div className="relative mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <div className="absolute right-[450px] top-[450px] hidden md:block opacity-30 ">

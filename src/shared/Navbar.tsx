@@ -75,7 +75,7 @@ const Header = () => {
   );
 
   return (
-    <header className="py-3 z-10 opacity-80 text-gray-900 bg-teal-950  w-full">
+    <header className="py-3 z-10 text-gray-900 bg-teal-950 w-full">
       <div className="max-w-[1280px] mx-auto">
         <div className="container mx-auto">
           <div className="navbar items-center h-16 my-5">

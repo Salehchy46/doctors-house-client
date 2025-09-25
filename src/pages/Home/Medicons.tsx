@@ -18,7 +18,7 @@ const Medicons = () => {
                     <p>Dhanmondi 17, Dhaka -1200, Bangladesh</p>
                 </div>
             </div>
-            <div className='flex items-center gap-6 bg-teal-950 text-whitef md:w-96 md:h-48 p-6 rounded-2xl'>
+            <div className='flex items-center gap-6 bg-teal-950 text-white md:w-96 md:h-48 p-6 rounded-2xl'>
                 <SlCallOut className='text-[36px]'></SlCallOut>
                 <div>
                     <h5 className="text-2xl font-semibold">Contact Us</h5>
