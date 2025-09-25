@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import docimage from '../../assets/docimg.png'
 
 const Services = () => {
@@ -26,7 +27,7 @@ const Services = () => {
                     <h3 className="text-2xl font-bold">Electro  Gastrology Therapy</h3>
                     <p className='mt-6'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error </p>
                     <p className='mb-6'>Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <button className="btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">All Services</button>
+                    <Link to='/appointment'><button className="btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">All Services</button></Link>
                 </div>
                 <div className='card md:hidden m-6'>
                     <img className='card-actions rounded-xl w-[550px] h-[350px]' src="https://www.nimshospital.com/assets/img/departments/GASTROENTEROLOGY.png" alt="" />

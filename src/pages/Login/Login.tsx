@@ -16,7 +16,6 @@ const Register: React.FC = () => {
                     <img className='w-[460px] h-80 relative right-72 bottom-40' src={frame1} alt="" />
                 </div>
             </div>
-            <Link to='/' className='btn btn-lg relative top-[750px] bg-gradient-to-r from-60% from-teal-950 to-50% to-white mx-auto text-teal-700 border-0'>Home</Link>
             {/* Right side - Login Form */}
             <div className="w-full bg-white text-black items-center justify-center p-8">
                 <div className="w-full max-w-md space-y-8">

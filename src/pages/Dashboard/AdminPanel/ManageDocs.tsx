@@ -78,7 +78,7 @@ const ManageDocs: React.FC = () => {
                             </td>
                             <td>Red</td>
                             <th>
-                               <button className='font-bold bg-red-500 btn btn-sm border-0'>Delete</button>
+                               <button className='font-bold bg-[#E11244] btn btn-sm border-0'>Delete</button>
                             </th>
                         </tr>
                         {/* row 3 */}
@@ -109,7 +109,7 @@ const ManageDocs: React.FC = () => {
                             </td>
                             <td>Crimson</td>
                             <th>
-                               <button className='font-bold bg-red-500 btn btn-sm border-0'>Delete</button>
+                               <button className='font-bold bg-[#E11244] btn btn-sm border-0'>Delete</button>
                             </th>
                         </tr>
                         {/* row 4 */}
@@ -140,7 +140,7 @@ const ManageDocs: React.FC = () => {
                             </td>
                             <td>Indigo</td>
                             <th>
-                               <button className='font-bold bg-red-500 btn btn-sm border-0'>Delete</button>
+                               <button className='font-bold bg-[#E11244] btn btn-sm border-0'>Delete</button>
                             </th>
                         </tr>
                     </tbody>
