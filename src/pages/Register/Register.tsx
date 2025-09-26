@@ -3,10 +3,19 @@ import React from 'react';
 import frame1 from '../../assets/frame1.png';
 import frame2 from '../../assets/frame2.png';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 
 // Main Component
 const Register: React.FC = () => {
+
+   const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+
   return (
     <div className="max-w-[1280px] mx-auto min-h-screen flex">
       {/* Left side - Image/Branding */}

@@ -35,7 +35,7 @@ const Reviews = () => {
       />
       <div className="py-10 invisible md:visible">
         <Swiper
-          spaceBetween={50}
+          spaceBetween={20}
           modules={[Navigation]}
           navigation
           slidesPerView={2}
@@ -67,7 +67,7 @@ const Reviews = () => {
       </div>
       <div className="py-3 md:hidden">
         <Swiper
-          spaceBetween={50}
+          spaceBetween={10}
           modules={[Navigation]}
           navigation
           slidesPerView={1}

@@ -11,8 +11,8 @@ const Dashboard: React.FC = () => {
         <div className='bg-gradient-to-r from-20% from-white to-30% to-gray-100'>
             <ScrollToTop />
             <Header></Header>
-            <div className=' bg-gray-100 mx-auto flex text-black'>
-                <div className='lg:w-[300px] md:w-[220px] min-h-screen bg-white'>
+            <div className='max-w-[1280px] bg-gray-100 mx-auto flex text-black'>
+                <div className='w-[300px] min-h-screen bg-white'>
                     <ul className='menu'>
                         {
                             isAdmin ?
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/addashboard' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Dashboard
@@ -29,7 +29,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/allusers' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             All Users
@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/addadoctor' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Add A Doctor
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/managedocs' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Manage Doctors
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
                                         <NavLink
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                             to="/"
@@ -73,7 +73,7 @@ const Dashboard: React.FC = () => {
                                             to="/dashboard/myappointment"
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                         >
@@ -84,7 +84,7 @@ const Dashboard: React.FC = () => {
                                         <NavLink
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 lg:w-[290px] md:w-[200px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                             to="/"
@@ -97,7 +97,7 @@ const Dashboard: React.FC = () => {
                     </ul>
                 </div>
                 {/* Dashboard Navigation Content */}
-                <div className='w-3/4 p-8'>
+                <div className='p-8 flex-1'>
                     <Outlet></Outlet>
                 </div>
             </div>

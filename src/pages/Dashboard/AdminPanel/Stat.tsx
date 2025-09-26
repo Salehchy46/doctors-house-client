@@ -5,7 +5,7 @@ import frame2 from '../../../assets/dashboard/Frame2.png';
 import frame3 from '../../../assets/dashboard/Frame3.png';
 
 const StatSect = () => (
-    <div className='max-w-[1000px]'>
+    <div className='max-w-[1000px] mx-auto'>
         <StatGroup spacing={20} columns={3}>
             <div className="rounded-xl">
                 <Stat bordered>
