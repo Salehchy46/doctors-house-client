@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/addashboard' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Dashboard
@@ -29,7 +29,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/allusers' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             All Users
@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/addadoctor' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Add A Doctor
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
                                     <li>
                                         <NavLink to='/dashboard/managedocs' className={({ isActive }) =>
                                             isActive
-                                                ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
                                             Manage Doctors
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
                                         <NavLink
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                             to="/"
@@ -73,7 +73,7 @@ const Dashboard: React.FC = () => {
                                             to="/dashboard/myappointment"
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                         >
@@ -84,7 +84,7 @@ const Dashboard: React.FC = () => {
                                         <NavLink
                                             className={({ isActive }) =>
                                                 isActive
-                                                    ? "bg-gray-100 w-[300px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                    ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                     : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                             }
                                             to="/"

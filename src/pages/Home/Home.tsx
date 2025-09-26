@@ -7,7 +7,7 @@ import Services from "./Services";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <div className="bg-teal-950">
         <Banner></Banner>
       </div>
