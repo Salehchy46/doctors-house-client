@@ -5,7 +5,7 @@ import img3 from "../../assets/doc3.png";
 
 const Banner = () => {
   return (
-    <section className="hero relative max-w-[1600px] bg-teal-950 mx-auto text-white min-h-screen overflow-hidden">
+    <section className="hero relative max-w-[1280px] bg-teal-950 mx-auto text-white min-h-screen overflow-hidden">
       <div className="hero-content flex justify-between">
         <div className="flex flex-col md:flex-row items-center justify-between lg:py-10 md:py-20 py-32 relative z-10">
           <div className="flex-1">
@@ -46,21 +46,21 @@ const Banner = () => {
                 </div>
                 <div className="">
                   <img
-                    className="relative z-10 top-80 right-24 w-80 h-80 object-cover"
+                    className="relative z-10 top-80 right-32 w-80 h-80 object-cover"
                     src={img1}
                     alt=""
                   />
                 </div>
                 <div className="">
                   <img
-                    className="relative z-20 top-36 left-8 w-80 h-80 object-cover"
+                    className="relative z-20 top-36 left-4 w-80 h-80 object-cover"
                     src={img2}
                     alt=""
                   />
                 </div>
                 <div className="">
                   <img
-                    className="relative z-30 bottom-96 left-52 w-80 h-80 object-cover"
+                    className="relative z-30 bottom-96 left-44 w-80 h-80 object-cover"
                     src={img3}
                     alt=""
                   />
