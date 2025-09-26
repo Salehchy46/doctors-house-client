@@ -42,7 +42,7 @@ const Reviews = () => {
         >
           {reviews.map((review, idx) => (
             <SwiperSlide key={idx}>
-              <div className="card w-[550px] h-[280px] shadow-sm">
+              <div className="card w-[550px] mx-auto h-[280px] shadow-sm">
                 <div className="card-body">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
