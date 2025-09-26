@@ -48,7 +48,7 @@ const data = [
 
 const RechartAreachart: React.FC = () => {
     return (
-        <div className='bg-white p-3 rounded-xl w-[500px] h-[350px]'>
+        <div className='bg-white p-3 rounded-xl w-[450px] h-[350px]'>
             <h3 className='text-[#898989] font-semibold'>Patients</h3>
             <div className='divider'></div>
             <div className='w-[440px] h-52 mx-auto'>

@@ -11,8 +11,8 @@ const Dashboard: React.FC = () => {
         <div className='bg-gradient-to-r from-20% from-white to-30% to-gray-100'>
             <ScrollToTop />
             <Header></Header>
-            <div className='max-w-[1280px] bg-gray-100 mx-auto flex text-black'>
-                <div className='w-[300px] min-h-screen bg-white'>
+            <div className=' bg-gray-100 mx-auto flex text-black'>
+                <div className='w-1/4 min-h-screen bg-white'>
                     <ul className='menu'>
                         {
                             isAdmin ?
@@ -97,7 +97,7 @@ const Dashboard: React.FC = () => {
                     </ul>
                 </div>
                 {/* Dashboard Navigation Content */}
-                <div className='flex-1 p-8'>
+                <div className='w-3/4 p-8'>
                     <Outlet></Outlet>
                 </div>
             </div>
