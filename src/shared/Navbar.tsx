@@ -1,13 +1,34 @@
 "use client";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
+import AuthContext from "@/context/AuthContext/AuthContext";
+import Swal from "sweetalert2";
 
 // Icons (as before) … MenuIcon, XIcon, SunIcon, MoonIcon
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logOut, user } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: "Logged Out Successfully",
+          text: "You Logged-Out",
+          icon: "success"
+        });
+      })
+      .catch(error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: error.message,
+        })
+      })
+  }
 
   const navLinks = (
     <>
@@ -15,7 +36,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/"
@@ -27,7 +48,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/about"
@@ -39,7 +60,7 @@ const Header = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
+              ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
               : "px-3 rounded hover:border-b-0"
           }
           to="/appointment"
@@ -47,30 +68,54 @@ const Header = () => {
           Appointment
         </NavLink>
       </ul>
-      <ul>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
-              : "px-3 rounded hover:border-b-0"
-          }
-          to="/login"
-        >
-          Login
-        </NavLink>
-      </ul>
-      <ul>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "border-b-2 pb-3 border-[#F7A582] px-3 rounded"
-              : "px-3 rounded hover:border-b-0"
-          }
-          to="/register"
-        >
-          Register
-        </NavLink>
-      </ul>
+      {
+        user ?
+          <>
+            <ul>
+              <NavLink
+                className="px-3 rounded hover:border-b-0"
+                onClick={handleLogout}
+              >
+                Log Out
+              </NavLink>
+            </ul>
+            <ul>
+              <NavLink to='/dashboard/addashboard'>
+                  {
+                    user ?
+                      <img src={user.photoURL} className="w-10 h-10 rounded-full" alt="" /> :
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwobOiULVUj1oukdw3Qj-KTBwOzmrgCPwvg&s" className="w-10 h-10 rounded-full" alt="" />
+                  }
+                </NavLink>
+            </ul>
+          </> :
+          <>
+            <ul>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
+                    : "px-3 rounded hover:border-b-0"
+                }
+                to="/login"
+              >
+                Login
+              </NavLink>
+            </ul>
+            <ul>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
+                    : "px-3 rounded hover:border-b-0"
+                }
+                to="/register"
+              >
+                Register
+              </NavLink>
+            </ul>
+          </>
+      }
     </>
   );
 
@@ -92,9 +137,6 @@ const Header = () => {
             {/* Desktop Nav */}
             <nav className="navbar-end hidden md:flex items-center gap-3 text-white">
               {navLinks}
-              <button className="">
-                <NavLink to='/dashboard/addashboard'><FaCartArrowDown></FaCartArrowDown></NavLink>
-              </button>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -122,12 +164,10 @@ const Header = () => {
           className="md:hidden border-t border-gray-200 dark:border-gray-700"
           id="mobile-menu"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white">
+          <div className="px-2 pt-2 pb-1 space-y-1 sm:px-3 text-white">
             {navLinks}
-            <button className="">
-              <Link to='/dashboard/addashboard'><FaCartArrowDown></FaCartArrowDown></Link>
-            </button>
           </div>
+            
         </div>
       )}
     </header>
