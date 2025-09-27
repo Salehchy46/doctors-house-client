@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword, EmailAuthProvider, getAuth, onAuthStateChanged, signInWithCredential, type User } from 'firebase/auth';
+import { createUserWithEmailAndPassword, EmailAuthProvider, getAuth, onAuthStateChanged, signInWithCredential, signOut, type User } from 'firebase/auth';
 import { app } from '@/firebase/firebase.config';
 
 interface AuthProviderProps {
@@ -36,11 +36,17 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     }
   }, [])
 
+  const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  }
+
   const authInfo = {
     user,
     loading,
     createUser,
-    login
+    login,
+    logOut,
   };
 
   return (
