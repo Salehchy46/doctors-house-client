@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, type User } from 'firebase/auth';
+import { createUserWithEmailAndPassword, EmailAuthProvider, getAuth, onAuthStateChanged, signInWithCredential, type User } from 'firebase/auth';
 import { app } from '@/firebase/firebase.config';
 
 interface AuthProviderProps {
@@ -19,14 +19,20 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const login = (email: string, password: string) => {
+    setLoading(true);
+    const credential = EmailAuthProvider.credential(email, password);
+    return signInWithCredential(auth, credential);
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-        setUser(currentUser);
-        setLoading(false);
+      setUser(currentUser);
+      setLoading(false);
     })
-    
-    return() => {
-        unsubscribe();
+
+    return () => {
+      unsubscribe();
     }
   }, [])
 
@@ -34,6 +40,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     user,
     loading,
     createUser,
+    login
   };
 
   return (

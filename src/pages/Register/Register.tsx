@@ -16,7 +16,7 @@ interface FormData {
 }
 
 const Register: React.FC = () => {
-  const { createUser } = useContext(AuthContext)!; 
+  const { createUser } = useContext(AuthContext); 
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
 
@@ -145,7 +145,7 @@ const Register: React.FC = () => {
 
                         <input
                           type="submit"
-                          className="btn btn-lg border-0 bg-[#F7A582] mt-4 rounded-xl"
+                          className="btn btn-lg border-0 bg-[#F7A582] mt-4 rounded-xl hover:bg-transparent hover:border hover:border-[#F7A582] hover:text-[#F7A582]"
                           value="Create Account"
                         />
                       </fieldset>
