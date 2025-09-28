@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import useAxiosSecure from '@/components/hooks/useAxiosSecure';
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 
 const AllUsers: React.FC = () => {
 
-    const [users, setUsers] = useState([]);
+    const axiosSecure = useAxiosSecure();
 
-    useEffect(() => {
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                setUsers(data);
-            })
-    }, [])
+    const {data: users = {}} = useQuery({
+        queryKey: ['users'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/users');
+            return res.data;
+        }
+    })
 
     return (
         <div>

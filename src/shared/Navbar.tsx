@@ -82,8 +82,8 @@ const Header = () => {
             <ul>
               <NavLink to='/dashboard/addashboard'>
                   {
-                    user ?
-                      <img src={user.photoURL} className="w-10 h-10 rounded-full" alt="" /> :
+                    user.phtotURL === null ?
+                      <img src={user?.photoURL} className="w-10 h-10 rounded-full" alt="" /> :
                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwobOiULVUj1oukdw3Qj-KTBwOzmrgCPwvg&s" className="w-10 h-10 rounded-full" alt="" />
                   }
                 </NavLink>
