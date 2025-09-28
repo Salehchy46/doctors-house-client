@@ -22,7 +22,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([])
 
   useEffect(() => {
-    fetch("./jsons/customer_reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data: Review[]) => setReviews(data))
   }, [])
