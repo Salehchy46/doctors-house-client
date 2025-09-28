@@ -17,7 +17,7 @@ interface Doctor {
 
 const Experts: React.FC = () => {
   const axiosSecure = useAxiosPublic();
-  const [visibleCount, setVisibleCount] = useState(3); // show 3 initially
+  const [visibleCount, setVisibleCount] = useState(3); 
 
   const { data: doctors = [] } = useQuery<Doctor[]>({
     queryKey: ['doctors'],
@@ -28,7 +28,7 @@ const Experts: React.FC = () => {
   });
 
   const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 3); // load 3 more each click
+    setVisibleCount((prev) => prev + 3); 
   };
 
   return (

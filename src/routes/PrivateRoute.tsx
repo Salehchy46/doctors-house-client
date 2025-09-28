@@ -1,22 +1,33 @@
-import AuthContext from '@/context/AuthContext/AuthContext';
 import React, { useContext } from 'react';
+import type { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import AuthContext from '@/context/AuthContext/AuthContext';
 
-const PrivateRoute: React.FC = ({ children }) => {
+interface PrivateRouteProps {
+  children: ReactNode;
+}
 
-    const location = useLocation();
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+  const location = useLocation();
+  const auth = useContext(AuthContext);
 
-    const { user, loading } = useContext(AuthContext);
+  if (!auth) {
+    throw new Error('AuthContext not found. Make sure AuthProvider wraps your app.');
+  }
 
-    if (loading) {
-        return <span className="loading loading-spinner loading-xl mx-auto flex justify-center my-[209px]"></span>
-    }
+  const { user, loading } = auth;
 
-    if (user) {
-        return children;
-    }
+  if (loading) {
+    return (
+      <span className="loading loading-spinner loading-xl mx-auto flex justify-center my-[209px]"></span>
+    );
+  }
 
-    return <Navigate to='/login' state={{from: location}} replace />
+  if (user) {
+    return <>{children}</>;
+  }
+
+  return <Navigate to="/login" state={{ from: location }} replace />;
 };
 
 export default PrivateRoute;

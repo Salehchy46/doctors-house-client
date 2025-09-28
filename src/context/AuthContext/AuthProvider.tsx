@@ -1,7 +1,14 @@
-import { useEffect, useState } from 'react';
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import AuthContext from './AuthContext';
-import { createUserWithEmailAndPassword, EmailAuthProvider, getAuth, onAuthStateChanged, signInWithCredential, signOut, type User } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  EmailAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithCredential,
+  signOut,
+  type User,
+} from 'firebase/auth';
 import { app } from '@/firebase/firebase.config';
 
 interface AuthProviderProps {
@@ -10,9 +17,9 @@ interface AuthProviderProps {
 
 const auth = getAuth(app);
 
-const AuthProvider = ({ children }: AuthProviderProps) => {
+const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
 
   const createUser = (email: string, password: string) => {
     setLoading(true);
@@ -29,25 +36,17 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
       setLoading(false);
-    })
+    });
 
-    return () => {
-      unsubscribe();
-    }
-  }, [])
+    return () => unsubscribe();
+  }, []);
 
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
-  }
-
-  const authInfo = {
-    user,
-    loading,
-    createUser,
-    login,
-    logOut,
   };
+
+  const authInfo = { user, loading, createUser, login, logOut };
 
   return (
     <AuthContext.Provider value={authInfo}>
