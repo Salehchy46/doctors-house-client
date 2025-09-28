@@ -8,6 +8,7 @@ import AllUsers from "@/pages/Dashboard/AdminPanel/AllUsers";
 import ManageDocs from "@/pages/Dashboard/AdminPanel/ManageDocs";
 import MyAppointment from "@/pages/Dashboard/MyAppointment";
 import Docprofile from "@/pages/DocProfile/Docprofile";
+import Doctors from "@/pages/Doctors/Doctors";
 import Error from "@/pages/ErrorPage/Error";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login/Login";
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
                 element: <div className="bg-gradient-to-r from-teal-950 via-teal-950 to-50% to-white">
                     <Register></Register>
                 </div>,
+            },
+            {
+                path: '/alldoctors',
+                element: <Doctors></Doctors>
             }
         ]
     },

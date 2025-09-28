@@ -6,92 +6,91 @@ import useAxiosPublic from '@/components/hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
 
 interface Doctor {
-  _id?: string;
-  name: string;
-  specialty: string;
-  image: string;
-  country: string;
-  avialable: string; // keep as your API
-  visit: string | number;
+    _id?: string;
+    name: string;
+    specialty: string;
+    image: string;
+    country: string;
+    avialable: string; 
+    visit: string | number;
 }
 
 const Experts: React.FC = () => {
-  const axiosSecure = useAxiosPublic();
-  const [visibleCount, setVisibleCount] = useState(3); 
+    const axiosPublic = useAxiosPublic();
+    const [visibleCount, setVisibleCount] = useState(3);
 
-  const { data: doctors = [] } = useQuery<Doctor[]>({
-    queryKey: ['doctors'],
-    queryFn: async () => {
-      const res = await axiosSecure.get<Doctor[]>('/expertDoctors');
-      return res.data;
-    },
-  });
+    const { data: doctors = [] } = useQuery<Doctor[]>({
+        queryKey: ['doctors'],
+        queryFn: async () => {
+            const res = await axiosPublic.get<Doctor[]>('/expertDoctors');
+            return res.data;
+        },
+    });
 
-  const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 3); 
-  };
+    const handleShowMore = () => {
+        setVisibleCount((prev) => prev + 3);
+    };
 
-  return (
-    <div className="max-w-[1600px] mx-auto text-black bg-white">
-      <Heading
-        title="Our Expert Doctors"
-        subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium..."
-      />
-      <div className="hero">
-        <div className="hero-content  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-10">
-          {doctors.slice(0, visibleCount).map((doctor) => (
-            <div key={doctor._id || doctor.name} className="card shadow-sm w-96 mx-auto">
-              <figure>
-                <img src={doctor.image} alt={doctor.name} />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{doctor.name}</h2>
-                <p>{doctor.specialty}</p>
-                <div className="rating rating-xs">
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" defaultChecked />
+    return (
+        <div className="max-w-[1280px] mx-auto text-black bg-white">
+            <Heading
+                title="Our Expert Doctors"
+                subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium..."
+            />
+            <div className="hero">
+                <div className="hero-content  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10">
+                    {doctors.slice(0, visibleCount).map((doctor) => (
+                        <div key={doctor._id || doctor.name} className="card shadow-sm w-96 mx-auto">
+                            <figure>
+                                <img src={doctor.image} alt={doctor.name} />
+                            </figure>
+                            <div className="card-body">
+                                <h2 className="card-title">{doctor.name}</h2>
+                                <p>{doctor.specialty}</p>
+                                <div className="rating rating-xs">
+                                    <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                                    <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                                    <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                                    <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                                    <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" defaultChecked />
+                                </div>
+                                <div className="divider-horizontal"></div>
+                                <div className="flex gap-3 items-center">
+                                    <CiLocationOn />
+                                    <p>{doctor.country}</p>
+                                </div>
+                                <div className="flex gap-3 items-center">
+                                    <CiCalendar />
+                                    <p>{doctor.avialable}</p>
+                                </div>
+                                <div className="flex gap-3 items-center">
+                                    <CiDollar />
+                                    <p>{doctor.visit}</p>
+                                </div>
+                                <div className="card-actions">
+                                    <Link to="/doctorprofile" className="w-full">
+                                        <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">
+                                            View Profile
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className="divider-horizontal"></div>
-                <div className="flex gap-3 items-center">
-                  <CiLocationOn />
-                  <p>{doctor.country}</p>
-                </div>
-                <div className="flex gap-3 items-center">
-                  <CiCalendar />
-                  <p>{doctor.avialable}</p>
-                </div>
-                <div className="flex gap-3 items-center">
-                  <CiDollar />
-                  <p>{doctor.visit}</p>
-                </div>
-                <div className="card-actions">
-                  <Link to="/doctorprofile" className="w-full">
-                    <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">
-                      View Profile
-                    </button>
-                  </Link>
-                </div>
-              </div>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {visibleCount < doctors.length && (
-        <div className="text-center mt-8">
-          <button
-            onClick={handleShowMore}
-            className="btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white"
-          >
-            More Doctors
-          </button>
+            <div className="text-center mt-8">
+                <Link to='alldoctors'>
+                    <button
+                        onClick={handleShowMore}
+                        className="btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white"
+                    >
+                        More Doctors
+                    </button></Link>
+            </div>
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default Experts;
