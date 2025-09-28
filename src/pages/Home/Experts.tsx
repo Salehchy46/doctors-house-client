@@ -1,108 +1,97 @@
-import Heading from "@/components/sharedComponents/Heading";
-import doctor1 from '../../assets/doctor1.png'
-import doctor2 from '../../assets/doctor2.png'
-import doctor3 from '../../assets/doctor3.png'
-import { CiLocationOn } from "react-icons/ci";
-import { CiCalendar, CiDollar } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Heading from '@/components/sharedComponents/Heading';
+import { CiLocationOn, CiCalendar, CiDollar } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
+import useAxiosPublic from '@/components/hooks/useAxiosPublic';
+import { useQuery } from '@tanstack/react-query';
 
-const Experts = () => {
+interface Doctor {
+  _id?: string;
+  name: string;
+  specialty: string;
+  image: string;
+  country: string;
+  avialable: string; // keep as your API
+  visit: string | number;
+}
 
-     const expertDoctors = [
-        {
-            id: 1,
-            name: "Dr. John Andersson",
-            country: "Italy",
-            specialty: "General Practitioner",
-            hospital: "Global Health Center",
-            experience_years: 13,
-            avialable: "Friday, 7:00PM - 10:00PM",
-            visit: 35,
-            rating: 3.7,
-            image: doctor1,
-            email: "john.andersson@example.com",
-            phone: "+17-1238277664"
-        },
-        {
-            id: 2,
-            name: "Dr. Maria Andersson",
-            country: "Spain",
-            specialty: "Endocrinologist",
-            hospital: "International Care Clinic",
-            experience_years: 23,
-            avialable: "Friday, 7:00PM - 10:00PM",
-            visit: 35,
-            rating: 4.2,
-            image: doctor2,
-            email: "maria.andersson@example.com",
-            phone: "+34-2895996076"
-        },
-        {
-            id: 3,
-            name: "Dr. Emily Muller",
-            country: "Netherlands",
-            specialty: "Psychiatrist",
-            hospital: "Sunrise Medical Center",
-            experience_years: 32,
-            avialable: "Friday, 7:00PM - 10:00PM",
-            visit: 35,
-            rating: 3.8,
-            image: doctor3,
-            email: "emily.muller@example.com",
-            phone: "+35-9018703036"
-        },
-    ]
+const Experts: React.FC = () => {
+  const axiosSecure = useAxiosPublic();
+  const [visibleCount, setVisibleCount] = useState(3); // show 3 initially
 
-    return (
-        <div className=" max-w-[1600px] mx-auto text-black bg-white">
-            <Heading
-                title={"Our Expert Doctors"}
-                subTitle={"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo."}
-            ></Heading>
-            <div className="hero">
-                <div className="hero-content gap-16 flex-col md:flex-row lg:flex justify-center">
-                    {
-                        expertDoctors.map(experts => <div className="card shadow-sm w-96 mx-auto ">
-                            <figure>
-                                <img
-                                    src={experts.image}
-                                    alt="Shoes" />
-                            </figure>
-                            <div className="card-body">
-                                <h2 className="card-title">{experts.name}</h2>
-                                <p>{experts.specialty}</p>
-                                <div className="rating rating-xs">
-                                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="1 star" />
-                                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="2 star" />
-                                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="3 star" />
-                                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="4 star" />
-                                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="5 star" defaultChecked />
-                                </div>
-                                <div className="divider-horizontal"></div>
-                                <div className="flex gap-3 items-center">
-                                    <CiLocationOn></CiLocationOn>
-                                    <p>{experts.country}</p>
-                                </div>
-                                <div className="flex gap-3 items-center">
-                                    <CiCalendar></CiCalendar>
-                                    <p>{experts.avialable}</p>
-                                </div>
-                                <div className="flex gap-3 items-center">
-                                    <CiDollar></CiDollar>
-                                    <p>{experts.visit}</p>
-                                </div>
-                                <div className="card-actions">
-                                    <Link to='/doctorprofile' className="w-full">
-                                        <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">View Profile</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>)
-                    }
+  const { data: doctors = [] } = useQuery<Doctor[]>({
+    queryKey: ['doctors'],
+    queryFn: async () => {
+      const res = await axiosSecure.get<Doctor[]>('/expertDoctors');
+      return res.data;
+    },
+  });
+
+  const handleShowMore = () => {
+    setVisibleCount((prev) => prev + 3); // load 3 more each click
+  };
+
+  return (
+    <div className="max-w-[1600px] mx-auto text-black bg-white">
+      <Heading
+        title="Our Expert Doctors"
+        subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium..."
+      />
+      <div className="hero">
+        <div className="hero-content  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-10">
+          {doctors.slice(0, visibleCount).map((doctor) => (
+            <div key={doctor._id || doctor.name} className="card shadow-sm w-96 mx-auto">
+              <figure>
+                <img src={doctor.image} alt={doctor.name} />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{doctor.name}</h2>
+                <p>{doctor.specialty}</p>
+                <div className="rating rating-xs">
+                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
+                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" defaultChecked />
                 </div>
+                <div className="divider-horizontal"></div>
+                <div className="flex gap-3 items-center">
+                  <CiLocationOn />
+                  <p>{doctor.country}</p>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <CiCalendar />
+                  <p>{doctor.avialable}</p>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <CiDollar />
+                  <p>{doctor.visit}</p>
+                </div>
+                <div className="card-actions">
+                  <Link to="/doctorprofile" className="w-full">
+                    <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">
+                      View Profile
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
+          ))}
         </div>
-    );
+      </div>
+
+      {visibleCount < doctors.length && (
+        <div className="text-center mt-8">
+          <button
+            onClick={handleShowMore}
+            className="btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white"
+          >
+            More Doctors
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Experts;
