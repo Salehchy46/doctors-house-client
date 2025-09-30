@@ -3,6 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Overview from "./Details/Overview";
 import Locations from "./Details/Locations";
+import DocReviews from "./Details/DocReviews";
+import BusinessHour from "./Details/BusinessHour";
 
 const MyTabs: React.FC = () => {
   return (
@@ -43,10 +45,10 @@ const MyTabs: React.FC = () => {
             <Locations></Locations>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 3</h2>
+            <DocReviews></DocReviews>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 4</h2>
+            <BusinessHour></BusinessHour>
           </TabPanel>
         </Tabs>
       </div>
