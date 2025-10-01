@@ -16,7 +16,7 @@ interface FormData {
 }
 
 const Register: React.FC = () => {
-  const { createUser } = useContext(AuthContext); 
+  const { createUser } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
 
@@ -41,20 +41,21 @@ const Register: React.FC = () => {
           email: data.email,
         };
 
-        axiosPublic.post('/users', userInfo).then(res => {
-          if (res.data.insertedId) {
-            console.log('User added to the database');
-            reset();
-            Swal.fire({
-              position: 'top-end',
-              icon: 'success',
-              title: 'User Created Successfully',
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            navigate('/')
-          }
-        });
+        axiosPublic.post('/users', userInfo)
+          .then(res => {
+            if (res.data.insertedId) {
+              console.log('User added to the database');
+              reset();
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'User Created Successfully',
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate('/')
+            }
+          });
       })
       .catch(error => {
         console.error(error);
