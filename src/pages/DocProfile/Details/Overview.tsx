@@ -43,7 +43,7 @@ const Overview: React.FC = () => {
     const [details, setDetails] = useState<CvDetails | null>(null);
 
     useEffect(() => {
-        fetch("/jsons/cv.json")
+        fetch("http://localhost:5000/doctorsCvs")
             .then((res) => res.json())
             .then((data: CvDetails) => setDetails(data))
             .catch((err) => console.error(err));

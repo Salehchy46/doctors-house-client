@@ -5,6 +5,7 @@ import Overview from "./Details/Overview";
 import Locations from "./Details/Locations";
 import DocReviews from "./Details/DocReviews";
 import BusinessHour from "./Details/BusinessHour";
+import AppointmentSerial from "./Details/AppointmentSerial";
 
 const MyTabs: React.FC = () => {
   return (
@@ -31,6 +32,12 @@ const MyTabs: React.FC = () => {
               Reviews
             </Tab>
             <Tab
+              className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
+              selectedClassName="bg-[#F7A582] p-3 text-white"
+            >
+              Appointments
+            </Tab>
+            <Tab
               className="px-10 rounded-tr-xl hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
               selectedClassName="bg-[#F7A582] p-3 text-white"
             >
@@ -46,6 +53,9 @@ const MyTabs: React.FC = () => {
           </TabPanel>
           <TabPanel>
             <DocReviews></DocReviews>
+          </TabPanel>
+          <TabPanel>
+            <AppointmentSerial></AppointmentSerial>
           </TabPanel>
           <TabPanel>
             <BusinessHour></BusinessHour>
