@@ -15,31 +15,31 @@ const MyTabs: React.FC = () => {
           <TabList className="flex gap-2">
             <Tab
               className="px-10 rounded-tl-xl hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
-              selectedClassName="bg-[#F7A582] p-3 text-white"
+              selectedClassName="bg-[#F7A582] border-0 p-3 text-white"
             >
               Overview
             </Tab>
             <Tab
               className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
-              selectedClassName="bg-[#F7A582] p-3 text-white"
+              selectedClassName="bg-[#F7A582] border-0 p-3 text-white"
             >
               Location
             </Tab>
             <Tab
               className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
-              selectedClassName="bg-[#F7A582] p-3 text-white"
+              selectedClassName="bg-[#F7A582] border-0 p-3 text-white"
             >
               Reviews
             </Tab>
             <Tab
               className="px-10 hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
-              selectedClassName="bg-[#F7A582] p-3 text-white"
+              selectedClassName="bg-[#F7A582] border-0 p-3 text-white"
             >
               Appointments
             </Tab>
             <Tab
               className="px-10 rounded-tr-xl hover:border-b-0 py-3 text-[20px] font-bold hover:bg-[#F7A582] hover:text-white"
-              selectedClassName="bg-[#F7A582] p-3 text-white"
+              selectedClassName="bg-[#F7A582] border-0 p-3 text-white"
             >
               Business Hours
             </Tab>

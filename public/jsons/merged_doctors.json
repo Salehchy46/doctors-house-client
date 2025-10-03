@@ -1,0 +1,3252 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Andersson",
+    "country": "Italy",
+    "specialty": "General Practitioner",
+    "hospital": "Global Health Center",
+    "experience_years": 13,
+    "rating": 3.7,
+    "image": "https://i.ibb.co/placeholder/doctor1.jpg",
+    "email": "john.andersson@example.com",
+    "phone": "+17-1238277664",
+    "about_me": "Experienced general practitioner with over 13 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Italy Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Italy National Medical Institute",
+        "degree": "Residency in General Practitioner",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior General Practitioner",
+        "years": "2012 - Present (13 years)"
+      },
+      {
+        "clinic": "Community Health Center, Italy",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive General Practitioner Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in General Practitioner."
+      }
+    ],
+    "specializations": [
+      "General Practitioner",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "john.andersson@example.com",
+      "phone": "+17-1238277664",
+      "image": "https://i.ibb.co/placeholder/doctor1.jpg",
+      "country": "Italy",
+      "hospital": "Global Health Center",
+      "rating": 3.7,
+      "experience_years": 13
+    }
+  },
+  {
+    "id": 2,
+    "name": "Dr. Maria Andersson",
+    "country": "Spain",
+    "specialty": "Endocrinologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 23,
+    "rating": 4.2,
+    "image": "https://i.ibb.co/placeholder/doctor2.jpg",
+    "email": "maria.andersson@example.com",
+    "phone": "+34-2895996076",
+    "about_me": "Experienced endocrinologist with over 23 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of Spain Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Spain National Medical Institute",
+        "degree": "Residency in Endocrinologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Endocrinologist",
+        "years": "2002 - Present (23 years)"
+      },
+      {
+        "clinic": "Community Health Center, Spain",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Endocrinologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Endocrinologist."
+      }
+    ],
+    "specializations": [
+      "Endocrinologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "maria.andersson@example.com",
+      "phone": "+34-2895996076",
+      "image": "https://i.ibb.co/placeholder/doctor2.jpg",
+      "country": "Spain",
+      "hospital": "International Care Clinic",
+      "rating": 4.2,
+      "experience_years": 23
+    }
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Muller",
+    "country": "UK",
+    "specialty": "Endocrinologist",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 35,
+    "rating": 3.8,
+    "image": "https://i.ibb.co/placeholder/doctor19.jpg",
+    "email": "emily.muller@example.com",
+    "phone": "+98-3562906920",
+    "about_me": "Experienced psychiatrist with over 32 years of practice. Dedicated to delivering patient-centered care at Sunrise Medical Center.",
+    "education": [
+      {
+        "institution": "University of Netherlands Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Netherlands National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Sunrise Medical Center",
+        "role": "Senior Psychiatrist",
+        "years": "1993 - Present (32 years)"
+      },
+      {
+        "clinic": "Community Health Center, Netherlands",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "emily.muller@example.com",
+      "phone": "+35-9018703036",
+      "image": "https://i.ibb.co/placeholder/doctor3.jpg",
+      "country": "Netherlands",
+      "hospital": "Sunrise Medical Center",
+      "rating": 3.8,
+      "experience_years": 32
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dr. Victor Khan",
+    "country": "Spain",
+    "specialty": "Cardiologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 13,
+    "rating": 3.9,
+    "image": "https://i.ibb.co/placeholder/doctor4.jpg",
+    "email": "victor.khan@example.com",
+    "phone": "+54-3245696199",
+    "about_me": "Experienced cardiologist with over 13 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Spain Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Spain National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Cardiologist",
+        "years": "2012 - Present (13 years)"
+      },
+      {
+        "clinic": "Community Health Center, Spain",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "victor.khan@example.com",
+      "phone": "+54-3245696199",
+      "image": "https://i.ibb.co/placeholder/doctor4.jpg",
+      "country": "Spain",
+      "hospital": "Universal Hospital",
+      "rating": 3.9,
+      "experience_years": 13
+    }
+  },
+  {
+    "id": 5,
+    "name": "Dr. Chen Chowdhury",
+    "country": "Brazil",
+    "specialty": "Cardiologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 16,
+    "rating": 3.6,
+    "image": "https://i.ibb.co/placeholder/doctor5.jpg",
+    "email": "chen.chowdhury@example.com",
+    "phone": "+96-6696389258",
+    "about_me": "Experienced cardiologist with over 16 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Brazil Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Brazil National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Cardiologist",
+        "years": "2009 - Present (16 years)"
+      },
+      {
+        "clinic": "Community Health Center, Brazil",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.chowdhury@example.com",
+      "phone": "+96-6696389258",
+      "image": "https://i.ibb.co/placeholder/doctor5.jpg",
+      "country": "Brazil",
+      "hospital": "Universal Hospital",
+      "rating": 3.6,
+      "experience_years": 16
+    }
+  },
+  {
+    "id": 6,
+    "name": "Dr. Aisha Singh",
+    "country": "USA",
+    "specialty": "Psychiatrist",
+    "hospital": "Universal Hospital",
+    "experience_years": 6,
+    "rating": 3.9,
+    "image": "https://i.ibb.co/placeholder/doctor6.jpg",
+    "email": "aisha.singh@example.com",
+    "phone": "+43-3243908644",
+    "about_me": "Experienced psychiatrist with over 6 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of USA Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "USA National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Psychiatrist",
+        "years": "2019 - Present (6 years)"
+      },
+      {
+        "clinic": "Community Health Center, USA",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "aisha.singh@example.com",
+      "phone": "+43-3243908644",
+      "image": "https://i.ibb.co/placeholder/doctor6.jpg",
+      "country": "USA",
+      "hospital": "Universal Hospital",
+      "rating": 3.9,
+      "experience_years": 6
+    }
+  },
+  {
+    "id": 7,
+    "name": "Dr. Chen Brown",
+    "country": "UK",
+    "specialty": "Cardiologist",
+    "hospital": "Sunrise Medical Center",
+    "experience_years": 32,
+    "rating": 4.3,
+    "image": "https://i.ibb.co/placeholder/doctor7.jpg",
+    "email": "chen.brown@example.com",
+    "phone": "+87-1370154695",
+    "about_me": "Experienced cardiologist with over 32 years of practice. Dedicated to delivering patient-centered care at Sunrise Medical Center.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Sunrise Medical Center",
+        "role": "Senior Cardiologist",
+        "years": "1993 - Present (32 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.brown@example.com",
+      "phone": "+87-1370154695",
+      "image": "https://i.ibb.co/placeholder/doctor7.jpg",
+      "country": "UK",
+      "hospital": "Sunrise Medical Center",
+      "rating": 4.3,
+      "experience_years": 32
+    }
+  },
+  {
+    "id": 8,
+    "name": "Dr. Carlos Brown",
+    "country": "Saudi Arabia",
+    "specialty": "Dermatologist",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 19,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/placeholder/doctor8.jpg",
+    "email": "carlos.brown@example.com",
+    "phone": "+3-1296726425",
+    "about_me": "Experienced dermatologist with over 19 years of practice. Dedicated to delivering patient-centered care at Metropolitan Health Institute.",
+    "education": [
+      {
+        "institution": "University of Saudi Arabia Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Saudi Arabia National Medical Institute",
+        "degree": "Residency in Dermatologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Metropolitan Health Institute",
+        "role": "Senior Dermatologist",
+        "years": "2006 - Present (19 years)"
+      },
+      {
+        "clinic": "Community Health Center, Saudi Arabia",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Dermatologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Dermatologist."
+      }
+    ],
+    "specializations": [
+      "Dermatologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "carlos.brown@example.com",
+      "phone": "+3-1296726425",
+      "image": "https://i.ibb.co/placeholder/doctor8.jpg",
+      "country": "Saudi Arabia",
+      "hospital": "Metropolitan Health Institute",
+      "rating": 4.6,
+      "experience_years": 19
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dr. Olivia Lee",
+    "country": "India",
+    "specialty": "Cardiologist",
+    "hospital": "PrimeCare Hospital",
+    "experience_years": 10,
+    "rating": 4.8,
+    "image": "https://i.ibb.co/placeholder/doctor9.jpg",
+    "email": "olivia.lee@example.com",
+    "phone": "+6-4013312190",
+    "about_me": "Experienced cardiologist with over 10 years of practice. Dedicated to delivering patient-centered care at PrimeCare Hospital.",
+    "education": [
+      {
+        "institution": "University of India Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "India National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "PrimeCare Hospital",
+        "role": "Senior Cardiologist",
+        "years": "2015 - Present (10 years)"
+      },
+      {
+        "clinic": "Community Health Center, India",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "olivia.lee@example.com",
+      "phone": "+6-4013312190",
+      "image": "https://i.ibb.co/placeholder/doctor9.jpg",
+      "country": "India",
+      "hospital": "PrimeCare Hospital",
+      "rating": 4.8,
+      "experience_years": 10
+    }
+  },
+  {
+    "id": 10,
+    "name": "Dr. Fatima Hernandez",
+    "country": "Mexico",
+    "specialty": "Psychiatrist",
+    "hospital": "PrimeCare Hospital",
+    "experience_years": 9,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/placeholder/doctor10.jpg",
+    "email": "fatima.hernandez@example.com",
+    "phone": "+43-9617335676",
+    "about_me": "Experienced psychiatrist with over 9 years of practice. Dedicated to delivering patient-centered care at PrimeCare Hospital.",
+    "education": [
+      {
+        "institution": "University of Mexico Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Mexico National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "PrimeCare Hospital",
+        "role": "Senior Psychiatrist",
+        "years": "2016 - Present (9 years)"
+      },
+      {
+        "clinic": "Community Health Center, Mexico",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "fatima.hernandez@example.com",
+      "phone": "+43-9617335676",
+      "image": "https://i.ibb.co/placeholder/doctor10.jpg",
+      "country": "Mexico",
+      "hospital": "PrimeCare Hospital",
+      "rating": 4.6,
+      "experience_years": 9
+    }
+  },
+  {
+    "id": 11,
+    "name": "Dr. Maria Martinez",
+    "country": "France",
+    "specialty": "Orthopedic Surgeon",
+    "hospital": "PrimeCare Hospital",
+    "experience_years": 6,
+    "rating": 3.9,
+    "image": "https://i.ibb.co/placeholder/doctor11.jpg",
+    "email": "maria.martinez@example.com",
+    "phone": "+25-3691910760",
+    "about_me": "Experienced orthopedic surgeon with over 6 years of practice. Dedicated to delivering patient-centered care at PrimeCare Hospital.",
+    "education": [
+      {
+        "institution": "University of France Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "France National Medical Institute",
+        "degree": "Residency in Orthopedic Surgeon",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "PrimeCare Hospital",
+        "role": "Senior Orthopedic Surgeon",
+        "years": "2019 - Present (6 years)"
+      },
+      {
+        "clinic": "Community Health Center, France",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Orthopedic Surgeon Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Orthopedic Surgeon."
+      }
+    ],
+    "specializations": [
+      "Orthopedic Surgeon",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "maria.martinez@example.com",
+      "phone": "+25-3691910760",
+      "image": "https://i.ibb.co/placeholder/doctor11.jpg",
+      "country": "France",
+      "hospital": "PrimeCare Hospital",
+      "rating": 3.9,
+      "experience_years": 6
+    }
+  },
+  {
+    "id": 12,
+    "name": "Dr. Isabella Dubois",
+    "country": "Pakistan",
+    "specialty": "Cardiologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 33,
+    "rating": 4.4,
+    "image": "https://i.ibb.co/placeholder/doctor12.jpg",
+    "email": "isabella.dubois@example.com",
+    "phone": "+52-6477768843",
+    "about_me": "Experienced cardiologist with over 33 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Pakistan Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Pakistan National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Cardiologist",
+        "years": "1992 - Present (33 years)"
+      },
+      {
+        "clinic": "Community Health Center, Pakistan",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "isabella.dubois@example.com",
+      "phone": "+52-6477768843",
+      "image": "https://i.ibb.co/placeholder/doctor12.jpg",
+      "country": "Pakistan",
+      "hospital": "Universal Hospital",
+      "rating": 4.4,
+      "experience_years": 33
+    }
+  },
+  {
+    "id": 13,
+    "name": "Dr. Chen Nguyen",
+    "country": "Mexico",
+    "specialty": "Orthopedic Surgeon",
+    "hospital": "Global Health Center",
+    "experience_years": 16,
+    "rating": 3.6,
+    "image": "https://i.ibb.co/placeholder/doctor13.jpg",
+    "email": "chen.nguyen@example.com",
+    "phone": "+83-6604110391",
+    "about_me": "Experienced orthopedic surgeon with over 16 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Mexico Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Mexico National Medical Institute",
+        "degree": "Residency in Orthopedic Surgeon",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Orthopedic Surgeon",
+        "years": "2009 - Present (16 years)"
+      },
+      {
+        "clinic": "Community Health Center, Mexico",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Orthopedic Surgeon Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Orthopedic Surgeon."
+      }
+    ],
+    "specializations": [
+      "Orthopedic Surgeon",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.nguyen@example.com",
+      "phone": "+83-6604110391",
+      "image": "https://i.ibb.co/placeholder/doctor13.jpg",
+      "country": "Mexico",
+      "hospital": "Global Health Center",
+      "rating": 3.6,
+      "experience_years": 16
+    }
+  },
+  {
+    "id": 14,
+    "name": "Dr. Fatima Lopez",
+    "country": "Canada",
+    "specialty": "Cardiologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 7,
+    "rating": 3.9,
+    "image": "https://i.ibb.co/placeholder/doctor14.jpg",
+    "email": "fatima.lopez@example.com",
+    "phone": "+32-3753252510",
+    "about_me": "Experienced cardiologist with over 7 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Canada Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Canada National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Cardiologist",
+        "years": "2018 - Present (7 years)"
+      },
+      {
+        "clinic": "Community Health Center, Canada",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "fatima.lopez@example.com",
+      "phone": "+32-3753252510",
+      "image": "https://i.ibb.co/placeholder/doctor14.jpg",
+      "country": "Canada",
+      "hospital": "Universal Hospital",
+      "rating": 3.9,
+      "experience_years": 7
+    }
+  },
+  {
+    "id": 15,
+    "name": "Dr. Sophia Kim",
+    "country": "Bangladesh",
+    "specialty": "Pediatrician",
+    "hospital": "Wellness Hospital",
+    "experience_years": 7,
+    "rating": 4.1,
+    "image": "https://i.ibb.co/placeholder/doctor20.jpg",
+    "email": "sophia.kim@example.com",
+    "phone": "+46-6486736038",
+    "about_me": "Experienced oncologist with over 33 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Canada Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Canada National Medical Institute",
+        "degree": "Residency in Oncologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Oncologist",
+        "years": "1992 - Present (33 years)"
+      },
+      {
+        "clinic": "Community Health Center, Canada",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Oncologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Oncologist."
+      }
+    ],
+    "specializations": [
+      "Oncologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "sophia.kim@example.com",
+      "phone": "+48-9524626548",
+      "image": "https://i.ibb.co/placeholder/doctor15.jpg",
+      "country": "Canada",
+      "hospital": "Global Health Center",
+      "rating": 3.9,
+      "experience_years": 33
+    }
+  },
+  {
+    "id": 16,
+    "name": "Dr. Emily Brown",
+    "country": "Netherlands",
+    "specialty": "Radiologist",
+    "hospital": "Wellness Hospital",
+    "experience_years": 8,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/placeholder/doctor16.jpg",
+    "email": "emily.brown@example.com",
+    "phone": "+10-3276897863",
+    "about_me": "Experienced radiologist with over 8 years of practice. Dedicated to delivering patient-centered care at Wellness Hospital.",
+    "education": [
+      {
+        "institution": "University of Netherlands Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Netherlands National Medical Institute",
+        "degree": "Residency in Radiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Wellness Hospital",
+        "role": "Senior Radiologist",
+        "years": "2017 - Present (8 years)"
+      },
+      {
+        "clinic": "Community Health Center, Netherlands",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Radiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Radiologist."
+      }
+    ],
+    "specializations": [
+      "Radiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "emily.brown@example.com",
+      "phone": "+10-3276897863",
+      "image": "https://i.ibb.co/placeholder/doctor16.jpg",
+      "country": "Netherlands",
+      "hospital": "Wellness Hospital",
+      "rating": 4.7,
+      "experience_years": 8
+    }
+  },
+  {
+    "id": 17,
+    "name": "Dr. Isabella Chowdhury",
+    "country": "Egypt",
+    "specialty": "Neurologist",
+    "hospital": "City Medical Hospital",
+    "experience_years": 34,
+    "rating": 4.2,
+    "image": "https://i.ibb.co/placeholder/doctor17.jpg",
+    "email": "isabella.chowdhury@example.com",
+    "phone": "+67-3533427882",
+    "about_me": "Experienced neurologist with over 34 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of Egypt Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Egypt National Medical Institute",
+        "degree": "Residency in Neurologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior Neurologist",
+        "years": "1991 - Present (34 years)"
+      },
+      {
+        "clinic": "Community Health Center, Egypt",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Neurologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Neurologist."
+      }
+    ],
+    "specializations": [
+      "Neurologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "isabella.chowdhury@example.com",
+      "phone": "+67-3533427882",
+      "image": "https://i.ibb.co/placeholder/doctor17.jpg",
+      "country": "Egypt",
+      "hospital": "City Medical Hospital",
+      "rating": 4.2,
+      "experience_years": 34
+    }
+  },
+  {
+    "id": 18,
+    "name": "Dr. William Martinez",
+    "country": "Sweden",
+    "specialty": "Radiologist",
+    "hospital": "City Medical Hospital",
+    "experience_years": 9,
+    "rating": 4.3,
+    "image": "https://i.ibb.co/placeholder/doctor18.jpg",
+    "email": "william.martinez@example.com",
+    "phone": "+7-3469284890",
+    "about_me": "Experienced radiologist with over 9 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of Sweden Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Sweden National Medical Institute",
+        "degree": "Residency in Radiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior Radiologist",
+        "years": "2016 - Present (9 years)"
+      },
+      {
+        "clinic": "Community Health Center, Sweden",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Radiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Radiologist."
+      }
+    ],
+    "specializations": [
+      "Radiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "william.martinez@example.com",
+      "phone": "+7-3469284890",
+      "image": "https://i.ibb.co/placeholder/doctor18.jpg",
+      "country": "Sweden",
+      "hospital": "City Medical Hospital",
+      "rating": 4.3,
+      "experience_years": 9
+    }
+  },
+  {
+    "id": 19,
+    "name": "Dr. Emily Muller",
+    "country": "UK",
+    "specialty": "Endocrinologist",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 35,
+    "rating": 3.8,
+    "image": "https://i.ibb.co/placeholder/doctor19.jpg",
+    "email": "emily.muller@example.com",
+    "phone": "+98-3562906920",
+    "about_me": "Experienced endocrinologist with over 35 years of practice. Dedicated to delivering patient-centered care at Metropolitan Health Institute.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in Endocrinologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Metropolitan Health Institute",
+        "role": "Senior Endocrinologist",
+        "years": "1990 - Present (35 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Endocrinologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Endocrinologist."
+      }
+    ],
+    "specializations": [
+      "Endocrinologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "emily.muller@example.com",
+      "phone": "+98-3562906920",
+      "image": "https://i.ibb.co/placeholder/doctor19.jpg",
+      "country": "UK",
+      "hospital": "Metropolitan Health Institute",
+      "rating": 3.8,
+      "experience_years": 35
+    }
+  },
+  {
+    "id": 20,
+    "name": "Dr. Sophia Kim",
+    "country": "Bangladesh",
+    "specialty": "Pediatrician",
+    "hospital": "Wellness Hospital",
+    "experience_years": 7,
+    "rating": 4.1,
+    "image": "https://i.ibb.co/placeholder/doctor20.jpg",
+    "email": "sophia.kim@example.com",
+    "phone": "+46-6486736038",
+    "about_me": "Experienced pediatrician with over 7 years of practice. Dedicated to delivering patient-centered care at Wellness Hospital.",
+    "education": [
+      {
+        "institution": "University of Bangladesh Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Bangladesh National Medical Institute",
+        "degree": "Residency in Pediatrician",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Wellness Hospital",
+        "role": "Senior Pediatrician",
+        "years": "2018 - Present (7 years)"
+      },
+      {
+        "clinic": "Community Health Center, Bangladesh",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Pediatrician Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Pediatrician."
+      }
+    ],
+    "specializations": [
+      "Pediatrician",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "sophia.kim@example.com",
+      "phone": "+46-6486736038",
+      "image": "https://i.ibb.co/placeholder/doctor20.jpg",
+      "country": "Bangladesh",
+      "hospital": "Wellness Hospital",
+      "rating": 4.1,
+      "experience_years": 7
+    }
+  },
+  {
+    "id": 21,
+    "name": "Dr. Carlos Zhang",
+    "country": "China",
+    "specialty": "Endocrinologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 21,
+    "rating": 3.5,
+    "image": "https://i.ibb.co/placeholder/doctor21.jpg",
+    "email": "carlos.zhang@example.com",
+    "phone": "+72-8504143318",
+    "about_me": "Experienced endocrinologist with over 21 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of China Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "China National Medical Institute",
+        "degree": "Residency in Endocrinologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Endocrinologist",
+        "years": "2004 - Present (21 years)"
+      },
+      {
+        "clinic": "Community Health Center, China",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Endocrinologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Endocrinologist."
+      }
+    ],
+    "specializations": [
+      "Endocrinologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "carlos.zhang@example.com",
+      "phone": "+72-8504143318",
+      "image": "https://i.ibb.co/placeholder/doctor21.jpg",
+      "country": "China",
+      "hospital": "International Care Clinic",
+      "rating": 3.5,
+      "experience_years": 21
+    }
+  },
+  {
+    "id": 22,
+    "name": "Dr. William Nguyen",
+    "country": "USA",
+    "specialty": "Radiologist",
+    "hospital": "PrimeCare Hospital",
+    "experience_years": 18,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/placeholder/doctor22.jpg",
+    "email": "william.nguyen@example.com",
+    "phone": "+10-4006667177",
+    "about_me": "Experienced radiologist with over 18 years of practice. Dedicated to delivering patient-centered care at PrimeCare Hospital.",
+    "education": [
+      {
+        "institution": "University of USA Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "USA National Medical Institute",
+        "degree": "Residency in Radiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "PrimeCare Hospital",
+        "role": "Senior Radiologist",
+        "years": "2007 - Present (18 years)"
+      },
+      {
+        "clinic": "Community Health Center, USA",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Radiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Radiologist."
+      }
+    ],
+    "specializations": [
+      "Radiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "william.nguyen@example.com",
+      "phone": "+10-4006667177",
+      "image": "https://i.ibb.co/placeholder/doctor22.jpg",
+      "country": "USA",
+      "hospital": "PrimeCare Hospital",
+      "rating": 4.6,
+      "experience_years": 18
+    }
+  },
+  {
+    "id": 23,
+    "name": "Dr. Yusuf Lopez",
+    "country": "UK",
+    "specialty": "Cardiologist",
+    "hospital": "City Medical Hospital",
+    "experience_years": 25,
+    "rating": 4.9,
+    "image": "https://i.ibb.co/placeholder/doctor23.jpg",
+    "email": "yusuf.lopez@example.com",
+    "phone": "+74-7831107413",
+    "about_me": "Experienced cardiologist with over 25 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior Cardiologist",
+        "years": "2000 - Present (25 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "yusuf.lopez@example.com",
+      "phone": "+74-7831107413",
+      "image": "https://i.ibb.co/placeholder/doctor23.jpg",
+      "country": "UK",
+      "hospital": "City Medical Hospital",
+      "rating": 4.9,
+      "experience_years": 25
+    }
+  },
+  {
+    "id": 24,
+    "name": "Dr. Amelia Hernandez",
+    "country": "Saudi Arabia",
+    "specialty": "Pediatrician",
+    "hospital": "Global Health Center",
+    "experience_years": 9,
+    "rating": 4.4,
+    "image": "https://i.ibb.co/placeholder/doctor24.jpg",
+    "email": "amelia.hernandez@example.com",
+    "phone": "+79-7451650324",
+    "about_me": "Experienced pediatrician with over 9 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Saudi Arabia Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Saudi Arabia National Medical Institute",
+        "degree": "Residency in Pediatrician",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Pediatrician",
+        "years": "2016 - Present (9 years)"
+      },
+      {
+        "clinic": "Community Health Center, Saudi Arabia",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Pediatrician Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Pediatrician."
+      }
+    ],
+    "specializations": [
+      "Pediatrician",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "amelia.hernandez@example.com",
+      "phone": "+79-7451650324",
+      "image": "https://i.ibb.co/placeholder/doctor24.jpg",
+      "country": "Saudi Arabia",
+      "hospital": "Global Health Center",
+      "rating": 4.4,
+      "experience_years": 9
+    }
+  },
+  {
+    "id": 25,
+    "name": "Dr. William Hernandez",
+    "country": "Egypt",
+    "specialty": "Neurologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 33,
+    "rating": 3.7,
+    "image": "https://i.ibb.co/placeholder/doctor25.jpg",
+    "email": "william.hernandez@example.com",
+    "phone": "+7-2352013205",
+    "about_me": "Experienced neurologist with over 33 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of Egypt Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Egypt National Medical Institute",
+        "degree": "Residency in Neurologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Neurologist",
+        "years": "1992 - Present (33 years)"
+      },
+      {
+        "clinic": "Community Health Center, Egypt",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Neurologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Neurologist."
+      }
+    ],
+    "specializations": [
+      "Neurologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "william.hernandez@example.com",
+      "phone": "+7-2352013205",
+      "image": "https://i.ibb.co/placeholder/doctor25.jpg",
+      "country": "Egypt",
+      "hospital": "International Care Clinic",
+      "rating": 3.7,
+      "experience_years": 33
+    }
+  },
+  {
+    "id": 26,
+    "name": "Dr. Chen Dubois",
+    "country": "India",
+    "specialty": "Neurologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 10,
+    "rating": 5.0,
+    "image": "https://i.ibb.co/placeholder/doctor26.jpg",
+    "email": "chen.dubois@example.com",
+    "phone": "+47-9180567011",
+    "about_me": "Experienced neurologist with over 10 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of India Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "India National Medical Institute",
+        "degree": "Residency in Neurologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Neurologist",
+        "years": "2015 - Present (10 years)"
+      },
+      {
+        "clinic": "Community Health Center, India",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Neurologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Neurologist."
+      }
+    ],
+    "specializations": [
+      "Neurologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.dubois@example.com",
+      "phone": "+47-9180567011",
+      "image": "https://i.ibb.co/placeholder/doctor26.jpg",
+      "country": "India",
+      "hospital": "International Care Clinic",
+      "rating": 5.0,
+      "experience_years": 10
+    }
+  },
+  {
+    "id": 27,
+    "name": "Dr. Ahmed Smith",
+    "country": "Pakistan",
+    "specialty": "Pediatrician",
+    "hospital": "Global Health Center",
+    "experience_years": 19,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/placeholder/doctor27.jpg",
+    "email": "ahmed.smith@example.com",
+    "phone": "+31-1506938648",
+    "about_me": "Experienced pediatrician with over 19 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Pakistan Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Pakistan National Medical Institute",
+        "degree": "Residency in Pediatrician",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Pediatrician",
+        "years": "2006 - Present (19 years)"
+      },
+      {
+        "clinic": "Community Health Center, Pakistan",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Pediatrician Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Pediatrician."
+      }
+    ],
+    "specializations": [
+      "Pediatrician",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "ahmed.smith@example.com",
+      "phone": "+31-1506938648",
+      "image": "https://i.ibb.co/placeholder/doctor27.jpg",
+      "country": "Pakistan",
+      "hospital": "Global Health Center",
+      "rating": 4.7,
+      "experience_years": 19
+    }
+  },
+  {
+    "id": 28,
+    "name": "Dr. Fatima Andersson",
+    "country": "France",
+    "specialty": "Oncologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 5,
+    "rating": 3.9,
+    "image": "https://i.ibb.co/placeholder/doctor28.jpg",
+    "email": "fatima.andersson@example.com",
+    "phone": "+98-7396669895",
+    "about_me": "Experienced oncologist with over 5 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of France Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "France National Medical Institute",
+        "degree": "Residency in Oncologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Oncologist",
+        "years": "2020 - Present (5 years)"
+      },
+      {
+        "clinic": "Community Health Center, France",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Oncologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Oncologist."
+      }
+    ],
+    "specializations": [
+      "Oncologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "fatima.andersson@example.com",
+      "phone": "+98-7396669895",
+      "image": "https://i.ibb.co/placeholder/doctor28.jpg",
+      "country": "France",
+      "hospital": "Universal Hospital",
+      "rating": 3.9,
+      "experience_years": 5
+    }
+  },
+  {
+    "id": 29,
+    "name": "Dr. Victor Kim",
+    "country": "UK",
+    "specialty": "General Practitioner",
+    "hospital": "City Medical Hospital",
+    "experience_years": 21,
+    "rating": 4.3,
+    "image": "https://i.ibb.co/placeholder/doctor29.jpg",
+    "email": "victor.kim@example.com",
+    "phone": "+52-1410077487",
+    "about_me": "Experienced general practitioner with over 21 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in General Practitioner",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior General Practitioner",
+        "years": "2004 - Present (21 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive General Practitioner Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in General Practitioner."
+      }
+    ],
+    "specializations": [
+      "General Practitioner",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "victor.kim@example.com",
+      "phone": "+52-1410077487",
+      "image": "https://i.ibb.co/placeholder/doctor29.jpg",
+      "country": "UK",
+      "hospital": "City Medical Hospital",
+      "rating": 4.3,
+      "experience_years": 21
+    }
+  },
+  {
+    "id": 30,
+    "name": "Dr. Ahmed Lee",
+    "country": "Italy",
+    "specialty": "Oncologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 19,
+    "rating": 4.0,
+    "image": "https://i.ibb.co/placeholder/doctor30.jpg",
+    "email": "ahmed.lee@example.com",
+    "phone": "+77-3035631350",
+    "about_me": "Experienced oncologist with over 19 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of Italy Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Italy National Medical Institute",
+        "degree": "Residency in Oncologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Oncologist",
+        "years": "2006 - Present (19 years)"
+      },
+      {
+        "clinic": "Community Health Center, Italy",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Oncologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Oncologist."
+      }
+    ],
+    "specializations": [
+      "Oncologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "ahmed.lee@example.com",
+      "phone": "+77-3035631350",
+      "image": "https://i.ibb.co/placeholder/doctor30.jpg",
+      "country": "Italy",
+      "hospital": "International Care Clinic",
+      "rating": 4.0,
+      "experience_years": 19
+    }
+  },
+  {
+    "id": 31,
+    "name": "Dr. Fatima Ivanov",
+    "country": "Canada",
+    "specialty": "Dermatologist",
+    "hospital": "Sunrise Medical Center",
+    "experience_years": 8,
+    "rating": 3.8,
+    "image": "https://i.ibb.co/placeholder/doctor31.jpg",
+    "email": "fatima.ivanov@example.com",
+    "phone": "+91-7988988520",
+    "about_me": "Experienced dermatologist with over 8 years of practice. Dedicated to delivering patient-centered care at Sunrise Medical Center.",
+    "education": [
+      {
+        "institution": "University of Canada Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Canada National Medical Institute",
+        "degree": "Residency in Dermatologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Sunrise Medical Center",
+        "role": "Senior Dermatologist",
+        "years": "2017 - Present (8 years)"
+      },
+      {
+        "clinic": "Community Health Center, Canada",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Dermatologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Dermatologist."
+      }
+    ],
+    "specializations": [
+      "Dermatologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "fatima.ivanov@example.com",
+      "phone": "+91-7988988520",
+      "image": "https://i.ibb.co/placeholder/doctor31.jpg",
+      "country": "Canada",
+      "hospital": "Sunrise Medical Center",
+      "rating": 3.8,
+      "experience_years": 8
+    }
+  },
+  {
+    "id": 32,
+    "name": "Dr. Daniel Patel",
+    "country": "China",
+    "specialty": "Cardiologist",
+    "hospital": "City Medical Hospital",
+    "experience_years": 30,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/placeholder/doctor32.jpg",
+    "email": "daniel.patel@example.com",
+    "phone": "+50-5741893763",
+    "about_me": "Experienced cardiologist with over 30 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of China Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "China National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior Cardiologist",
+        "years": "1995 - Present (30 years)"
+      },
+      {
+        "clinic": "Community Health Center, China",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "daniel.patel@example.com",
+      "phone": "+50-5741893763",
+      "image": "https://i.ibb.co/placeholder/doctor32.jpg",
+      "country": "China",
+      "hospital": "City Medical Hospital",
+      "rating": 4.6,
+      "experience_years": 30
+    }
+  },
+  {
+    "id": 33,
+    "name": "Dr. Isabella Brown",
+    "country": "Canada",
+    "specialty": "Neurologist",
+    "hospital": "Global Health Center",
+    "experience_years": 16,
+    "rating": 4.9,
+    "image": "https://i.ibb.co/placeholder/doctor33.jpg",
+    "email": "isabella.brown@example.com",
+    "phone": "+65-4765899010",
+    "about_me": "Experienced neurologist with over 16 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Canada Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Canada National Medical Institute",
+        "degree": "Residency in Neurologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Neurologist",
+        "years": "2009 - Present (16 years)"
+      },
+      {
+        "clinic": "Community Health Center, Canada",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Neurologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Neurologist."
+      }
+    ],
+    "specializations": [
+      "Neurologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "isabella.brown@example.com",
+      "phone": "+65-4765899010",
+      "image": "https://i.ibb.co/placeholder/doctor33.jpg",
+      "country": "Canada",
+      "hospital": "Global Health Center",
+      "rating": 4.9,
+      "experience_years": 16
+    }
+  },
+  {
+    "id": 34,
+    "name": "Dr. Maria Ivanov",
+    "country": "Netherlands",
+    "specialty": "Cardiologist",
+    "hospital": "International Care Clinic",
+    "experience_years": 35,
+    "rating": 4.3,
+    "image": "https://i.ibb.co/placeholder/doctor34.jpg",
+    "email": "maria.ivanov@example.com",
+    "phone": "+47-1494268828",
+    "about_me": "Experienced cardiologist with over 35 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of Netherlands Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Netherlands National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Cardiologist",
+        "years": "1990 - Present (35 years)"
+      },
+      {
+        "clinic": "Community Health Center, Netherlands",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "maria.ivanov@example.com",
+      "phone": "+47-1494268828",
+      "image": "https://i.ibb.co/placeholder/doctor34.jpg",
+      "country": "Netherlands",
+      "hospital": "International Care Clinic",
+      "rating": 4.3,
+      "experience_years": 35
+    }
+  },
+  {
+    "id": 35,
+    "name": "Dr. Yusuf Lee",
+    "country": "UK",
+    "specialty": "Cardiologist",
+    "hospital": "Sunrise Medical Center",
+    "experience_years": 18,
+    "rating": 4.5,
+    "image": "https://i.ibb.co/placeholder/doctor35.jpg",
+    "email": "yusuf.lee@example.com",
+    "phone": "+96-8326853710",
+    "about_me": "Experienced cardiologist with over 18 years of practice. Dedicated to delivering patient-centered care at Sunrise Medical Center.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in Cardiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Sunrise Medical Center",
+        "role": "Senior Cardiologist",
+        "years": "2007 - Present (18 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Cardiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Cardiologist."
+      }
+    ],
+    "specializations": [
+      "Cardiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "yusuf.lee@example.com",
+      "phone": "+96-8326853710",
+      "image": "https://i.ibb.co/placeholder/doctor35.jpg",
+      "country": "UK",
+      "hospital": "Sunrise Medical Center",
+      "rating": 4.5,
+      "experience_years": 18
+    }
+  },
+  {
+    "id": 36,
+    "name": "Dr. William Kim",
+    "country": "China",
+    "specialty": "General Practitioner",
+    "hospital": "City Medical Hospital",
+    "experience_years": 25,
+    "rating": 4.1,
+    "image": "https://i.ibb.co/placeholder/doctor36.jpg",
+    "email": "william.kim@example.com",
+    "phone": "+14-9957048763",
+    "about_me": "Experienced general practitioner with over 25 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of China Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "China National Medical Institute",
+        "degree": "Residency in General Practitioner",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior General Practitioner",
+        "years": "2000 - Present (25 years)"
+      },
+      {
+        "clinic": "Community Health Center, China",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive General Practitioner Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in General Practitioner."
+      }
+    ],
+    "specializations": [
+      "General Practitioner",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "william.kim@example.com",
+      "phone": "+14-9957048763",
+      "image": "https://i.ibb.co/placeholder/doctor36.jpg",
+      "country": "China",
+      "hospital": "City Medical Hospital",
+      "rating": 4.1,
+      "experience_years": 25
+    }
+  },
+  {
+    "id": 37,
+    "name": "Dr. Michael Nguyen",
+    "country": "UK",
+    "specialty": "Endocrinologist",
+    "hospital": "City Medical Hospital",
+    "experience_years": 22,
+    "rating": 4.3,
+    "image": "https://i.ibb.co/placeholder/doctor37.jpg",
+    "email": "michael.nguyen@example.com",
+    "phone": "+25-5087546215",
+    "about_me": "Experienced endocrinologist with over 22 years of practice. Dedicated to delivering patient-centered care at City Medical Hospital.",
+    "education": [
+      {
+        "institution": "University of UK Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "UK National Medical Institute",
+        "degree": "Residency in Endocrinologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "City Medical Hospital",
+        "role": "Senior Endocrinologist",
+        "years": "2003 - Present (22 years)"
+      },
+      {
+        "clinic": "Community Health Center, UK",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Endocrinologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Endocrinologist."
+      }
+    ],
+    "specializations": [
+      "Endocrinologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "michael.nguyen@example.com",
+      "phone": "+25-5087546215",
+      "image": "https://i.ibb.co/placeholder/doctor37.jpg",
+      "country": "UK",
+      "hospital": "City Medical Hospital",
+      "rating": 4.3,
+      "experience_years": 22
+    }
+  },
+  {
+    "id": 38,
+    "name": "Dr. John Smith",
+    "country": "Brazil",
+    "specialty": "Pediatrician",
+    "hospital": "International Care Clinic",
+    "experience_years": 29,
+    "rating": 4.4,
+    "image": "https://i.ibb.co/placeholder/doctor38.jpg",
+    "email": "john.smith@example.com",
+    "phone": "+23-4736284690",
+    "about_me": "Experienced pediatrician with over 29 years of practice. Dedicated to delivering patient-centered care at International Care Clinic.",
+    "education": [
+      {
+        "institution": "University of Brazil Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Brazil National Medical Institute",
+        "degree": "Residency in Pediatrician",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "International Care Clinic",
+        "role": "Senior Pediatrician",
+        "years": "1996 - Present (29 years)"
+      },
+      {
+        "clinic": "Community Health Center, Brazil",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Pediatrician Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Pediatrician."
+      }
+    ],
+    "specializations": [
+      "Pediatrician",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "john.smith@example.com",
+      "phone": "+23-4736284690",
+      "image": "https://i.ibb.co/placeholder/doctor38.jpg",
+      "country": "Brazil",
+      "hospital": "International Care Clinic",
+      "rating": 4.4,
+      "experience_years": 29
+    }
+  },
+  {
+    "id": 39,
+    "name": "Dr. Chen Muller",
+    "country": "Japan",
+    "specialty": "General Practitioner",
+    "hospital": "Wellness Hospital",
+    "experience_years": 15,
+    "rating": 3.5,
+    "image": "https://i.ibb.co/placeholder/doctor39.jpg",
+    "email": "chen.muller@example.com",
+    "phone": "+90-4924035430",
+    "about_me": "Experienced general practitioner with over 15 years of practice. Dedicated to delivering patient-centered care at Wellness Hospital.",
+    "education": [
+      {
+        "institution": "University of Japan Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Japan National Medical Institute",
+        "degree": "Residency in General Practitioner",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Wellness Hospital",
+        "role": "Senior General Practitioner",
+        "years": "2010 - Present (15 years)"
+      },
+      {
+        "clinic": "Community Health Center, Japan",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive General Practitioner Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in General Practitioner."
+      }
+    ],
+    "specializations": [
+      "General Practitioner",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.muller@example.com",
+      "phone": "+90-4924035430",
+      "image": "https://i.ibb.co/placeholder/doctor39.jpg",
+      "country": "Japan",
+      "hospital": "Wellness Hospital",
+      "rating": 3.5,
+      "experience_years": 15
+    }
+  },
+  {
+    "id": 40,
+    "name": "Dr. Fatima Chowdhury",
+    "country": "Mexico",
+    "specialty": "Dermatologist",
+    "hospital": "PrimeCare Hospital",
+    "experience_years": 20,
+    "rating": 3.7,
+    "image": "https://i.ibb.co/placeholder/doctor40.jpg",
+    "email": "fatima.chowdhury@example.com",
+    "phone": "+1-6781831414",
+    "about_me": "Experienced dermatologist with over 20 years of practice. Dedicated to delivering patient-centered care at PrimeCare Hospital.",
+    "education": [
+      {
+        "institution": "University of Mexico Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Mexico National Medical Institute",
+        "degree": "Residency in Dermatologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "PrimeCare Hospital",
+        "role": "Senior Dermatologist",
+        "years": "2005 - Present (20 years)"
+      },
+      {
+        "clinic": "Community Health Center, Mexico",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Dermatologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Dermatologist."
+      }
+    ],
+    "specializations": [
+      "Dermatologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "fatima.chowdhury@example.com",
+      "phone": "+1-6781831414",
+      "image": "https://i.ibb.co/placeholder/doctor40.jpg",
+      "country": "Mexico",
+      "hospital": "PrimeCare Hospital",
+      "rating": 3.7,
+      "experience_years": 20
+    }
+  },
+  {
+    "id": 41,
+    "name": "Dr. Amelia Smith",
+    "country": "France",
+    "specialty": "General Practitioner",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 30,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/placeholder/doctor41.jpg",
+    "email": "amelia.smith@example.com",
+    "phone": "+84-9987673197",
+    "about_me": "Experienced general practitioner with over 30 years of practice. Dedicated to delivering patient-centered care at Metropolitan Health Institute.",
+    "education": [
+      {
+        "institution": "University of France Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "France National Medical Institute",
+        "degree": "Residency in General Practitioner",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Metropolitan Health Institute",
+        "role": "Senior General Practitioner",
+        "years": "1995 - Present (30 years)"
+      },
+      {
+        "clinic": "Community Health Center, France",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive General Practitioner Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in General Practitioner."
+      }
+    ],
+    "specializations": [
+      "General Practitioner",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "amelia.smith@example.com",
+      "phone": "+84-9987673197",
+      "image": "https://i.ibb.co/placeholder/doctor41.jpg",
+      "country": "France",
+      "hospital": "Metropolitan Health Institute",
+      "rating": 4.7,
+      "experience_years": 30
+    }
+  },
+  {
+    "id": 42,
+    "name": "Dr. Aisha Kim",
+    "country": "South Africa",
+    "specialty": "Psychiatrist",
+    "hospital": "Wellness Hospital",
+    "experience_years": 20,
+    "rating": 4.8,
+    "image": "https://i.ibb.co/placeholder/doctor42.jpg",
+    "email": "aisha.kim@example.com",
+    "phone": "+89-9935636054",
+    "about_me": "Experienced psychiatrist with over 20 years of practice. Dedicated to delivering patient-centered care at Wellness Hospital.",
+    "education": [
+      {
+        "institution": "University of South Africa Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "South Africa National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Wellness Hospital",
+        "role": "Senior Psychiatrist",
+        "years": "2005 - Present (20 years)"
+      },
+      {
+        "clinic": "Community Health Center, South Africa",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "aisha.kim@example.com",
+      "phone": "+89-9935636054",
+      "image": "https://i.ibb.co/placeholder/doctor42.jpg",
+      "country": "South Africa",
+      "hospital": "Wellness Hospital",
+      "rating": 4.8,
+      "experience_years": 20
+    }
+  },
+  {
+    "id": 43,
+    "name": "Dr. Victor Zhang",
+    "country": "Italy",
+    "specialty": "Pediatrician",
+    "hospital": "Sunrise Medical Center",
+    "experience_years": 28,
+    "rating": 4.2,
+    "image": "https://i.ibb.co/placeholder/doctor43.jpg",
+    "email": "victor.zhang@example.com",
+    "phone": "+77-2235010510",
+    "about_me": "Experienced pediatrician with over 28 years of practice. Dedicated to delivering patient-centered care at Sunrise Medical Center.",
+    "education": [
+      {
+        "institution": "University of Italy Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Italy National Medical Institute",
+        "degree": "Residency in Pediatrician",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Sunrise Medical Center",
+        "role": "Senior Pediatrician",
+        "years": "1997 - Present (28 years)"
+      },
+      {
+        "clinic": "Community Health Center, Italy",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Pediatrician Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Pediatrician."
+      }
+    ],
+    "specializations": [
+      "Pediatrician",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "victor.zhang@example.com",
+      "phone": "+77-2235010510",
+      "image": "https://i.ibb.co/placeholder/doctor43.jpg",
+      "country": "Italy",
+      "hospital": "Sunrise Medical Center",
+      "rating": 4.2,
+      "experience_years": 28
+    }
+  },
+  {
+    "id": 44,
+    "name": "Dr. Chen Johnson",
+    "country": "Germany",
+    "specialty": "Orthopedic Surgeon",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 15,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/placeholder/doctor44.jpg",
+    "email": "chen.johnson@example.com",
+    "phone": "+26-1380454434",
+    "about_me": "Experienced orthopedic surgeon with over 15 years of practice. Dedicated to delivering patient-centered care at Metropolitan Health Institute.",
+    "education": [
+      {
+        "institution": "University of Germany Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Germany National Medical Institute",
+        "degree": "Residency in Orthopedic Surgeon",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Metropolitan Health Institute",
+        "role": "Senior Orthopedic Surgeon",
+        "years": "2010 - Present (15 years)"
+      },
+      {
+        "clinic": "Community Health Center, Germany",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Orthopedic Surgeon Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Orthopedic Surgeon."
+      }
+    ],
+    "specializations": [
+      "Orthopedic Surgeon",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "chen.johnson@example.com",
+      "phone": "+26-1380454434",
+      "image": "https://i.ibb.co/placeholder/doctor44.jpg",
+      "country": "Germany",
+      "hospital": "Metropolitan Health Institute",
+      "rating": 4.6,
+      "experience_years": 15
+    }
+  },
+  {
+    "id": 45,
+    "name": "Dr. Hiroshi Chowdhury",
+    "country": "Japan",
+    "specialty": "Radiologist",
+    "hospital": "Global Health Center",
+    "experience_years": 29,
+    "rating": 4.9,
+    "image": "https://i.ibb.co/placeholder/doctor45.jpg",
+    "email": "hiroshi.chowdhury@example.com",
+    "phone": "+63-1464901222",
+    "about_me": "Experienced radiologist with over 29 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Japan Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Japan National Medical Institute",
+        "degree": "Residency in Radiologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Radiologist",
+        "years": "1996 - Present (29 years)"
+      },
+      {
+        "clinic": "Community Health Center, Japan",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Radiologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Radiologist."
+      }
+    ],
+    "specializations": [
+      "Radiologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "hiroshi.chowdhury@example.com",
+      "phone": "+63-1464901222",
+      "image": "https://i.ibb.co/placeholder/doctor45.jpg",
+      "country": "Japan",
+      "hospital": "Global Health Center",
+      "rating": 4.9,
+      "experience_years": 29
+    }
+  },
+  {
+    "id": 46,
+    "name": "Dr. Carlos Nguyen",
+    "country": "China",
+    "specialty": "Oncologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 23,
+    "rating": 4.1,
+    "image": "https://i.ibb.co/placeholder/doctor46.jpg",
+    "email": "carlos.nguyen@example.com",
+    "phone": "+83-3371099984",
+    "about_me": "Experienced oncologist with over 23 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of China Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "China National Medical Institute",
+        "degree": "Residency in Oncologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Oncologist",
+        "years": "2002 - Present (23 years)"
+      },
+      {
+        "clinic": "Community Health Center, China",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Oncologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Oncologist."
+      }
+    ],
+    "specializations": [
+      "Oncologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "carlos.nguyen@example.com",
+      "phone": "+83-3371099984",
+      "image": "https://i.ibb.co/placeholder/doctor46.jpg",
+      "country": "China",
+      "hospital": "Universal Hospital",
+      "rating": 4.1,
+      "experience_years": 23
+    }
+  },
+  {
+    "id": 47,
+    "name": "Dr. John Martinez",
+    "country": "Sweden",
+    "specialty": "Dermatologist",
+    "hospital": "Metropolitan Health Institute",
+    "experience_years": 19,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/placeholder/doctor47.jpg",
+    "email": "john.martinez@example.com",
+    "phone": "+98-1181131201",
+    "about_me": "Experienced dermatologist with over 19 years of practice. Dedicated to delivering patient-centered care at Metropolitan Health Institute.",
+    "education": [
+      {
+        "institution": "University of Sweden Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Sweden National Medical Institute",
+        "degree": "Residency in Dermatologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Metropolitan Health Institute",
+        "role": "Senior Dermatologist",
+        "years": "2006 - Present (19 years)"
+      },
+      {
+        "clinic": "Community Health Center, Sweden",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Dermatologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Dermatologist."
+      }
+    ],
+    "specializations": [
+      "Dermatologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "john.martinez@example.com",
+      "phone": "+98-1181131201",
+      "image": "https://i.ibb.co/placeholder/doctor47.jpg",
+      "country": "Sweden",
+      "hospital": "Metropolitan Health Institute",
+      "rating": 4.7,
+      "experience_years": 19
+    }
+  },
+  {
+    "id": 48,
+    "name": "Dr. Rajesh Khan",
+    "country": "Italy",
+    "specialty": "Psychiatrist",
+    "hospital": "Global Health Center",
+    "experience_years": 31,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/placeholder/doctor48.jpg",
+    "email": "rajesh.khan@example.com",
+    "phone": "+80-9487465292",
+    "about_me": "Experienced psychiatrist with over 31 years of practice. Dedicated to delivering patient-centered care at Global Health Center.",
+    "education": [
+      {
+        "institution": "University of Italy Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Italy National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Global Health Center",
+        "role": "Senior Psychiatrist",
+        "years": "1994 - Present (31 years)"
+      },
+      {
+        "clinic": "Community Health Center, Italy",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "rajesh.khan@example.com",
+      "phone": "+80-9487465292",
+      "image": "https://i.ibb.co/placeholder/doctor48.jpg",
+      "country": "Italy",
+      "hospital": "Global Health Center",
+      "rating": 4.7,
+      "experience_years": 31
+    }
+  },
+  {
+    "id": 49,
+    "name": "Dr. Rajesh Chowdhury",
+    "country": "Bangladesh",
+    "specialty": "Neurologist",
+    "hospital": "Universal Hospital",
+    "experience_years": 18,
+    "rating": 4.1,
+    "image": "https://i.ibb.co/placeholder/doctor49.jpg",
+    "email": "rajesh.chowdhury@example.com",
+    "phone": "+4-8865196790",
+    "about_me": "Experienced neurologist with over 18 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Bangladesh Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Bangladesh National Medical Institute",
+        "degree": "Residency in Neurologist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Neurologist",
+        "years": "2007 - Present (18 years)"
+      },
+      {
+        "clinic": "Community Health Center, Bangladesh",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Neurologist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Neurologist."
+      }
+    ],
+    "specializations": [
+      "Neurologist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "rajesh.chowdhury@example.com",
+      "phone": "+4-8865196790",
+      "image": "https://i.ibb.co/placeholder/doctor49.jpg",
+      "country": "Bangladesh",
+      "hospital": "Universal Hospital",
+      "rating": 4.1,
+      "experience_years": 18
+    }
+  },
+  {
+    "id": 50,
+    "name": "Dr. Aisha Smith",
+    "country": "Netherlands",
+    "specialty": "Psychiatrist",
+    "hospital": "Universal Hospital",
+    "experience_years": 11,
+    "rating": 4.5,
+    "image": "https://i.ibb.co/placeholder/doctor50.jpg",
+    "email": "aisha.smith@example.com",
+    "phone": "+36-6360622705",
+    "about_me": "Experienced psychiatrist with over 11 years of practice. Dedicated to delivering patient-centered care at Universal Hospital.",
+    "education": [
+      {
+        "institution": "University of Netherlands Medical School",
+        "degree": "MD (Doctor of Medicine)",
+        "years": "2000 - 2006"
+      },
+      {
+        "institution": "Netherlands National Medical Institute",
+        "degree": "Residency in Psychiatrist",
+        "years": "2006 - 2009"
+      }
+    ],
+    "work_experience": [
+      {
+        "clinic": "Universal Hospital",
+        "role": "Senior Psychiatrist",
+        "years": "2014 - Present (11 years)"
+      },
+      {
+        "clinic": "Community Health Center, Netherlands",
+        "role": "Resident Doctor",
+        "years": "2009 - 2012 (3 years)"
+      }
+    ],
+    "services": [
+      "Comprehensive Psychiatrist Care",
+      "Patient Consultations",
+      "Preventive Health Programs",
+      "Diagnostic Services",
+      "Treatment & Follow-up"
+    ],
+    "awards": [
+      {
+        "date": "2018",
+        "title": "Excellence in Healthcare Award",
+        "description": "Recognized for outstanding contributions in Psychiatrist."
+      }
+    ],
+    "specializations": [
+      "Psychiatrist",
+      "Preventive Medicine",
+      "Patient Counseling"
+    ],
+    "contact": {
+      "email": "aisha.smith@example.com",
+      "phone": "+36-6360622705",
+      "image": "https://i.ibb.co/placeholder/doctor50.jpg",
+      "country": "Netherlands",
+      "hospital": "Universal Hospital",
+      "rating": 4.5,
+      "experience_years": 11
+    }
+  }
+]
