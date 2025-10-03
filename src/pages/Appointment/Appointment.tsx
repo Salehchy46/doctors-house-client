@@ -1,7 +1,6 @@
 import CalendarHero from "./Calender";
 import Hero from "./Hero";
 import bgchair from '../../assets/appointment/landing-bg.png'
-import Service from "./Service";
 import Slots from "./Slots";
 
 const Appointment = () => {
@@ -15,7 +14,6 @@ const Appointment = () => {
                     `url(${bgchair})`,
             }}>
                 <CalendarHero></CalendarHero>
-                <Service></Service>
             </div>
             <div className="bg-white">
                 <Slots></Slots>
