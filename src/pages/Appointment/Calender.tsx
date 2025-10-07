@@ -14,7 +14,6 @@ const CalendarHero: React.FC = () => {
     const servicesRef = useRef<HTMLDivElement>(null);
     const [hasSelectedDate, setHasSelectedDate] = useState(false);
 
-    // Format the selected date to display like "April 2, 2022"
     const formatSelectedDate = (date: Date | null) => {
         if (!date) return "";
         return date.toLocaleDateString('en-US', {
