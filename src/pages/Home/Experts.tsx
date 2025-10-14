@@ -65,7 +65,7 @@ const Experts: React.FC = () => {
                   <p>{doctor.visit}</p>
                 </div>
                 <div className="card-actions">
-                  <Link to="/doctorprofile" className="w-full">
+                  <Link to={`/doctorprofile/${doctor._id}`} className="w-full">
                     <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">
                       View Profile
                     </button>

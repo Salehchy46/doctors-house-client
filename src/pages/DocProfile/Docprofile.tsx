@@ -81,76 +81,78 @@ const Docprofile: React.FC = () => {
 
                                 {/* Overview Tab */}
                                 <TabPanel>
-                                    <div>
-                                        <h6 className="text-xl font-bold mt-5">About Me</h6>
-                                        <p className="my-3">{details.about_me}</p>
+                                    {
+                                        details.map((detail) => (<div>
+                                            <h6 className="text-xl font-bold mt-5">About Me</h6>
+                                            <p className="my-3">{detail?.about_me}</p>
 
-                                        <div className="flex flex-wrap gap-8">
-                                            {/* Left column */}
-                                            <div className="flex-1 min-w-[300px]">
-                                                <h6 className="text-xl font-bold mt-5">Education</h6>
-                                                <ul className="m-5 list-disc">
-                                                    {details.education.map((ed, idx) => (
-                                                        <li key={idx} className="mb-3">
-                                                            <p className="font-bold">{ed.institution}</p>
-                                                            <p className="my-1.5">{ed.degree}</p>
-                                                            <p>{ed.years}</p>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                            <div className="flex flex-wrap gap-8">
+                                                {/* Left column */}
+                                                <div className="flex-1 min-w-[300px]">
+                                                    <h6 className="text-xl font-bold mt-5">Education</h6>
+                                                    <ul className="m-5 list-disc">
+                                                        {detail?.education.map((ed, idx) => (
+                                                            <li key={idx} className="mb-3">
+                                                                <p className="font-bold">{ed?.institution}</p>
+                                                                <p className="my-1.5">{ed?.degree}</p>
+                                                                <p>{ed?.years}</p>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
 
-                                                <h6 className="text-xl font-bold mt-5">Work & Experience</h6>
-                                                <ul className="m-5 list-disc">
-                                                    {details.work_experience.map((we, idx) => (
-                                                        <li key={idx} className="mb-3">
-                                                            <p className="font-bold">{we.clinic}</p>
-                                                            <p className="my-1.5">{we.role}</p>
-                                                            <p>{we.years}</p>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                    <h6 className="text-xl font-bold mt-5">Work & Experience</h6>
+                                                    <ul className="m-5 list-disc">
+                                                        {detail?.work_experience.map((we, idx) => (
+                                                            <li key={idx} className="mb-3">
+                                                                <p className="font-bold">{we?.clinic}</p>
+                                                                <p className="my-1.5">{we?.role}</p>
+                                                                <p>{we?.years}</p>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
 
-                                                <h6 className="text-xl font-bold mt-5">Services</h6>
-                                                <ul className="m-5 list-disc">
-                                                    {details.services.map((srv, idx) => (
-                                                        <li key={idx}>{srv}</li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-
-                                            {/* Right column */}
-                                            <div className="flex-1 min-w-[300px]">
-                                                <h6 className="text-xl font-bold mt-5">Awards</h6>
-                                                <ul className="m-5 list-disc">
-                                                    {details.awards.map((award, idx) => (
-                                                        <li key={idx} className="mb-3">
-                                                            <p className="font-bold">
-                                                                {award.title} <span className="text-sm">({award.date})</span>
-                                                            </p>
-                                                            <p className="my-1.5">{award.description}</p>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-
-                                                <h6 className="text-xl font-bold mt-5">Contact</h6>
-                                                <div className="m-5">
-                                                    <p>Email: {details.contact.email}</p>
-                                                    <p>Phone: {details.contact.phone}</p>
-                                                    <p>Hospital: {details.contact.hospital}</p>
-                                                    <p>Country: {details.contact.country}</p>
-                                                    <p>Rating: {details.contact.rating}</p>
-                                                    <p>Experience: {details.contact.experience_years} years</p>
+                                                    <h6 className="text-xl font-bold mt-5">Services</h6>
+                                                    <ul className="m-5 list-disc">
+                                                        {detail?.services.map((srv, idx) => (
+                                                            <li key={idx}>{srv}</li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
 
-                                                <h6 className="text-xl font-bold mt-5">Specializations</h6>
-                                                <ul className="m-5 list-disc">
-                                                    {details.specializations.map((spec, idx) => (
-                                                        <li key={idx}>{spec}</li>
-                                                    ))}
-                                                </ul>
+                                                {/* Right column */}
+                                                <div className="flex-1 min-w-[300px]">
+                                                    <h6 className="text-xl font-bold mt-5">Awards</h6>
+                                                    <ul className="m-5 list-disc">
+                                                        {detail?.awards.map((award, idx) => (
+                                                            <li key={idx} className="mb-3">
+                                                                <p className="font-bold">
+                                                                    {award?.title} <span className="text-sm">({award?.date})</span>
+                                                                </p>
+                                                                <p className="my-1.5">{award?.description}</p>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+
+                                                    <h6 className="text-xl font-bold mt-5">Contact</h6>
+                                                    <div className="m-5">
+                                                        <p>Email: {detail?.contact?.email}</p>
+                                                        <p>Phone: {detail?.contact?.phone}</p>
+                                                        <p>Hospital: {detail?.contact?.hospital}</p>
+                                                        <p>Country: {detail?.contact?.country}</p>
+                                                        <p>Rating: {detail?.contact?.rating}</p>
+                                                        <p>Experience: {detail?.contact?.experience_years} years</p>
+                                                    </div>
+
+                                                    <h6 className="text-xl font-bold mt-5">Specializations</h6>
+                                                    <ul className="m-5 list-disc">
+                                                        {detail?.specializations.map((spec, idx) => (
+                                                            <li key={idx}>{spec}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </div>))
+                                    }
                                 </TabPanel>
 
                                 {/* Other tabs */}

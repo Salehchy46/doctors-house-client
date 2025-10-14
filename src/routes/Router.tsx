@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
                 element: <About></About>,
             },
             {
-                path: '/doctorprofile',
+                path: '/doctorprofile/:id',
                 element: <Docprofile></Docprofile>,
                 loader: ({params}) => fetch(`http://localhost:5000/expertDoctors/${params.id}`),
             },
