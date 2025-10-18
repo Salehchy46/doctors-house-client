@@ -36,32 +36,32 @@ const Doctors: React.FC = () => {
                 <div className="hero">
                     <div className="hero-content  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-10">
                         {doctors.map((doctor) => (
-                            <div key={doctor._id || doctor.name} className="card shadow-sm w-96 mx-auto">
+                            <div key={doctor?._id || doctor?.name} className="card shadow-sm w-96 mx-auto">
                                 <figure>
-                                    <img src={doctor.image} alt={doctor.name} />
+                                    <img src={doctor?.image} alt={doctor?.name} />
                                 </figure>
                                 <div className="card-body">
-                                    <h2 className="card-title">{doctor.name}</h2>
-                                    <p>{doctor.specialty}</p>
+                                    <h2 className="card-title">{doctor?.name}</h2>
+                                    <p>{doctor?.specialty}</p>
                                     <div className="rating rating-xs">
-                                        <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" defaultChecked />
+                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
+                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
+                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
+                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
+                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" defaultChecked />
                                     </div>
                                     <div className="divider-horizontal"></div>
                                     <div className="flex gap-3 items-center">
                                         <CiLocationOn />
-                                        <p>{doctor.country}</p>
+                                        <p>{doctor?.country}</p>
                                     </div>
                                     <div className="flex gap-3 items-center">
                                         <CiCalendar />
-                                        <p>{doctor.avialable}</p>
+                                        <p>{doctor?.avialable}</p>
                                     </div>
                                     <div className="flex gap-3 items-center">
                                         <CiDollar />
-                                        <p>{doctor.visit}</p>
+                                        <p>{doctor?.visit}</p>
                                     </div>
                                     <div className="card-actions">
                                         <Link to="/doctorprofile" className="w-full">
