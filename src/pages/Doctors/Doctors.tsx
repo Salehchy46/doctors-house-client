@@ -14,6 +14,7 @@ interface Doctor {
     avialable: string;
     visit: string | number;
     email: string;
+    rating: number;
 }
 
 const Doctors: React.FC = () => {
@@ -44,12 +45,21 @@ const Doctors: React.FC = () => {
                                 <div className="card-body">
                                     <h2 className="card-title">{doctor?.name}</h2>
                                     <p>{doctor?.specialty}</p>
-                                    <div className="rating rating-xs">
-                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" />
-                                        <input type="radio" name={`rating-${doctor?._id}`} className="mask mask-star bg-orange-400" defaultChecked />
+                                    <div className="rating rating-sm flex items-center">
+                                        {[1, 2, 3, 4, 5].map((star) => (
+                                            <input
+                                                key={star}
+                                                type="radio"
+                                                name={`rating-${doctor._id}`}
+                                                className="mask mask-star bg-orange-400"
+                                                aria-label={`${star} star`}
+                                                checked={Math.round(doctor.rating) === star}
+                                                readOnly
+                                            />
+                                        ))}
+                                        <span className="ml-2 text-gray-600 text-sm">
+                                            {doctor.rating?.toFixed(1) || "N/A"}
+                                        </span>
                                     </div>
                                     <div className="divider-horizontal"></div>
                                     <div className="flex gap-3 items-center">
@@ -65,7 +75,7 @@ const Doctors: React.FC = () => {
                                         <p>{doctor?.visit}</p>
                                     </div>
                                     <div className="card-actions">
-                                        <Link to="/doctorprofile" className="w-full">
+                                        <Link to={`/doctorprofile/${doctor._id}`} className="w-full">
                                             <button className="w-full btn btn-xl bg-white border-[#F7A582] text-[#F7A582] hover:bg-[#F7A582] hover:text-white">
                                                 View Profile
                                             </button>

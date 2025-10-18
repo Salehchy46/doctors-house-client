@@ -11,8 +11,9 @@ interface Doctor {
   specialty: string;
   image: string;
   country: string;
-  avialable: string; 
+  avialable: string;
   visit: string | number;
+  rating: number;
 }
 
 const Experts: React.FC = () => {
@@ -44,12 +45,21 @@ const Experts: React.FC = () => {
               <div className="card-body">
                 <h2 className="card-title">{doctor.name}</h2>
                 <p>{doctor.specialty}</p>
-                <div className="rating rating-xs">
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" />
-                  <input type="radio" name={`rating-${doctor._id}`} className="mask mask-star bg-orange-400" defaultChecked />
+                <div className="rating rating-sm flex items-center">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <input
+                      key={star}
+                      type="radio"
+                      name={`rating-${doctor._id}`}
+                      className="mask mask-star bg-orange-400"
+                      aria-label={`${star} star`}
+                      checked={Math.round(doctor.rating) === star}
+                      readOnly
+                    />
+                  ))}
+                  <span className="ml-2 text-gray-600 text-sm">
+                    {doctor.rating?.toFixed(1) || "N/A"}
+                  </span>
                 </div>
                 <div className="divider-horizontal"></div>
                 <div className="flex gap-3 items-center">

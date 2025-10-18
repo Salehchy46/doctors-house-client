@@ -88,7 +88,7 @@ const Docprofile: React.FC = () => {
                     <h3 className='text-[40px] font-bold'>{doctor.name}</h3>
                     <p className='my-1.5'>{doctor.specialty}</p>
 
-                    <div className="rating rating-md flex items-center">
+                    <div className="rating rating-sm flex items-center">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <input
                           key={star}
