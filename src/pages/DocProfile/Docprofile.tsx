@@ -44,6 +44,7 @@ type CvDetails = {
   name: string;
   image: string;
   specialty: string;
+  rating: number;
   country: string;
   about_me: string;
   education: Education[];
@@ -73,42 +74,68 @@ const Docprofile: React.FC = () => {
         <div className="pt-28 pb-10 text-black max-w-[1280px] mx-auto">
           <div className="hero bg-white min-h-[450px] rounded-xl flex">
             {
-              detailArray.map((doctor) => <div className='hero-content'>
-                <div>
-                  <img src={doctor.image} className='w-[350px] h-96 object-cover rounded-xl m-5' alt="" />
+              detailArray.map((doctor, index) => (
+                <div className='hero-content' key={index}>
+                  <div>
+                    <img
+                      src={doctor.image}
+                      className='w-[350px] h-96 object-cover rounded-xl m-5'
+                      alt={doctor.name}
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className='text-[40px] font-bold'>{doctor.name}</h3>
+                    <p className='my-1.5'>{doctor.specialty}</p>
+
+                    <div className="rating rating-md flex items-center">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <input
+                          key={star}
+                          type="radio"
+                          name={`rating-${index}`}
+                          className="mask mask-star bg-orange-400"
+                          aria-label={`${star} star`}
+                          checked={Math.round(doctor.rating) === star}
+                          readOnly
+                        />
+                      ))}
+                      <span className="ml-2 text-gray-600 text-sm">
+                        {doctor.rating?.toFixed(1) || "N/A"}
+                      </span>
+                    </div>
+
+                    <div className='flex my-1.5 gap-3 items-center'>
+                      <CiLocationOn className="text-xl" />
+                      <p>
+                        {doctor.country}{" "}
+                        <Link to='/' className='text-[#F7A582]'>
+                          Get Directions
+                        </Link>
+                      </p>
+                    </div>
+
+                    <div className='flex max-w-[460px] mb-3 gap-3'>
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                      ))}
+                    </div>
+
+                    <div className='flex flex-wrap gap-3'>
+                      {doctor?.specializations?.map((specialisation, i) => (
+                        <h5
+                          key={i}
+                          className='text-xl p-3 text-center font-semibold text-[#6C6B6B] border rounded-xl border-[#6C6B6B]'
+                        >
+                          {specialisation}
+                        </h5>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className='text-[40px] font-bold'>{doctor.name}</h3>
-                  <p className='my-1.5'>{doctor.specialty}</p>
-                  <div className="rating rating-xs">
-                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="1 star" />
-                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="2 star" />
-                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="3 star" />
-                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="4 star" />
-                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="5 star" defaultChecked />
-                  </div>
-                  <div className='flex my-1.5 gap-3'>
-                    <CiLocationOn></CiLocationOn>
-                    <p>{doctor.country} <Link to='/' className='text-[#F7A582]'>Get Directions</Link></p>
-                  </div>
-                  <div className='flex max-w-[460px] mb-3 gap-3'>
-                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
-                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
-                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
-                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
-                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
-                  </div>
-                  <div className='flex gap-3'>
-                    {
-                      doctor?.specializations.map(specialisation => 
-                        <h5 className='text-xl p-3 text-center font-semibold text-[#6C6B6B] border rounded-xl border-[#6C6B6B]'>{specialisation}</h5>
-                      )
-                    }
-                    
-                  </div>
-                </div>
-              </div>)
+              ))
             }
+
           </div>
         </div>
       </div>
