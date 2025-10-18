@@ -55,12 +55,24 @@ type CvDetails = {
   contact: Contact;
 };
 
+type Location = string | { lat: number; lng: number };
+
 
 const Docprofile: React.FC = () => {
   const details = useLoaderData() as CvDetails | CvDetails[];
 
   // If details is an array
   const detailArray = Array.isArray(details) ? details : [details];
+
+
+const handleGetDirections = (location: Location): void => {
+  if (typeof location === "string") {
+    const query = encodeURIComponent(location);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${query}`, "_blank");
+  } else {
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`, "_blank");
+  }
+};
 
   return (
     <div>
@@ -109,8 +121,14 @@ const Docprofile: React.FC = () => {
                       <CiLocationOn className="text-xl" />
                       <p>
                         {doctor.country}{" "}
-                        <Link to='/' className='text-[#F7A582]'>
-                          Get Directions
+                        <Link to='' className='text-[#F7A582]'>
+                          <button
+                            onClick={() => handleGetDirections(doctor.country)}
+                            className='text-[#F7A582] underline'
+                          >
+                            Get Directions
+                          </button>
+
                         </Link>
                       </p>
                     </div>
