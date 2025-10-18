@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "./Hero";
-import DocDetail from "./DocDetail";
 import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -8,6 +7,8 @@ import Locations from "./Details/Locations";
 import DocReviews from "./Details/DocReviews";
 import BusinessHour from "./Details/BusinessHour";
 import AppointmentSerial from "./Details/AppointmentSerial";
+import { CiLocationOn } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
 
 
 type Education = {
@@ -41,6 +42,9 @@ type Contact = {
 type CvDetails = {
   _id: string;
   name: string;
+  image: string;
+  specialty: string;
+  country: string;
   about_me: string;
   education: Education[];
   work_experience: WorkExperience[];
@@ -67,7 +71,45 @@ const Docprofile: React.FC = () => {
 
       <div className="bg-gray-100">
         <div className="pt-28 pb-10 text-black max-w-[1280px] mx-auto">
-          <DocDetail />
+          <div className="hero bg-white min-h-[450px] rounded-xl flex">
+            {
+              detailArray.map((doctor) => <div className='hero-content'>
+                <div>
+                  <img src={doctor.image} className='w-[350px] h-96 object-cover rounded-xl m-5' alt="" />
+                </div>
+                <div>
+                  <h3 className='text-[40px] font-bold'>{doctor.name}</h3>
+                  <p className='my-1.5'>{doctor.specialty}</p>
+                  <div className="rating rating-xs">
+                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="1 star" />
+                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="2 star" />
+                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="3 star" />
+                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="4 star" />
+                    <input type="radio" name="rating-5" className="mask mask-star bg-orange-400" aria-label="5 star" defaultChecked />
+                  </div>
+                  <div className='flex my-1.5 gap-3'>
+                    <CiLocationOn></CiLocationOn>
+                    <p>{doctor.country} <Link to='/' className='text-[#F7A582]'>Get Directions</Link></p>
+                  </div>
+                  <div className='flex max-w-[460px] mb-3 gap-3'>
+                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                    <div className='w-20 p-16 rounded-xl bg-gray-100'></div>
+                  </div>
+                  <div className='flex gap-3'>
+                    {
+                      doctor?.specializations.map(specialisation => 
+                        <h5 className='text-xl p-3 text-center font-semibold text-[#6C6B6B] border rounded-xl border-[#6C6B6B]'>{specialisation}</h5>
+                      )
+                    }
+                    
+                  </div>
+                </div>
+              </div>)
+            }
+          </div>
         </div>
       </div>
 

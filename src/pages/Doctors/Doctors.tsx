@@ -13,6 +13,7 @@ interface Doctor {
     country: string;
     avialable: string;
     visit: string | number;
+    email: string;
 }
 
 const Doctors: React.FC = () => {
@@ -38,7 +39,7 @@ const Doctors: React.FC = () => {
                         {doctors.map((doctor) => (
                             <div key={doctor?._id || doctor?.name} className="card shadow-sm w-96 mx-auto">
                                 <figure>
-                                    <img src={doctor?.image} alt={doctor?.name} />
+                                    <img src={doctor?.image} alt={doctor?.email} />
                                 </figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{doctor?.name}</h2>
