@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 import chair1 from '../../assets/chair1.png';
 import service1 from '../../assets/appointment/service1.png';
 import service2 from '../../assets/appointment/service2.png';
@@ -13,6 +14,47 @@ const CalendarHero: React.FC = () => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
     const servicesRef = useRef<HTMLDivElement>(null);
     const [hasSelectedDate, setHasSelectedDate] = useState(false);
+    const navigate = useNavigate();
+
+    // Services data as objects
+    const services = [
+        {
+            id: 1,
+            name: "Teeth Orthodontics",
+            image: service1,
+            bgColor: "bg-pink-100"
+        },
+        {
+            id: 2,
+            name: "Cosmetic Dentistry",
+            image: service2,
+            bgColor: "bg-pink-50"
+        },
+        {
+            id: 3,
+            name: "Teeth Cleaning",
+            image: service3,
+            bgColor: "bg-pink-100"
+        },
+        {
+            id: 4,
+            name: "Cavity Protection",
+            image: service4,
+            bgColor: "bg-blue-100"
+        },
+        {
+            id: 5,
+            name: "Pediatric Dental",
+            image: service5,
+            bgColor: "bg-pink-100"
+        },
+        {
+            id: 6,
+            name: "Oral Surgery",
+            image: service6,
+            bgColor: "bg-amber-100"
+        }
+    ];
 
     const formatSelectedDate = (date: Date | null) => {
         if (!date) return "";
@@ -27,6 +69,18 @@ const CalendarHero: React.FC = () => {
     const handleDateChange = (date: Date | null) => {
         setSelectedDate(date);
         setHasSelectedDate(true);
+    };
+
+    // Handle service selection and navigation
+    const handleServiceClick = (service: typeof services[0]) => {
+        // Navigate to next component with service and date data
+        navigate('/book-appointment', {
+            state: {
+                service: service,
+                date: selectedDate,
+                formattedDate: formatSelectedDate(selectedDate)
+            }
+        });
     };
 
     // Scroll to services when a date is selected
@@ -117,53 +171,19 @@ const CalendarHero: React.FC = () => {
                     </h3>
                     
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 py-20'>
-                        {/* Service 1 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-pink-100 rounded-xl flex-shrink-0'>
-                                <img src={service1} className='w-14 h-14' alt="Teeth Orthodontics" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Teeth Orthodontics</h4>
-                        </div>
-                        
-                        {/* Service 2 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-pink-50 rounded-xl flex-shrink-0'>
-                                <img src={service2} className='w-14 h-14' alt="Cosmetic Dentistry" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Cosmetic Dentistry</h4>
-                        </div>
-                        
-                        {/* Service 3 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-pink-100 rounded-xl flex-shrink-0'>
-                                <img src={service3} className='w-14 h-14' alt="Teeth Cleaning" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Teeth Cleaning</h4>
-                        </div>
-                        
-                        {/* Service 4 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-blue-100 rounded-xl flex-shrink-0'>
-                                <img src={service4} className='w-14 h-14' alt="Cavity Protection" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Cavity Protection</h4>
-                        </div>
-                        
-                        {/* Service 5 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-pink-100 rounded-xl flex-shrink-0'>
-                                <img src={service5} className='w-14 h-14' alt="Pediatric Dental" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Pediatric Dental</h4>
-                        </div>
-                        
-                        {/* Service 6 */}
-                        <div className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200'>
-                            <div className='p-4 bg-amber-100 rounded-xl flex-shrink-0'>
-                                <img src={service6} className='w-14 h-14' alt="Oral Surgery" />
-                            </div>
-                            <h4 className='text-2xl font-bold text-black'>Oral Surgery</h4>
-                        </div>
+                        {/* Dynamic Service Buttons */}
+                        {services.map((service) => (
+                            <button
+                                key={service.id}
+                                className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200 w-full text-left'
+                                onClick={() => handleServiceClick(service)}
+                            >
+                                <div className={`p-4 ${service.bgColor} rounded-xl flex-shrink-0`}>
+                                    <img src={service.image} className='w-14 h-14' alt={service.name} />
+                                </div>
+                                <h4 className='text-2xl font-bold text-black'>{service.name}</h4>
+                            </button>
+                        ))}
                     </div>
                 </div>
             </div>
