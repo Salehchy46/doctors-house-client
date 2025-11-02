@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { MdCancel } from 'react-icons/md';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useNavigate } from "react-router-dom";
 import chair1 from '../../assets/chair1.png';
 import service1 from '../../assets/appointment/service1.png';
 import service2 from '../../assets/appointment/service2.png';
@@ -22,7 +21,6 @@ interface SlotData {
     title: string;
     time: string;
     modalTitle: string;
-    date: string;
     hasBackground?: boolean;
 }
 
@@ -45,6 +43,7 @@ interface SlotCardProps {
     formData: FormData;
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     handleSubmit: (e: React.FormEvent, slotId: string) => void;
+    selectedDate: string;
 }
 
 // SlotCard Component
@@ -53,14 +52,15 @@ const SlotCard: React.FC<SlotCardProps> = ({
     openModal,
     formData,
     handleInputChange,
-    handleSubmit
+    handleSubmit,
+    selectedDate
 }) => {
     return (
         <div className="card text-black shadow-xl">
             <figure className="px-10 pt-10">
-                <img 
-                    src={slot.image} 
-                    alt={slot.title} 
+                <img
+                    src={slot.image}
+                    alt={slot.title}
                     className={slot.hasBackground ? "p-8 rounded-full bg-pink-50" : ""}
                 />
             </figure>
@@ -81,7 +81,7 @@ const SlotCard: React.FC<SlotCardProps> = ({
                             <div className="flex pb-8 justify-between items-center">
                                 <h3 className="font-bold text-lg">{slot.modalTitle}</h3>
                                 <form method="dialog">
-                                    <button type="button">
+                                    <button type="submit">
                                         <MdCancel className="font-bold text-3xl text-teal-950" />
                                     </button>
                                 </form>
@@ -90,12 +90,12 @@ const SlotCard: React.FC<SlotCardProps> = ({
                             <form onSubmit={(e) => handleSubmit(e, slot.id)}>
                                 <input
                                     className="input bg-gray-100 w-full font-bold"
-                                    placeholder={slot.date}
+                                    value={selectedDate}
                                     readOnly
                                 />
                                 <input
                                     className="input bg-gray-100 w-full my-4 font-bold"
-                                    placeholder={slot.time}
+                                    value={slot.time}
                                     readOnly
                                 />
                                 <input
@@ -141,7 +141,7 @@ const SlotCard: React.FC<SlotCardProps> = ({
 };
 
 // Slots Component
-const Slots: React.FC<{ slotData: SlotData[] }> = ({ slotData }) => {
+const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotData, selectedDate }) => {
     const [formData, setFormData] = useState<FormData>({
         fullName: '',
         mobile: '',
@@ -183,6 +183,7 @@ const Slots: React.FC<{ slotData: SlotData[] }> = ({ slotData }) => {
                         formData={formData}
                         handleInputChange={handleInputChange}
                         handleSubmit={handleSubmit}
+                        selectedDate={selectedDate}
                     />
                 ))}
             </div>
@@ -197,7 +198,6 @@ const CalendarHero: React.FC = () => {
     const slotsRef = useRef<HTMLDivElement>(null);
     const [hasSelectedDate, setHasSelectedDate] = useState(false);
     const [hasSelectedService, setHasSelectedService] = useState(false);
-    const navigate = useNavigate();
 
     // Services data
     const services: ServiceData[] = [
@@ -239,31 +239,28 @@ const CalendarHero: React.FC = () => {
         }
     ];
 
-    // Slots data
+    // Slots data - removed the hardcoded date property
     const slotData: SlotData[] = [
         {
             id: '1',
             image: slot1,
             title: 'Teeth Orthodontics',
             time: '8:00 AM - 9:00 AM',
-            modalTitle: 'Cavity Protection',
-            date: 'April 30, 2020'
+            modalTitle: 'Teeth Orthodontics'
         },
         {
             id: '2',
             image: slot2,
             title: 'Cosmetic Dentistry',
             time: '10:05 AM - 11:30 AM',
-            modalTitle: 'Cavity Protection',
-            date: 'April 30, 2020'
+            modalTitle: 'Cosmetic Dentistry'
         },
         {
             id: '3',
             image: slot3,
             title: 'Teeth Cleaning',
             time: '8:00 AM - 9:00 AM',
-            modalTitle: 'Cavity Protection',
-            date: 'April 30, 2020',
+            modalTitle: 'Teeth Cleaning',
             hasBackground: true
         },
         {
@@ -271,8 +268,7 @@ const CalendarHero: React.FC = () => {
             image: slot4,
             title: 'Teeth Orthodontics',
             time: '8:00 AM - 9:00 AM',
-            modalTitle: 'Cavity Protection',
-            date: 'April 30, 2020',
+            modalTitle: 'Teeth Orthodontics',
             hasBackground: true
         },
         {
@@ -280,8 +276,7 @@ const CalendarHero: React.FC = () => {
             image: slot5,
             title: 'Teeth Orthodontics',
             time: '8:00 AM - 9:00 AM',
-            modalTitle: 'Cavity Protection',
-            date: 'April 30, 2020',
+            modalTitle: 'Teeth Orthodontics',
             hasBackground: true
         }
     ];
@@ -302,17 +297,8 @@ const CalendarHero: React.FC = () => {
     };
 
     // Handle service selection and scroll to slots
-    const handleServiceClick = (service: ServiceData) => {
+    const handleServiceClick = () => {
         setHasSelectedService(true);
-        
-        // If you still want to navigate, you can do it here
-        // navigate('/book-appointment', {
-        //     state: {
-        //         service: service,
-        //         date: selectedDate,
-        //         formattedDate: formatSelectedDate(selectedDate)
-        //     }
-        // });
     };
 
     // Scroll to services when a date is selected
@@ -419,7 +405,7 @@ const CalendarHero: React.FC = () => {
                             <button
                                 key={service.id}
                                 className='flex items-center gap-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer hover:scale-105 transform duration-200 w-full text-left'
-                                onClick={() => handleServiceClick(service)}
+                                onClick={handleServiceClick}
                                 type="button"
                             >
                                 <div className={`p-4 ${service.bgColor} rounded-xl flex-shrink-0`}>
@@ -434,7 +420,10 @@ const CalendarHero: React.FC = () => {
 
             {/* Slots Section with ref for scrolling */}
             <div ref={slotsRef} className="scroll-mt-8">
-                <Slots slotData={slotData} />
+                <Slots 
+                    slotData={slotData} 
+                    selectedDate={formatSelectedDate(selectedDate)}
+                />
             </div>
         </>
     );
