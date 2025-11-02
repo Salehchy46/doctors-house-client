@@ -1,7 +1,7 @@
 import CalendarHero from "./Calender";
 import Hero from "./Hero";
 import bgchair from '../../assets/appointment/landing-bg.png'
-import Slots from "./Slots";
+
 
 const Appointment = () => {
     return (
@@ -15,9 +15,7 @@ const Appointment = () => {
             }}>
                 <CalendarHero></CalendarHero>
             </div>
-            <div className="bg-white">
-                <Slots></Slots>
-            </div>
+           
         </div>
     );
 };
