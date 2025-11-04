@@ -14,7 +14,7 @@ import slot2 from '../../assets/appointment/slot2.png';
 import slot3 from '../../assets/appointment/slot3.png';
 import slot4 from '../../assets/appointment/slot4.png';
 import slot5 from '../../assets/appointment/slot5.png';
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 interface SlotData {
     id: string;
@@ -40,7 +40,6 @@ interface ServiceData {
 
 interface SlotCardProps {
     slot: SlotData;
-    openModal: (id: string) => void;
     selectedDate: string;
     onFormSubmit: (data: FormData, slotId: string) => void;
 }
@@ -48,7 +47,6 @@ interface SlotCardProps {
 // SlotCard Component
 const SlotCard: React.FC<SlotCardProps> = ({
     slot,
-    openModal,
     selectedDate,
     onFormSubmit
 }) => {
@@ -59,10 +57,33 @@ const SlotCard: React.FC<SlotCardProps> = ({
         reset
     } = useForm<FormData>();
 
-    const onSubmit: SubmitHandler<FormData> = (data) => {
+    const modalRef = useRef<HTMLDivElement>(null);
+
+    const onSubmit = (data: FormData) => {
         onFormSubmit(data, slot.id);
-        reset(); // Reset form after submission
+        reset();
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const handleCloseModal = () => {
+        reset();
+        const modal = document.getElementById(`modal_${slot.id}`) as HTMLInputElement;
+        if (modal) modal.checked = false;
+    };
+
+    // Close modal when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                handleCloseModal();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [handleCloseModal]);
 
     return (
         <div className="card text-black shadow-xl">
@@ -77,44 +98,53 @@ const SlotCard: React.FC<SlotCardProps> = ({
                 <h2 className="card-title text-[25px] font-bold">{slot.title}</h2>
                 <p className="font-semibold">{slot.time}</p>
                 <div className="card-actions">
-                    <button
-                        onClick={() => openModal(slot.id)}
-                        className="btn btn-xl bg-[#F7A582] border-0 hover:border-2 rounded-xl hover:bg-transparent hover:border-[#F7A582] hover:text-[#F7A582]"
+                    {/* Modal opener button */}
+                    <label 
+                        htmlFor={`modal_${slot.id}`}
+                        className="btn btn-xl bg-[#F7A582] border-0 hover:border-2 rounded-xl hover:bg-transparent hover:border-[#F7A582] hover:text-[#F7A582] cursor-pointer"
                     >
                         Book Appointment
+                    </label>
+                </div>
+            </div>
+
+            {/* DaisyUI Modal with black background */}
+            <input type="checkbox" id={`modal_${slot.id}`} className="modal-toggle" />
+            <div className="modal">
+                <div 
+                    ref={modalRef}
+                    className="modal-box w-11/12 max-w-2xl bg-white text-black relative"
+                >
+                    {/* Close button - fixed position */}
+                    <button
+                        onClick={handleCloseModal}
+                        className="absolute top-4 right-4 text-teal-950 rounded-full p-2 z-50 transition-colors duration-200"
+                    >
+                        <MdCancel className="text-xl" />
                     </button>
-
-                    {/* Modal */}
-                    <dialog id={`modal_${slot.id}`} className="modal">
-                        <div className="px-5 pb-5 pt-2 rounded-xl bg-white w-[480px]">
-                            <div className="flex pb-8 justify-between items-center">
-                                <h3 className="font-bold text-lg">{slot.modalTitle}</h3>
-                                <form method="dialog">
-                                    <button 
-                                        type="submit"
-                                        onClick={() => reset()} // Reset form when modal is closed
-                                    >
-                                        <MdCancel className="font-bold text-3xl text-teal-950" />
-                                    </button>
-                                </form>
-                            </div>
-
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <input
-                                    className="input bg-gray-100 w-full font-bold"
-                                    value={selectedDate}
-                                    readOnly
-                                />
-                                <input
-                                    className="input bg-gray-100 w-full my-4 font-bold"
-                                    value={slot.time}
-                                    readOnly
-                                />
-                                
-                                {/* Full Name Input */}
+                    
+                    <div className="flex justify-between items-center pb-4">
+                        <h3 className="font-bold text-xl">{slot.modalTitle}</h3>
+                    </div>
+                    
+                    <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
+                        <div className="space-y-4">
+                            <input
+                                className="input input-bordered w-full bg-gray-200 text-black"
+                                value={selectedDate}
+                                readOnly
+                            />
+                            <input
+                                className="input input-bordered w-full bg-gray-200 text-black"
+                                value={slot.time}
+                                readOnly
+                            />
+                            
+                            {/* Full Name Input */}
+                            <div>
                                 <input
                                     type="text"
-                                    className="input bg-white border border-gray-300 w-full"
+                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
                                     placeholder="Full Name"
                                     {...register("fullName", { 
                                         required: "Full name is required",
@@ -125,13 +155,15 @@ const SlotCard: React.FC<SlotCardProps> = ({
                                     })}
                                 />
                                 {errors.fullName && (
-                                    <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
+                                    <p className="text-red-400 text-sm mt-1">{errors.fullName.message}</p>
                                 )}
+                            </div>
 
-                                {/* Mobile Input */}
+                            {/* Mobile Input */}
+                            <div>
                                 <input
                                     type="tel"
-                                    className="input bg-white border border-gray-300 w-full my-4"
+                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
                                     placeholder="Mobile"
                                     {...register("mobile", { 
                                         required: "Mobile number is required",
@@ -142,13 +174,15 @@ const SlotCard: React.FC<SlotCardProps> = ({
                                     })}
                                 />
                                 {errors.mobile && (
-                                    <p className="text-red-500 text-sm mt-1">{errors.mobile.message}</p>
+                                    <p className="text-red-400 text-sm mt-1">{errors.mobile.message}</p>
                                 )}
+                            </div>
 
-                                {/* Email Input */}
+                            {/* Email Input */}
+                            <div>
                                 <input
                                     type="email"
-                                    className="input bg-white border border-gray-300 w-full mb-4"
+                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
                                     placeholder="Email"
                                     {...register("email", { 
                                         required: "Email is required",
@@ -159,18 +193,20 @@ const SlotCard: React.FC<SlotCardProps> = ({
                                     })}
                                 />
                                 {errors.email && (
-                                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                                    <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
                                 )}
-
-                                <button
-                                    type="submit"
-                                    className="btn w-full bg-teal-950 py-2 text-white"
-                                >
-                                    Submit
-                                </button>
-                            </form>
+                            </div>
                         </div>
-                    </dialog>
+
+                        <div className="modal-action mt-6">
+                            <button
+                                type="submit"
+                                className="btn bg-teal-950 text-white w-full border-0"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -179,15 +215,11 @@ const SlotCard: React.FC<SlotCardProps> = ({
 
 // Slots Component
 const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotData, selectedDate }) => {
-    const openModal = (id: string) => {
-        const dialog = document.getElementById(`modal_${id}`) as HTMLDialogElement | null;
-        dialog?.showModal();
-    };
-
     const handleFormSubmit = (data: FormData, slotId: string) => {
         console.log('Form submitted for slot:', slotId, data);
-        const dialog = document.getElementById(`modal_${slotId}`) as HTMLDialogElement | null;
-        dialog?.close();
+        // Close the modal
+        const modal = document.getElementById(`modal_${slotId}`) as HTMLInputElement;
+        if (modal) modal.checked = false;
     };
 
     return (
@@ -200,7 +232,6 @@ const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotD
                     <SlotCard
                         key={slot.id}
                         slot={slot}
-                        openModal={openModal}
                         selectedDate={selectedDate}
                         onFormSubmit={handleFormSubmit}
                     />
