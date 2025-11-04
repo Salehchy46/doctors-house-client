@@ -14,6 +14,7 @@ import slot2 from '../../assets/appointment/slot2.png';
 import slot3 from '../../assets/appointment/slot3.png';
 import slot4 from '../../assets/appointment/slot4.png';
 import slot5 from '../../assets/appointment/slot5.png';
+import { useForm, SubmitHandler } from "react-hook-form";
 
 interface SlotData {
     id: string;
@@ -40,21 +41,29 @@ interface ServiceData {
 interface SlotCardProps {
     slot: SlotData;
     openModal: (id: string) => void;
-    formData: FormData;
-    handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    handleSubmit: (e: React.FormEvent, slotId: string) => void;
     selectedDate: string;
+    onFormSubmit: (data: FormData, slotId: string) => void;
 }
 
 // SlotCard Component
 const SlotCard: React.FC<SlotCardProps> = ({
     slot,
     openModal,
-    formData,
-    handleInputChange,
-    handleSubmit,
-    selectedDate
+    selectedDate,
+    onFormSubmit
 }) => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm<FormData>();
+
+    const onSubmit: SubmitHandler<FormData> = (data) => {
+        onFormSubmit(data, slot.id);
+        reset(); // Reset form after submission
+    };
+
     return (
         <div className="card text-black shadow-xl">
             <figure className="px-10 pt-10">
@@ -81,13 +90,16 @@ const SlotCard: React.FC<SlotCardProps> = ({
                             <div className="flex pb-8 justify-between items-center">
                                 <h3 className="font-bold text-lg">{slot.modalTitle}</h3>
                                 <form method="dialog">
-                                    <button type="submit">
+                                    <button 
+                                        type="submit"
+                                        onClick={() => reset()} // Reset form when modal is closed
+                                    >
                                         <MdCancel className="font-bold text-3xl text-teal-950" />
                                     </button>
                                 </form>
                             </div>
 
-                            <form onSubmit={(e) => handleSubmit(e, slot.id)}>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <input
                                     className="input bg-gray-100 w-full font-bold"
                                     value={selectedDate}
@@ -98,33 +110,58 @@ const SlotCard: React.FC<SlotCardProps> = ({
                                     value={slot.time}
                                     readOnly
                                 />
+                                
+                                {/* Full Name Input */}
                                 <input
                                     type="text"
-                                    name="fullName"
-                                    value={formData.fullName}
-                                    onChange={handleInputChange}
                                     className="input bg-white border border-gray-300 w-full"
                                     placeholder="Full Name"
-                                    required
+                                    {...register("fullName", { 
+                                        required: "Full name is required",
+                                        minLength: {
+                                            value: 2,
+                                            message: "Full name must be at least 2 characters"
+                                        }
+                                    })}
                                 />
+                                {errors.fullName && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
+                                )}
+
+                                {/* Mobile Input */}
                                 <input
                                     type="tel"
-                                    name="mobile"
-                                    value={formData.mobile}
-                                    onChange={handleInputChange}
                                     className="input bg-white border border-gray-300 w-full my-4"
                                     placeholder="Mobile"
-                                    required
+                                    {...register("mobile", { 
+                                        required: "Mobile number is required",
+                                        pattern: {
+                                            value: /^[0-9+\-\s()]+$/,
+                                            message: "Please enter a valid mobile number"
+                                        }
+                                    })}
                                 />
+                                {errors.mobile && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.mobile.message}</p>
+                                )}
+
+                                {/* Email Input */}
                                 <input
                                     type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
                                     className="input bg-white border border-gray-300 w-full mb-4"
                                     placeholder="Email"
-                                    required
+                                    {...register("email", { 
+                                        required: "Email is required",
+                                        pattern: {
+                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                            message: "Please enter a valid email address"
+                                        }
+                                    })}
                                 />
+                                {errors.email && (
+                                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                                )}
+
                                 <button
                                     type="submit"
                                     className="btn w-full bg-teal-950 py-2 text-white"
@@ -142,29 +179,13 @@ const SlotCard: React.FC<SlotCardProps> = ({
 
 // Slots Component
 const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotData, selectedDate }) => {
-    const [formData, setFormData] = useState<FormData>({
-        fullName: '',
-        mobile: '',
-        email: ''
-    });
-
     const openModal = (id: string) => {
         const dialog = document.getElementById(`modal_${id}`) as HTMLDialogElement | null;
         dialog?.showModal();
     };
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent, slotId: string) => {
-        e.preventDefault();
-        console.log('Form submitted for slot:', slotId, formData);
-        setFormData({ fullName: '', mobile: '', email: '' });
+    const handleFormSubmit = (data: FormData, slotId: string) => {
+        console.log('Form submitted for slot:', slotId, data);
         const dialog = document.getElementById(`modal_${slotId}`) as HTMLDialogElement | null;
         dialog?.close();
     };
@@ -180,10 +201,8 @@ const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotD
                         key={slot.id}
                         slot={slot}
                         openModal={openModal}
-                        formData={formData}
-                        handleInputChange={handleInputChange}
-                        handleSubmit={handleSubmit}
                         selectedDate={selectedDate}
+                        onFormSubmit={handleFormSubmit}
                     />
                 ))}
             </div>
@@ -239,7 +258,7 @@ const CalendarHero: React.FC = () => {
         }
     ];
 
-    // Slots data - removed the hardcoded date property
+    // Slots data
     const slotData: SlotData[] = [
         {
             id: '1',
@@ -420,8 +439,8 @@ const CalendarHero: React.FC = () => {
 
             {/* Slots Section with ref for scrolling */}
             <div ref={slotsRef} className="scroll-mt-8">
-                <Slots 
-                    slotData={slotData} 
+                <Slots
+                    slotData={slotData}
                     selectedDate={formatSelectedDate(selectedDate)}
                 />
             </div>
