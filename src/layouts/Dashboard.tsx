@@ -27,6 +27,15 @@ const Dashboard: React.FC = () => {
                                         </NavLink>
                                     </li>
                                     <li>
+                                        <NavLink to='/dashboard/allappointment' className={({ isActive }) =>
+                                            isActive
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
+                                        }>
+                                            All Appointment
+                                        </NavLink>
+                                    </li>
+                                    <li>
                                         <NavLink to='/dashboard/allusers' className={({ isActive }) =>
                                             isActive
                                                 ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"

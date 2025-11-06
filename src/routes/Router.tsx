@@ -4,6 +4,7 @@ import About from "@/pages/About/About";
 import Appointment from "@/pages/Appointment/Appointment";
 import AddaDoctor from "@/pages/Dashboard/AdminPanel/AddaDoctor";
 import AdDashboard from "@/pages/Dashboard/AdminPanel/AdDashboard";
+import AllAppointment from "@/pages/Dashboard/AdminPanel/AllAppointment";
 import AllUsers from "@/pages/Dashboard/AdminPanel/AllUsers";
 import ManageDocs from "@/pages/Dashboard/AdminPanel/ManageDocs";
 import MyAppointment from "@/pages/Dashboard/MyAppointment";
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
                 element: <AdDashboard></AdDashboard>,
             },
             {
+                path: '/dashboard/allappointment',
+                element: <AllAppointment></AllAppointment>
+            },
+            {
                 path: '/dashboard/allusers',
                 element: <AllUsers></AllUsers>
             },
@@ -83,7 +88,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/managedocs',
-                element: <ManageDocs></ManageDocs>
+                element: <ManageDocs></ManageDocs>,
             }
         ]
     }

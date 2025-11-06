@@ -16,6 +16,8 @@ const Register: React.FC = () => {
   console.log('state capture from', location?.state);
 
   //auth error 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const { login } = useContext(AuthContext);
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {

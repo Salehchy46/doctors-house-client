@@ -26,9 +26,12 @@ interface SlotData {
 }
 
 interface FormData {
+    modalTitle: string;
     fullName: string;
     mobile: string;
     email: string;
+    date: string;
+    time: string;
 }
 
 interface ServiceData {
@@ -54,10 +57,18 @@ const SlotCard: React.FC<SlotCardProps> = ({
         register,
         handleSubmit,
         formState: { errors },
-        reset
+        reset,
+        setValue
     } = useForm<FormData>();
 
     const modalRef = useRef<HTMLDivElement>(null);
+
+    // Set default values when modal opens
+    const openModal = () => {
+        setValue("modalTitle", slot.modalTitle);
+        setValue("date", selectedDate);
+        setValue("time", slot.time);
+    };
 
     const onSubmit = (data: FormData) => {
         onFormSubmit(data, slot.id);
@@ -99,9 +110,10 @@ const SlotCard: React.FC<SlotCardProps> = ({
                 <p className="font-semibold">{slot.time}</p>
                 <div className="card-actions">
                     {/* Modal opener button */}
-                    <label 
+                    <label
                         htmlFor={`modal_${slot.id}`}
                         className="btn btn-xl bg-[#F7A582] border-0 hover:border-2 rounded-xl hover:bg-transparent hover:border-[#F7A582] hover:text-[#F7A582] cursor-pointer"
+                        onClick={openModal}
                     >
                         Book Appointment
                     </label>
@@ -111,7 +123,7 @@ const SlotCard: React.FC<SlotCardProps> = ({
             {/* DaisyUI Modal with black background */}
             <input type="checkbox" id={`modal_${slot.id}`} className="modal-toggle" />
             <div className="modal">
-                <div 
+                <div
                     ref={modalRef}
                     className="modal-box w-11/12 max-w-2xl bg-white text-black relative"
                 >
@@ -122,31 +134,63 @@ const SlotCard: React.FC<SlotCardProps> = ({
                     >
                         <MdCancel className="text-xl" />
                     </button>
-                    
+
                     <div className="flex justify-between items-center pb-4">
                         <h3 className="font-bold text-xl">{slot.modalTitle}</h3>
                     </div>
-                    
+
                     <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
                         <div className="space-y-4">
-                            <input
-                                className="input input-bordered w-full bg-gray-200 text-black"
-                                value={selectedDate}
-                                readOnly
-                            />
-                            <input
-                                className="input input-bordered w-full bg-gray-200 text-black"
-                                value={slot.time}
-                                readOnly
-                            />
-                            
-                            {/* Full Name Input */}
+                            {/* Date Input */}
                             <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
                                 <input
                                     type="text"
-                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
-                                    placeholder="Full Name"
-                                    {...register("fullName", { 
+                                    className="input input-bordered w-full bg-gray-100 text-black border-gray-300"
+                                    readOnly
+                                    {...register("date", { required: "Date is required" })}
+                                />
+                                {errors.date && (
+                                    <p className="text-red-400 text-sm mt-1">{errors.date.message}</p>
+                                )}
+                            </div>
+
+                            {/* Scheduled Time Input */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Scheduled Time</label>
+                                <input
+                                    type="text"
+                                    className="input input-bordered w-full bg-gray-100 text-black border-gray-300"
+                                    readOnly
+                                    {...register("time", { required: "Time is required" })}
+                                />
+                                {errors.time && (
+                                    <p className="text-red-400 text-sm mt-1">{errors.time.message}</p>
+                                )}
+                            </div>
+
+                            {/* Service Title Input */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Service</label>
+                                <input
+                                    type="text"
+                                    className="input input-bordered w-full bg-gray-100 text-black border-gray-300"
+                                    readOnly
+                                    {...register("modalTitle", { required: "Service title is required" })}
+                                />
+                                {errors.modalTitle && (
+                                    <p className="text-red-400 text-sm mt-1">{errors.modalTitle.message}</p>
+                                )}
+                            </div>
+
+                            {/* Full Name Input */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                <input
+                                    type="text"
+                                    className="input input-bordered w-full bg-white text-black border-gray-300 focus:border-[#F7A582] focus:ring-1 focus:ring-[#F7A582]"
+                                    placeholder="Enter your full name"
+                                    {...register("fullName", {
                                         required: "Full name is required",
                                         minLength: {
                                             value: 2,
@@ -161,11 +205,12 @@ const SlotCard: React.FC<SlotCardProps> = ({
 
                             {/* Mobile Input */}
                             <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number *</label>
                                 <input
                                     type="tel"
-                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
-                                    placeholder="Mobile"
-                                    {...register("mobile", { 
+                                    className="input input-bordered w-full bg-white text-black border-gray-300 focus:border-[#F7A582] focus:ring-1 focus:ring-[#F7A582]"
+                                    placeholder="Enter your mobile number"
+                                    {...register("mobile", {
                                         required: "Mobile number is required",
                                         pattern: {
                                             value: /^[0-9+\-\s()]+$/,
@@ -180,11 +225,12 @@ const SlotCard: React.FC<SlotCardProps> = ({
 
                             {/* Email Input */}
                             <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
                                 <input
                                     type="email"
-                                    className="input input-bordered w-full bg-white text-black border-gray-200 border-2"
-                                    placeholder="Email"
-                                    {...register("email", { 
+                                    className="input input-bordered w-full bg-white text-black border-gray-300 focus:border-[#F7A582] focus:ring-1 focus:ring-[#F7A582]"
+                                    placeholder="Enter your email address"
+                                    {...register("email", {
                                         required: "Email is required",
                                         pattern: {
                                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -201,9 +247,9 @@ const SlotCard: React.FC<SlotCardProps> = ({
                         <div className="modal-action mt-6">
                             <button
                                 type="submit"
-                                className="btn bg-teal-950 text-white w-full border-0"
+                                className="btn bg-teal-950 text-white w-full border-0 hover:bg-teal-800"
                             >
-                                Submit
+                                Book Appointment
                             </button>
                         </div>
                     </form>
@@ -216,7 +262,15 @@ const SlotCard: React.FC<SlotCardProps> = ({
 // Slots Component
 const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotData, selectedDate }) => {
     const handleFormSubmit = (data: FormData, slotId: string) => {
-        console.log('Form submitted for slot:', slotId, data);
+        console.log('Form submitted for slot:', slotId);
+        console.log('Form data:', {
+            service: data.modalTitle,
+            date: data.date,
+            time: data.time,
+            fullName: data.fullName,
+            mobile: data.mobile,
+            email: data.email
+        });
         // Close the modal
         const modal = document.getElementById(`modal_${slotId}`) as HTMLInputElement;
         if (modal) modal.checked = false;
@@ -241,7 +295,7 @@ const Slots: React.FC<{ slotData: SlotData[]; selectedDate: string }> = ({ slotD
     );
 };
 
-// Main CalendarHero Component
+// Main CalendarHero Component remains the same...
 const CalendarHero: React.FC = () => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
     const servicesRef = useRef<HTMLDivElement>(null);

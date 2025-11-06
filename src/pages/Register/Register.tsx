@@ -16,6 +16,8 @@ interface FormData {
 }
 
 const Register: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const { createUser } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ const Register: React.FC = () => {
   const onSubmit = (data: FormData) => {
     // Only email and password for Firebase auth
     createUser(data.email, data.password)
-      .then(result => {
+      .then((result: { user: unknown; }) => {
         const loggedUser = result.user;
         console.log('Firebase user created:', loggedUser);
 
@@ -57,7 +59,7 @@ const Register: React.FC = () => {
             }
           });
       })
-      .catch(error => {
+      .catch((error: { message: unknown; }) => {
         console.error(error);
         Swal.fire({
           icon: 'error',
