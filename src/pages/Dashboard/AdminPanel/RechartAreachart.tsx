@@ -46,6 +46,7 @@ const data = [
     },
 ];
 
+
 const RechartAreachart: React.FC = () => {
     return (
         <div className='bg-white p-3 rounded-xl w-[450px] h-[350px]'>

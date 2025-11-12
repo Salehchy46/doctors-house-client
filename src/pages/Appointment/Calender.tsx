@@ -16,6 +16,7 @@ import slot4 from '../../assets/appointment/slot4.png';
 import slot5 from '../../assets/appointment/slot5.png';
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "@/components/hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 interface SlotData {
     id: string;
@@ -108,12 +109,20 @@ const SlotCard: React.FC<SlotCardProps> = ({
 
             // Optional: Handle success response
             console.log('Appointment created successfully:', response.data);
+            Swal.fire({
+                title: "Appointment booked successfully",
+                icon: "success",
+                draggable: true
+            });
 
         } catch (error) {
             // Handle error
             console.error('Error creating appointment:', error);
-            // Optional: Show error message to user
-            // You can add a toast notification here
+            Swal.fire({
+                title: "Failed to book an appointment!",
+                icon: "error",
+                draggable: false
+            });
         }
     };
 
