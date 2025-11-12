@@ -15,6 +15,7 @@ import slot3 from '../../assets/appointment/slot3.png';
 import slot4 from '../../assets/appointment/slot4.png';
 import slot5 from '../../assets/appointment/slot5.png';
 import { useForm } from "react-hook-form";
+import useAxiosSecure from "@/components/hooks/useAxiosSecure";
 
 interface SlotData {
     id: string;
@@ -62,6 +63,7 @@ const SlotCard: React.FC<SlotCardProps> = ({
     } = useForm<FormData>();
 
     const modalRef = useRef<HTMLDivElement>(null);
+    const axiosSecure = useAxiosSecure();
 
     // Set default values when modal opens
     const openModal = () => {
@@ -70,9 +72,49 @@ const SlotCard: React.FC<SlotCardProps> = ({
         setValue("time", slot.time);
     };
 
-    const onSubmit = (data: FormData) => {
-        onFormSubmit(data, slot.id);
-        reset();
+    const onSubmit = async (data: FormData) => {
+        try {
+            // Prepare all data to send to backend
+            const appointmentData = {
+                // Form data from user input
+                fullName: data.fullName,
+                mobile: data.mobile,
+                email: data.email,
+
+                // Slot data
+                service: data.modalTitle,
+                scheduledTime: data.time,
+                appointmentDate: data.date,
+
+                // Additional slot information
+                slotId: slot.id,
+                slotTitle: slot.title,
+                slotImage: slot.image,
+
+                // Timestamp for when appointment was booked
+                bookedAt: new Date().toISOString(),
+
+                // Status (you might want to set initial status)
+                status: 'pending' // or 'confirmed', 'completed', etc.
+            };
+
+            // Post to backend API
+            const response = await axiosSecure.post('/appointments', appointmentData);
+
+            // If successful, call the parent callback and reset form
+            onFormSubmit(data, slot.id);
+            reset();
+            handleCloseModal();
+
+            // Optional: Handle success response
+            console.log('Appointment created successfully:', response.data);
+
+        } catch (error) {
+            // Handle error
+            console.error('Error creating appointment:', error);
+            // Optional: Show error message to user
+            // You can add a toast notification here
+        }
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
