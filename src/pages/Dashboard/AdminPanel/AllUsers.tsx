@@ -79,15 +79,20 @@ const AllUsers: React.FC = () => {
           </thead>
           <tbody>
             {users.map((user, index) => (
-              <tr key={user._id || index}>
+              <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td>{user.email}</td>
                 <td>{user.username}</td>
+                <td>{user.role === "admin" ? "Admin" : "User"}</td>
                 <td>
-                  <button onClick={handleMakeAdmin} className="btn bg-teal-950 text-white">Make Admin</button>
-                </td>
-                <td>
-                  <button className="btn bg-teal-950 text-white">Remove User</button>
+                  {user.role !== "admin" && (
+                    <button
+                      onClick={() => handleMakeAdmin(user)}
+                      className="btn bg-teal-950 text-white"
+                    >
+                      Make Admin
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}

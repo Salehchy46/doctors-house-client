@@ -1,14 +1,7 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useRef } from "react";
 import axios, { type AxiosInstance } from "axios";
 import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
-
-export interface AuthContextType {
-  user: unknown; // replace 'any' with your User type
-  loading: boolean;
-  logOut: () => void;
-  // ... other properties and methods
-}
 
 const axiosSecure: AxiosInstance = axios.create({
   baseURL: "http://localhost:5000",
@@ -17,16 +10,22 @@ const axiosSecure: AxiosInstance = axios.create({
 const useAxiosSecure = (): AxiosInstance => {
   const navigate = useNavigate();
   const { logOut } = useAuth() || {};
+  
+  // Use refs for stable references
+  const logOutRef = useRef(logOut);
+  const navigateRef = useRef(navigate);
 
-  // Use `useMemo` so axiosSecure is not recreated on every render
-  const instance = useMemo(() => axiosSecure, []);
+  // Update refs when dependencies change
+  useEffect(() => {
+    logOutRef.current = logOut;
+    navigateRef.current = navigate;
+  }, [logOut, navigate]);
 
   useEffect(() => {
-    // Add request interceptor
-    const requestInterceptor = instance.interceptors.request.use(
+    const requestInterceptor = axiosSecure.interceptors.request.use(
       (config) => {
         const token = localStorage.getItem("access-token");
-        if (token && config.headers) {
+        if (token) {
           config.headers.Authorization = `Bearer ${token}`;
         }
         return config;
@@ -34,31 +33,32 @@ const useAxiosSecure = (): AxiosInstance => {
       (error) => Promise.reject(error)
     );
 
-    // Add response interceptor
-    const responseInterceptor = instance.interceptors.response.use(
+    const responseInterceptor = axiosSecure.interceptors.response.use(
       (response) => response,
       async (error) => {
         const status = error?.response?.status;
         console.log("status error in interceptors:", status);
+        
         if (status === 401 || status === 403) {
-          await logOut?.().catch(error => {
-            console.error('Logout failed:', error);
-            // Handle logout failure gracefully
-          });
-          navigate("/login");
+          try {
+            await logOutRef.current?.();
+          } catch (logoutError) {
+            console.error('Logout failed:', logoutError);
+          } finally {
+            navigateRef.current("/login");
+          }
         }
         return Promise.reject(error);
       }
     );
 
-    // Cleanup interceptors when component unmounts
     return () => {
-      instance.interceptors.request.eject(requestInterceptor);
-      instance.interceptors.response.eject(responseInterceptor);
+      axiosSecure.interceptors.request.eject(requestInterceptor);
+      axiosSecure.interceptors.response.eject(responseInterceptor);
     };
-  }, [instance, logOut, navigate]);
+  }, []); // Empty dependencies since we use refs
 
-  return instance;
+  return axiosSecure;
 };
 
 export default useAxiosSecure;
