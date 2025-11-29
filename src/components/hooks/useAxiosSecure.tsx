@@ -11,11 +11,9 @@ const useAxiosSecure = (): AxiosInstance => {
   const navigate = useNavigate();
   const { logOut } = useAuth() || {};
   
-  // Use refs for stable references
   const logOutRef = useRef(logOut);
   const navigateRef = useRef(navigate);
 
-  // Update refs when dependencies change
   useEffect(() => {
     logOutRef.current = logOut;
     navigateRef.current = navigate;
@@ -27,6 +25,9 @@ const useAxiosSecure = (): AxiosInstance => {
         const token = localStorage.getItem("access-token");
         if (token) {
           config.headers.Authorization = `Bearer ${token}`;
+          console.log("AxiosSecure: Token attached to request");
+        } else {
+          console.log("AxiosSecure: No token found");
         }
         return config;
       },
@@ -36,18 +37,9 @@ const useAxiosSecure = (): AxiosInstance => {
     const responseInterceptor = axiosSecure.interceptors.response.use(
       (response) => response,
       async (error) => {
-        const status = error?.response?.status;
-        console.log("status error in interceptors:", status);
-        
-        if (status === 401 || status === 403) {
-          try {
-            await logOutRef.current?.();
-          } catch (logoutError) {
-            console.error('Logout failed:', logoutError);
-          } finally {
-            navigateRef.current("/login");
-          }
-        }
+        // DON'T automatically handle 401/403 here
+        // Let the component handle it
+        console.log("AxiosSecure: Response error", error.response?.status);
         return Promise.reject(error);
       }
     );
@@ -56,7 +48,7 @@ const useAxiosSecure = (): AxiosInstance => {
       axiosSecure.interceptors.request.eject(requestInterceptor);
       axiosSecure.interceptors.response.eject(responseInterceptor);
     };
-  }, []); // Empty dependencies since we use refs
+  }, []); 
 
   return axiosSecure;
 };

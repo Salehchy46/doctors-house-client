@@ -10,11 +10,17 @@ interface User {
   role?: string;
 }
 
+interface ApiResponse {
+  modifiedCount?: number;
+  matchedCount?: number;
+  message?: string;
+  acknowledged?: boolean;
+}
+
 const AllUsers: React.FC = () => {
   const axiosSecure = useAxiosSecure();
 
-  // useQuery typed return
-  const { data: users = [], refetch } = useQuery<User[]>({
+  const { data: users = [], refetch, isLoading, error } = useQuery<User[]>({
     queryKey: ['users'],
     queryFn: async () => {
       const res = await axiosSecure.get<User[]>('/users');
@@ -22,7 +28,10 @@ const AllUsers: React.FC = () => {
     },
   });
 
-  const handleMakeAdmin = (user: User) => {
+  // Debug: Check what data we're receiving
+  console.log('Users data:', users);
+
+  const handleMakeAdmin = async (user: User) => {
     if (!user._id) {
       Swal.fire({
         icon: "error",
@@ -32,35 +41,84 @@ const AllUsers: React.FC = () => {
       return;
     }
 
-    axiosSecure.patch(`/users/admin/${user._id}`)
-      .then(res => {
-        console.log('Admin update response:', res.data);
-        if (res.data.modifiedCount > 0) {
-          refetch();
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: `${user.username} has been promoted to admin.`,
-            showConfirmButton: false,
-            timer: 1500
-          });
-        } else if (res.data.matchedCount === 0) {
-          Swal.fire({
-            icon: "error",
-            title: "User Not Found",
-            text: "The user you're trying to promote doesn't exist.",
-          });
-        }
-      })
-      .catch(error => {
-        console.error('Error making admin:', error);
+    try {
+      const res = await axiosSecure.patch<ApiResponse>(`/users/admin/${user._id}`);
+      console.log('Full admin update response:', res);
+      console.log('Response data:', res.data);
+
+      // Check different possible response structures
+      if (res.data.modifiedCount && res.data.modifiedCount > 0) {
+        await refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${user.username} has been promoted to admin.`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+      } else if (res.data.acknowledged) {
+        // Some MongoDB responses use 'acknowledged' instead
+        await refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${user.username} has been promoted to admin.`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+      } else if (res.data.message) {
+        // Backend sent a message but no modification
+        Swal.fire({
+          icon: "info",
+          title: "Info",
+          text: res.data.message,
+        });
+      } else {
+        Swal.fire({
+          icon: "warning",
+          title: "No Changes",
+          text: "User role was not updated.",
+        });
+      }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      console.error('Error making admin:', error);
+      
+      // Handle different error types
+      if (error.response?.status === 403) {
+        Swal.fire({
+          icon: "error",
+          title: "Permission Denied",
+          text: "You don't have permission to make users admin.",
+        });
+      } else if (error.response?.status === 401) {
+        Swal.fire({
+          icon: "error",
+          title: "Unauthorized",
+          text: "Please log in again.",
+        });
+      } else {
         const message = error.response?.data?.message || 'Failed to promote user to admin';
         Swal.fire({
           icon: "error",
           title: "Error",
           text: message,
         });
-      });
+      }
+    }
+  }
+
+  // Add loading and error states
+  if (isLoading) {
+    return <div className="text-center">Loading users...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center text-red-500">
+        Error loading users: {error.message}
+      </div>
+    );
   }
 
   return (
@@ -83,12 +141,18 @@ const AllUsers: React.FC = () => {
                 <th>{index + 1}</th>
                 <td>{user.email}</td>
                 <td>{user.username}</td>
-                <td>{user.role === "admin" ? "Admin" : "User"}</td>
+                <td>
+                  <span className={`font-semibold ${
+                    user.role === "admin" ? "text-green-600" : "text-blue-600"
+                  }`}>
+                    {user.role === "admin" ? "Admin" : "User"}
+                  </span>
+                </td>
                 <td>
                   {user.role !== "admin" && (
                     <button
                       onClick={() => handleMakeAdmin(user)}
-                      className="btn bg-teal-950 text-white"
+                      className="btn bg-teal-950 text-white hover:bg-teal-800"
                     >
                       Make Admin
                     </button>
