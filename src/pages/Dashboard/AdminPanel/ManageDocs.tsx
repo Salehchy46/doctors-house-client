@@ -16,10 +16,16 @@ interface DeleteForm {
   doctorId: string;
 }
 
+interface ApiResponse {
+  message?: string;
+  deletedCount?: number;
+  acknowledged?: boolean;
+}
+
 const ManageDocs: React.FC = () => {
   const axiosSecure = useAxiosSecure();
   const [doctors, setDoctors] = useState<Doctor[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   
   // Use form for delete operations
   const { register, handleSubmit, setValue, reset } = useForm<DeleteForm>();
@@ -27,17 +33,17 @@ const ManageDocs: React.FC = () => {
   // Fetch doctors
   useEffect(() => {
     setLoading(true);
-    axiosSecure.get('/doctors')
+    axiosSecure.get<Doctor[]>('/doctors')
       .then(res => {
         console.log(res.data);
         setDoctors(res.data);
       })
-      .catch(err => console.error('Error fetching doctors:', err))
+      .catch((err: Error) => console.error('Error fetching doctors:', err))
       .finally(() => setLoading(false));
   }, [axiosSecure]);
 
   // Delete doctor function using useForm
-  const onDeleteSubmit = async (data: DeleteForm) => {
+  const onDeleteSubmit = async (data: DeleteForm): Promise<void> => {
     const doctorId = data.doctorId;
     const doctorToDelete = doctors.find(d => d._id === doctorId);
     
@@ -79,7 +85,7 @@ const ManageDocs: React.FC = () => {
 
     try {
       // Make DELETE request
-      const res = await axiosSecure.delete(`/doctors/${doctorId}`);
+      const res = await axiosSecure.delete<ApiResponse>(`/doctors/${doctorId}`);
       console.log('Delete response:', res.data);
       
       // Remove doctor from state
@@ -95,17 +101,26 @@ const ManageDocs: React.FC = () => {
         timer: 2000,
         showConfirmButton: false
       });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error deleting doctor:', error);
       
       let errorMessage = 'Failed to delete doctor. Please try again.';
-      if (error.response?.status === 403) {
-        errorMessage = 'You do not have permission to delete doctors.';
-      } else if (error.response?.status === 401) {
-        errorMessage = 'Please log in again to perform this action.';
-      } else if (error.response?.data?.message) {
-        errorMessage = error.response.data.message;
+      
+      if (typeof error === 'object' && error !== null && 'response' in error) {
+        const axiosError = error as { 
+          response?: { 
+            status?: number; 
+            data?: { message?: string } 
+          } 
+        };
+        
+        if (axiosError.response?.status === 403) {
+          errorMessage = 'You do not have permission to delete doctors.';
+        } else if (axiosError.response?.status === 401) {
+          errorMessage = 'Please log in again to perform this action.';
+        } else if (axiosError.response?.data?.message) {
+          errorMessage = axiosError.response.data.message;
+        }
       }
       
       Swal.fire({
@@ -119,7 +134,7 @@ const ManageDocs: React.FC = () => {
   };
 
   // Handle delete button click - set doctor ID and submit form
-  const handleDeleteClick = (doctorId: string) => {
+  const handleDeleteClick = (doctorId: string): void => {
     setValue('doctorId', doctorId);
     
     // Trigger form submission after a small delay to ensure value is set
@@ -130,13 +145,6 @@ const ManageDocs: React.FC = () => {
       }
     }, 100);
   };
-
-  // Alternative: Direct form submission without setTimeout
-  // const handleDeleteClickDirect = (doctorId: string) => {
-  //   handleSubmit(onDeleteSubmit)({ doctorId }).catch(error => {
-  //     console.error('Form submission error:', error);
-  //   });
-  // };
 
   // Loading state
   if (loading) {
@@ -219,21 +227,12 @@ const ManageDocs: React.FC = () => {
                   <td className="font-medium">{doctor.email || "N/A"}</td>
 
                   <td>
-                    {/* Option 1: Using form submission with hidden form */}
                     <button
                       className="btn btn-sm bg-[#E11244] border-0 text-white hover:bg-red-700"
                       onClick={() => handleDeleteClick(doctor._id)}
                     >
                       Delete
                     </button>
-
-                    {/* Option 2: Direct form submission (alternative) */}
-                    {/* <button
-                      className="btn btn-sm bg-[#E11244] border-0 text-white hover:bg-red-700"
-                      onClick={() => handleDeleteClickDirect(doctor._id)}
-                    >
-                      Delete
-                    </button> */}
                   </td>
                 </tr>
               ))}
