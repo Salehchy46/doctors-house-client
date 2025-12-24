@@ -5,21 +5,32 @@ import frame2 from '../../../assets/dashboard/Frame2.png';
 import frame3 from '../../../assets/dashboard/Frame3.png';
 import { useEffect, useState } from 'react';
 
-interface Appointment {
+interface Doctor {
   _id: string;
-  // add more fields if needed
+}
+
+interface User {
+  _id: string;
 }
 
 const StatSect: React.FC = () => {
 
-  const [doctors, setDoctors] = useState<Appointment[]>([]);
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/appointments')
+    fetch('http://localhost:5000/doctors')
       .then(res => res.json())
-      .then((data: Appointment[]) => setDoctors(data))
+      .then((data: Doctor[]) => setDoctors(data))
       .catch(error => console.error(error));
   }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/users')
+    .then(res => res.json())
+    .then((data: User[]) => setUsers(data))
+    .catch(error => console.log(error))
+  }, [])
 
   return (
     <div className="max-w-[1000px] mx-auto">
@@ -41,9 +52,9 @@ const StatSect: React.FC = () => {
             <div className="bg-green-100 w-20 h-20 rounded-xl">
               <img src={frame2} className="w-10 h-10 mx-auto my-5" alt="Patients" />
             </div>
-            <Stat.Value>487</Stat.Value>
+            <Stat.Value>{users.length}</Stat.Value>
           </div>
-          <Progress.Line percent={50} strokeColor="#7BB13C" showInfo={false} />
+          <Progress.Line percent={users.length} strokeColor="#7BB13C" showInfo={false} />
           <p className="font-semibold">Patients</p>
         </Stat>
 
