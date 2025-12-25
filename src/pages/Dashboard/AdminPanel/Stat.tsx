@@ -13,10 +13,15 @@ interface User {
   _id: string;
 }
 
+interface Appointment {
+  _id: string;
+}
+
 const StatSect: React.FC = () => {
 
   const [doctors, setDoctors] = useState<Doctor[]>([]);
   const [users, setUsers] = useState<User[]>([]);
+  const [appointments, setAppointments] = useState<Appointment[]>([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/doctors')
@@ -27,9 +32,16 @@ const StatSect: React.FC = () => {
 
   useEffect(() => {
     fetch('http://localhost:5000/users')
-    .then(res => res.json())
-    .then((data: User[]) => setUsers(data))
-    .catch(error => console.log(error))
+      .then(res => res.json())
+      .then((data: User[]) => setUsers(data))
+      .catch(error => console.log(error))
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:5000/appointments')
+      .then(res => res.json())
+      .then((data : Appointment[]) => setAppointments(data))
+      .catch(error => console.log(error))
   }, [])
 
   return (
@@ -63,9 +75,9 @@ const StatSect: React.FC = () => {
             <div className="bg-amber-100 w-20 h-20 rounded-xl">
               <img src={frame3} className="w-10 h-10 mx-auto my-5" alt="Appointments" />
             </div>
-            <Stat.Value>98</Stat.Value>
+            <Stat.Value>{appointments.length}</Stat.Value>
           </div>
-          <Progress.Line percent={50} strokeColor="#FFBC34" showInfo={false} />
+          <Progress.Line percent={appointments.length} strokeColor="#FFBC34" showInfo={false} />
           <p className="font-semibold">Appointment</p>
         </Stat>
 

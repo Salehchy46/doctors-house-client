@@ -1,5 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from 'react';
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
+
+interface Doctor {
+    _id: string;
+}
+
+interface User {
+    _id: string;
+}
+
+interface Appointment {
+    _id: string;
+}
 
 const data = [
     { name: 'Group A', value: 400 },
@@ -24,6 +37,32 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
 
 export default function Piechart() {
+
+    const [doctors, setDoctors] = useState<Doctor[]>([]);
+    const [users, setUsers] = useState<User[]>([]);
+    const [appointments, setAppointments] = useState<Appointment[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/doctors')
+            .then(res => res.json())
+            .then((data: Doctor[]) => setDoctors(data))
+            .catch(error => console.error(error));
+    }, []);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then((data: User[]) => setUsers(data))
+            .catch(error => console.log(error))
+    }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/appointments')
+            .then(res => res.json())
+            .then((data: Appointment[]) => setAppointments(data))
+            .catch(error => console.log(error))
+    }, [])
+
     return (
         <div className='bg-white p-3 rounded-xl w-[450px] h-[350px]'>
             <h3 className='text-[#898989] font-semibold'>Appointment</h3>
