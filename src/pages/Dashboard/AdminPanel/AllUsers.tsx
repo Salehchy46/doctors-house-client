@@ -110,7 +110,7 @@ const AllUsers: React.FC = () => {
 
   // Add loading and error states
   if (isLoading) {
-    return <div className="text-center">Loading users...</div>;
+    return <span className="loading loading-spinner loading-xl mx-auto flex justify-center my-[209px]"></span>;
   }
 
   if (error) {

@@ -1,80 +1,82 @@
-import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
+import React, { useEffect, useMemo, useState } from 'react';
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+} from 'recharts';
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 2100,
-    },
-];
-
+interface User {
+  _id: string;
+  createdAt: string;
+}
 
 const RechartAreachart: React.FC = () => {
-    return (
-        <div className='bg-white p-3 rounded-xl w-[450px] h-[350px]'>
-            <h3 className='text-[#898989] font-semibold'>Patients</h3>
-            <div className='divider'></div>
-            <div className='w-[440px] h-52 mx-auto'>
-                <ResponsiveContainer width="100%" height="100%">
-                    <AreaChart
-                        width={500}
-                        height={400}
-                        data={data}
-                        margin={{
-                            top: 10,
-                            right: 30,
-                            left: 0,
-                            bottom: 0,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#898989" />
-                    </AreaChart>
-                </ResponsiveContainer>
-            </div>
-        </div>
-    );
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/users')
+      .then(res => res.json())
+      .then((data: User[]) => setUsers(data))
+      .catch(console.error);
+  }, []);
+
+  // Create chart data with all days (1–31)
+  const chartData = useMemo(() => {
+    const dateMap: Record<number, number> = {};
+
+    // Count users per day
+    users.forEach(user => {
+      const day = new Date(user.createdAt).getDate(); // 1–31
+      dateMap[day] = (dateMap[day] || 0) + 1;
+    });
+
+    // Get current month total days
+    const now = new Date();
+    const totalDays = new Date(
+      now.getFullYear(),
+      now.getMonth() + 1,
+      0
+    ).getDate();
+
+    // Build full month data
+    const result = [];
+    for (let day = 1; day <= totalDays; day++) {
+      result.push({
+        date: day.toString(), // X-axis
+        patients: dateMap[day] || 0, // Y-axis
+      });
+    }
+
+    return result;
+  }, [users]);
+
+  return (
+    <div className="bg-white p-3 rounded-xl w-[450px] h-[350px]">
+      <h3 className="text-[#898989] font-semibold">Patients (Monthly)</h3>
+      <div className="divider"></div>
+
+      <div className="w-[440px] h-52 mx-auto">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />
+            <YAxis allowDecimals={false} />
+            <Tooltip />
+            <Area
+              type="monotone"
+              dataKey="patients"
+              stroke="#8884d8"
+              fill="#E0E7FF"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  );
 };
 
 export default RechartAreachart;

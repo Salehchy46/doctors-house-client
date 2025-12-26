@@ -151,8 +151,7 @@ const ManageDocs: React.FC = () => {
     return (
       <div className="flex justify-center items-center h-64">
         <div className="text-center">
-          <div className="loading loading-spinner loading-lg text-primary"></div>
-          <p className="mt-4 text-lg">Loading doctors...</p>
+          <span className="loading loading-spinner loading-xl mx-auto flex justify-center my-[209px]"></span>
         </div>
       </div>
     );
