@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface Appointment {
     _id: string;
     name: string;
+    fullName: string;
     mobile: string;
     number: string;
     time: string;
@@ -38,10 +39,10 @@ const AllAppointment: React.FC = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>{index}</th>
-                                    <td>{appointment.name}</td>
-                                    <td>Quality Control Specialist</td>
-                                    <td>Blue</td>
+                                    <th>{++index}</th>
+                                    <td>{appointment.name || appointment.fullName}</td>
+                                    <td>{appointment.mobile || appointment.number}</td>
+                                    <td>{appointment.time || appointment.scheduledTime}</td>
                                 </tr>
                             </tbody>
                         </table>
