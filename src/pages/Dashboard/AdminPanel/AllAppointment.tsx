@@ -8,6 +8,7 @@ interface Appointment {
     number: string;
     time: string;
     scheduledTime: string;
+    doctorsName: string;
 }
 
 const AllAppointment: React.FC = () => {
@@ -25,29 +26,32 @@ const AllAppointment: React.FC = () => {
         <div>
             <h2 className='text-2xl font-bold'>All Appointment : {appointments.length}</h2>
             <div>
-                {
-                    appointments.map((appointment, index) => <div className="overflow-x-auto">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Name</th>
-                                    <th>Phone Number</th>
-                                    <th>Appointment Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>{++index}</th>
-                                    <td>{appointment.name || appointment.fullName}</td>
-                                    <td>{appointment.mobile || appointment.number}</td>
-                                    <td>{appointment.time || appointment.scheduledTime}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>)
-                }
+                <div className='overflow-x-auto'>
+                    <table className='table'>
+                        <thead>
+                            <tr className='text-black'>
+                                <th>Serial</th>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Appointment Time</th>
+                                <th>Doctor</th>
+                            </tr>
+                        </thead>
+                        {
+                            appointments.map((appointment, index) =>
+                                <tbody>
+                                    <tr>
+                                        <th>{++index}</th>
+                                        <td>{appointment.name || appointment.fullName}</td>
+                                        <td>{appointment.mobile || appointment.number}</td>
+                                        <td>{appointment.time || appointment.scheduledTime}</td>
+                                        <td>{appointment.doctorsName}</td>
+                                    </tr>
+                                </tbody>
+                            )
+                        }
+                    </table>
+                </div>
             </div>
         </div>
     );

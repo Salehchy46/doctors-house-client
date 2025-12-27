@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 interface formData {
   name: string,
   email: string,
-  speciality: string,
+  specialty: string,
   image: string,
 }
 
@@ -28,7 +28,7 @@ const AddaDoctor: React.FC = () => {
     const newDoctor = {
       name: data.name,
       email: data.email,
-      speciality: data.speciality,
+      specialty: data.specialty,
       image: data.image,
     }
 
@@ -103,12 +103,12 @@ const AddaDoctor: React.FC = () => {
           <div className="mb-6">
             <label className="label font-semibold text-[14px] mb-2 block">Specialty</label>
             <input
-              {...register('speciality', { required: true })}
+              {...register('specialty', { required: true })}
               type="text"
               className="input input-lg bg-white border border-gray-300 rounded-md w-full p-3 text-sm focus:outline-none focus:border-teal-500"
               placeholder="Teeth Orthodontics"
             />
-            {errors.speciality && <span className='text-red-600'>Speciality is required</span>}
+            {errors.specialty && <span className='text-red-600'>specialty is required</span>}
           </div>
 
           {/* Upload Photo Section */}
