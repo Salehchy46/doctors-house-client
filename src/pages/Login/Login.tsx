@@ -18,7 +18,7 @@ const Register: React.FC = () => {
   //auth error 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
-  const { login } = useContext(AuthContext);
+  const { login, forgetPass } = useContext(AuthContext);
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,6 +45,41 @@ const Register: React.FC = () => {
         // Firebase errors are typically objects with 'message'
         if (error instanceof Error) {
           console.error(error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: error.message,
+          });
+        } else {
+          console.error(error);
+        }
+      });
+  };
+
+  const handleResetPassword = () => {
+    const form = document.querySelector('form') as HTMLFormElement;
+    const emailInput = form?.elements.namedItem('email') as HTMLInputElement;
+    const email = emailInput?.value;
+
+    if (!email) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please enter your email address to reset password.',
+      });
+      return;
+    }
+
+    forgetPass(email)
+      .then(() => {
+        Swal.fire({
+          title: 'Password Reset Email Sent',
+          text: 'Please check your email to reset your password.',
+          icon: 'success',
+        });
+      })
+      .catch((error: unknown) => {
+        if (error instanceof Error) {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -98,9 +133,11 @@ const Register: React.FC = () => {
                           Password
                         </label>
                         <div>
-                          <a className="link link-hover text-[#F7A582]">
-                            Forgot password?
-                          </a>
+                          <button onClick={handleResetPassword} className="label text-xl font-semibold">
+                            <a className="link link-hover text-[#F7A582]">
+                              Forgot password?
+                            </a>
+                          </button>
                         </div>
                       </div>
                       <input

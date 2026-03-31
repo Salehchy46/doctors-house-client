@@ -5,6 +5,7 @@ import {
   EmailAuthProvider,
   getAuth,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithCredential,
   signOut,
   type User,
@@ -46,7 +47,12 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     return signOut(auth);
   };
 
-  const authInfo = { user, loading, createUser, login, logOut };
+  const forgetPass = (email: string) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
+  }
+
+  const authInfo = { user, loading, createUser, login, logOut, forgetPass };
 
   return (
     <AuthContext.Provider value={authInfo}>
