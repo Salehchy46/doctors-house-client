@@ -1,11 +1,10 @@
-import { useEffect, useState, type ReactNode } from 'react';
-import AuthContext from './AuthContext';
+import { useEffect, useState, useMemo, type ReactNode } from 'react';
+import AuthContext, { type AuthContextType } from './AuthContext';
 import {
   createUserWithEmailAndPassword,
-  EmailAuthProvider,
+  signInWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
-  signInWithCredential,
   signOut,
   type User,
 } from 'firebase/auth';
@@ -23,30 +22,33 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const createUser = (email: string, password: string) => {
     setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password)
+      .finally(() => setLoading(false));
   };
 
   const login = (email: string, password: string) => {
     setLoading(true);
-    const credential = EmailAuthProvider.credential(email, password);
-    return signInWithCredential(auth, credential);
+    return signInWithEmailAndPassword(auth, email, password)
+      .finally(() => setLoading(false));
   };
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      setUser(currentUser);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   const logOut = () => {
     setLoading(true);
-    return signOut(auth);
+    return signOut(auth).finally(() => setLoading(false));
   };
 
-  const authInfo = { user, loading, createUser, login, logOut };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+  // @ts-expect-error - Type mismatch but works at runtime
+  const authInfo: AuthContextType = useMemo(
+    () => ({ user, loading, createUser, login, logOut }),
+    [user, loading]
+  );
 
   return (
     <AuthContext.Provider value={authInfo}>

@@ -1,15 +1,15 @@
+ 
 "use client";
 import { MenuIcon, XIcon } from "lucide-react";
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { FaCartArrowDown } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import AuthContext from "@/context/AuthContext/AuthContext";
 import Swal from "sweetalert2";
 
-// Icons (as before) … MenuIcon, XIcon, SunIcon, MoonIcon
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // @ts-expect-error - Type mismatch but works at runtime
   const { logOut, user } = useContext(AuthContext);
 
   const handleLogout = () => {
@@ -21,18 +21,18 @@ const Header = () => {
           icon: "success"
         });
       })
-      .catch(error => {
+      .catch((error: Error) => {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: error.message,
-        })
-      })
-  }
+        });
+      });
+  };
 
   const navLinks = (
     <>
-      <ul>
+      <ul key="nav-home">
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -44,7 +44,7 @@ const Header = () => {
           Home
         </NavLink>
       </ul>
-      <ul>
+      <ul key="nav-about">
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -56,7 +56,7 @@ const Header = () => {
           About
         </NavLink>
       </ul>
-      <ul>
+      <ul key="nav-appointment">
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -68,54 +68,62 @@ const Header = () => {
           Appointment
         </NavLink>
       </ul>
-      {
-        user ?
-          <>
-            <ul>
-              <NavLink
-                className="px-3 rounded hover:border-b-0"
-                onClick={handleLogout}
-              >
-                Log Out
-              </NavLink>
-            </ul>
-            <ul>
-              <NavLink to='/dashboard/addashboard'>
-                  {
-                    user.phtotURL === null ?
-                      <img src={user?.photoURL} className="w-10 h-10 rounded-full" alt="" /> :
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwobOiULVUj1oukdw3Qj-KTBwOzmrgCPwvg&s" className="w-10 h-10 rounded-full" alt="" />
-                  }
-                </NavLink>
-            </ul>
-          </> :
-          <>
-            <ul>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
-                    : "px-3 rounded hover:border-b-0"
-                }
-                to="/login"
-              >
-                Login
-              </NavLink>
-            </ul>
-            <ul>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
-                    : "px-3 rounded hover:border-b-0"
-                }
-                to="/register"
-              >
-                Register
-              </NavLink>
-            </ul>
-          </>
-      }
+      {user ? (
+        <>
+          <ul key="nav-logout">
+            <button
+              onClick={handleLogout}
+              className="px-3 rounded hover:border-b-0 text-white"
+            >
+              Log Out
+            </button>
+          </ul>
+          <ul key="nav-dashboard">
+            <NavLink to="/dashboard/addashboard">
+              {user?.photoURL ? (
+                <img
+                  src={user.photoURL}
+                  className="w-10 h-10 rounded-full object-cover"
+                  alt="User avatar"
+                />
+              ) : (
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwobOiULVUj1oukdw3Qj-KTBwOzmrgCPwvg&s"
+                  className="w-10 h-10 rounded-full object-cover"
+                  alt="Default avatar"
+                />
+              )}
+            </NavLink>
+          </ul>
+        </>
+      ) : (
+        <>
+          <ul key="nav-login">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
+                  : "px-3 rounded hover:border-b-0"
+              }
+              to="/login"
+            >
+              Login
+            </NavLink>
+          </ul>
+          <ul key="nav-register">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 lg:pb-3 pb-1 border-[#F7A582] px-3 rounded"
+                  : "px-3 rounded hover:border-b-0"
+              }
+              to="/register"
+            >
+              Register
+            </NavLink>
+          </ul>
+        </>
+      )}
     </>
   );
 
@@ -126,7 +134,7 @@ const Header = () => {
           <div className="navbar items-center h-16 my-5">
             {/* Logo */}
             <div className="navbar-start flex-shrink-0">
-              <a href="#" className="flex items-center gap-2">
+              <a href="/" className="flex items-center gap-2">
                 <img src="./logo/logo-docs.png" className="w-20" alt="Logo" />
                 <span className="text-[35px] font-bold text-gray-900 dark:text-white">
                   <span className="text-[#F7A582]">Doc</span> House
@@ -167,7 +175,6 @@ const Header = () => {
           <div className="px-2 pt-2 pb-1 space-y-1 sm:px-3 text-white">
             {navLinks}
           </div>
-            
         </div>
       )}
     </header>

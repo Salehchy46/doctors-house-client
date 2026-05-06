@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-expect-error
 import "swiper/css"
 // @ts-expect-error
@@ -20,12 +21,40 @@ type Review = {
 
 const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
-      .then((res) => res.json())
-      .then((data: Review[]) => setReviews(data))
+    const fetchReviews = async () => {
+      try {
+        setLoading(true)
+
+        const res = await fetch("http://localhost:5000/reviews")
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch reviews")
+        }
+
+        const data: Review[] = await res.json()
+
+        setReviews(data)
+      } catch (err) {
+        setError((err as Error).message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchReviews()
   }, [])
+
+  if(loading || error) {
+    return (
+      <div className="max-w-[1280px] mx-auto bg-white text-black">
+        {loading ? <p>Loading reviews...</p> : <p className="text-red-500">Error: {error}</p>}
+      </div>
+    )
+  }
 
   return (
     <div className="max-w-[1280px] mx-auto bg-white text-black">

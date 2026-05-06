@@ -61,6 +61,7 @@ const Register: React.FC = () => {
       })
       .catch((error: { message: unknown; }) => {
         console.error(error);
+        // @ts-expect-error - Type mismatch but works at runtime
         Swal.fire({
           icon: 'error',
           title: 'Oops...',

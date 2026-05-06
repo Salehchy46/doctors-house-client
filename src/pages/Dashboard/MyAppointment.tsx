@@ -8,11 +8,10 @@ const MyAppointment: React.FC = () => {
                 <div className=''>
                     <h2 className='text-2xl font-bold mb-10'>My Appointment</h2>
                 </div>
-                <DateSelector></DateSelector>
+                <DateSelector />
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
-                    {/* head */}
                     <thead>
                         <tr className='bg-gray-200 text-black'>
                             <th></th>
@@ -24,7 +23,6 @@ const MyAppointment: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
                         <tr>
                             <th>1</th>
                             <td>Cy Ganderton</td>
@@ -36,8 +34,7 @@ const MyAppointment: React.FC = () => {
                                 <p>id : dfadfjlaksdjf24sdfds</p>
                             </td>
                         </tr>
-                        {/* row 2 */}
-                        <tr className="">
+                        <tr>
                             <th>2</th>
                             <td>Hart Hagerty</td>
                             <td>09/09/25</td>
@@ -47,8 +44,13 @@ const MyAppointment: React.FC = () => {
                                 <div className="card-actions">
                                     <button
                                         className='btn bg-teal-950'
-                                        onClick={() => document.getElementById('my_modal_1').showModal()}>Pay</button>
-                                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+                                        onClick={() => {
+                                            const dialog = document.getElementById('my_modal_1') as HTMLDialogElement;
+                                            if (dialog) dialog.showModal();
+                                        }}
+                                    >
+                                        Pay
+                                    </button>
                                     <dialog id="my_modal_1" className="modal">
                                         <div className="px-5 pb-5 pt-2 rounded-xl bg-white w-[430px]">
                                             <div className='items-center'>
@@ -68,7 +70,6 @@ const MyAppointment: React.FC = () => {
                                 </div>
                             </td>
                         </tr>
-                        {/* row 3 */}
                         <tr>
                             <th>3</th>
                             <td>Brice Swyre</td>
@@ -79,8 +80,13 @@ const MyAppointment: React.FC = () => {
                                 <div className="card-actions">
                                     <button
                                         className='btn bg-teal-950'
-                                        onClick={() => document.getElementById('my_modal_2').showModal()}>Pay</button>
-                                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+                                        onClick={() => {
+                                            const dialog = document.getElementById('my_modal_2') as HTMLDialogElement;
+                                            if (dialog) dialog.showModal();
+                                        }}
+                                    >
+                                        Pay
+                                    </button>
                                     <dialog id="my_modal_2" className="modal">
                                         <div className="px-5 pb-5 pt-2 rounded-xl bg-white w-[430px]">
                                             <div className='items-center'>
