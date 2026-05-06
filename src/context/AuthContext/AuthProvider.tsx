@@ -5,6 +5,11 @@ import {
   signInWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+<<<<<<< HEAD
+=======
+  sendPasswordResetEmail,
+  signInWithCredential,
+>>>>>>> bb1aec5da84e32cbaf904937d6ddc176aee0eb93
   signOut,
   type User,
 } from 'firebase/auth';
@@ -37,6 +42,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     return signOut(auth).finally(() => setLoading(false));
   };
 
+<<<<<<< HEAD
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -49,6 +55,14 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     () => ({ user, loading, createUser, login, logOut }),
     [user, loading]
   );
+=======
+  const forgetPass = (email: string) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
+  }
+
+  const authInfo = { user, loading, createUser, login, logOut, forgetPass };
+>>>>>>> bb1aec5da84e32cbaf904937d6ddc176aee0eb93
 
   return (
     <AuthContext.Provider value={authInfo}>
