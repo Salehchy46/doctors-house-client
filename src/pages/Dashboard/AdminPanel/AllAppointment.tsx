@@ -16,7 +16,7 @@ const AllAppointment: React.FC = () => {
     const [appointments, setAppointments] = useState<Appointment[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/appointments')
+        fetch('http://localhost:5000/contactAppointment')
             .then(res => res.json())
             .then((data: Appointment[]) => setAppointments(data))
             .catch(error => console.log(error))
