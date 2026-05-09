@@ -7,6 +7,7 @@ import AdDashboard from "@/pages/Dashboard/AdminPanel/AdDashboard";
 import AllAppointment from "@/pages/Dashboard/AdminPanel/AllAppointment";
 import AllUsers from "@/pages/Dashboard/AdminPanel/AllUsers";
 import ManageDocs from "@/pages/Dashboard/AdminPanel/ManageDocs";
+import TestAppointment from "@/pages/Dashboard/AdminPanel/TestAppointment";
 import MyAppointment from "@/pages/Dashboard/MyAppointment";
 import Docprofile from "@/pages/DocProfile/Docprofile";
 import Doctors from "@/pages/Doctors/Doctors";
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
                 element: <AllAppointment></AllAppointment>
             },
             {
+                path: '/dashboard/testAppointment',
+                element: <TestAppointment></TestAppointment>
+            },
+            {
                 path: '/dashboard/allusers',
                 element: <AllUsers></AllUsers>
             },
@@ -89,7 +94,7 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/managedocs',
                 element: <ManageDocs></ManageDocs>,
-            }
+            },
         ]
     }
 ])

@@ -37,7 +37,7 @@ const Footer = () => {
                 <Link className="text-xl font-semibold text-gray-500" to='/departments'>Departments</Link>
             </li>
             <li>
-                <Link className="text-xl font-semibold text-gray-500" to='/olinePaments'>Online Paments</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/olinePaments'>Online Payments</Link>
             </li>
             <li>
                 <Link className="text-xl font-semibold text-gray-500" to='/contactUs'>Contact Us</Link>
@@ -95,7 +95,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Doc House. All rights reserved.
         </p>
         <p className="mt-1">
-          Designed by Saleh
+          Designed and Developed by <a href="https://msalehc.netlify.app/" className="text-blue-500 font-bold hover:text-teal-950 ">Mohammad Saleh</a>
         </p>
       </div>
     </footer>

@@ -32,7 +32,16 @@ const Dashboard: React.FC = () => {
                                                 ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
                                                 : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
                                         }>
-                                            All Appointment
+                                            Doctor's Appointment
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='/dashboard/testAppointment' className={({ isActive }) =>
+                                            isActive
+                                                ? "bg-gray-100 w-[290px] h-14 text-xl font-bold align-middle flex items-center text-center"
+                                                : "px-3 rounded text-xl font-bold align-middle flex items-center h-14 text-center"
+                                        }>
+                                            Test Appointment
                                         </NavLink>
                                     </li>
                                     <li>
