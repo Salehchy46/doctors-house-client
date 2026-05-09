@@ -90,7 +90,7 @@ const handleGetDirections = (location: Location): void => {
                 <div className='hero-content' key={index}>
                   <div>
                     <img
-                      src={doctor.image}
+                      src={doctor.image || "https://img.daisyui.com/images/profile/demo/2@94.webp"}
                       className='w-[350px] h-96 object-cover rounded-xl m-5'
                       alt={doctor.name}
                     />

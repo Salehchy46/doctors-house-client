@@ -40,7 +40,7 @@ const Doctors: React.FC = () => {
                         {doctors.map((doctor) => (
                             <div key={doctor?._id || doctor?.name} className="card shadow-sm w-96 mx-auto">
                                 <figure>
-                                    <img src={doctor?.image} alt={doctor?.email} />
+                                    <img src={doctor?.image || "https://img.daisyui.com/images/profile/demo/2@94.webp"} alt={doctor?.email} />
                                 </figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{doctor?.name}</h2>

@@ -37,7 +37,7 @@ const Footer = () => {
                 <Link className="text-xl font-semibold text-gray-500" to='/departments'>Departments</Link>
             </li>
             <li>
-                <Link className="text-xl font-semibold text-gray-500" to='/olinePaments'>Online Payments</Link>
+                <Link className="text-xl font-semibold text-gray-500" to='/olinePayments'>Online Payments</Link>
             </li>
             <li>
                 <Link className="text-xl font-semibold text-gray-500" to='/contactUs'>Contact Us</Link>
